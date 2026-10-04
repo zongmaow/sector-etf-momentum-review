@@ -1,0 +1,26 @@
+{
+  "source": "Yahoo Finance via yfinance",
+  "downloaded_at_utc": "2026-10-04T19:44:39.950249+00:00",
+  "yfinance_version": "0.2.66",
+  "base_prices_sha256": "e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c",
+  "combined_prices_sha256": "e7ff603fb28f7b1e65237300ef4d5416274517f50f39c9fae47af3c2d789c777",
+  "extra_raw_sha256": "994ea11153950cd727c1c9a78913e02cb9678d7abe467d43f06576b205b59882",
+  "warmup_start": "2018-12-31",
+  "research_start": "2020-01-01",
+  "research_end": "2025-12-31",
+  "new_tickers": [
+    "XLRE",
+    "XLC"
+  ],
+  "product_sources": {
+    "XLRE": "https://www.ssga.com/us/en/individual/etfs/state-street-real-estate-select-sector-spdr-etf-xlre",
+    "XLC": "https://www.ssga.com/us/en/individual/etfs/state-street-communication-services-select-sector-spdr-etf-xlc"
+  },
+  "options": {
+    "auto_adjust": false,
+    "actions": true,
+    "repair": false,
+    "keepna": true
+  },
+  "note": "No backfilled pre-inception history. Original nine levels are unchanged. This is an exploratory universe sensitivity test, not a revised primary hypothesis."
+}

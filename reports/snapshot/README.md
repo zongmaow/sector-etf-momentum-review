@@ -12,3 +12,5 @@ The tables and figures use Yahoo supplier-adjusted ETF levels for 2000–2025, w
 - `source_hashes.json`: source file identities for this snapshot.
 
 Local reproduction also writes daily NAV and detailed audit files, which are intentionally excluded from this Git snapshot. Different vendor revisions can change results. Never use synthetic demo output as historical evidence.
+
+The later [period and sector exploration](../exploratory_snapshot) is reported separately. This original primary snapshot and its source identities are retained.

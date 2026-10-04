@@ -1,0 +1,62 @@
+{
+  "analysis_type": "EX POST EXPLORATORY DIAGNOSTIC; not new out-of-sample confirmation",
+  "fixed_rule": "MOM12_1, top3, next-close execution, 5bps per side; no signal tuning",
+  "window_grid": {
+    "years": 26,
+    "disjoint_five_year_blocks": 5,
+    "remainder": "2025",
+    "overlapping_36m_windows": 277
+  },
+  "rolling_descriptive_counts": {
+    "profitable": 236,
+    "outperform_ew": 124,
+    "outperform_spy": 136
+  },
+  "primary_prices_sha256": "e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c",
+  "expanded_prices_sha256": "e7ff603fb28f7b1e65237300ef4d5416274517f50f39c9fae47af3c2d789c777",
+  "primary_coverage": {
+    "status": "passed",
+    "calendar": "XNYS",
+    "calendar_library": "exchange_calendars",
+    "calendar_library_version": "4.13.2",
+    "research_start_inclusive": "1998-12-31",
+    "research_end_inclusive": "2025-12-31",
+    "expected_sessions": 6792,
+    "observed_sessions": 6792,
+    "missing_sessions": 0,
+    "non_session_observations": 0,
+    "observations_outside_window": 0,
+    "limitation": "Coverage checked against the library schedule; adjusted-return accuracy is not certified."
+  },
+  "expanded_coverage": {
+    "status": "passed",
+    "calendar": "XNYS",
+    "calendar_library": "exchange_calendars",
+    "calendar_library_version": "4.13.2",
+    "research_start_inclusive": "2018-12-31",
+    "research_end_inclusive": "2025-12-31",
+    "expected_sessions": 1761,
+    "observed_sessions": 1761,
+    "missing_sessions": 0,
+    "non_session_observations": 0,
+    "observations_outside_window": 0,
+    "limitation": "Coverage checked against the library schedule; adjusted-return accuracy is not certified."
+  },
+  "source_files_sha256": {
+    "__init__.py": "2a3e27dc25eff682db467fff4aed78b1f2ee5691259ab44d0af0554cd8040457",
+    "__main__.py": "42edeba973e6d2c7fa8b6f59475fb042fe45fbb104cb4af87482d78113ad9039",
+    "data.py": "08faaf542580bc62a304d531226486123435c99d29ad9056907e115296d05aef",
+    "engine.py": "670f7b1e6917fd6c1ce3cea01db72ff7bacd4376194b9bb61d30bd20e8da2b1a",
+    "evaluation.py": "bc9e4fc10211bb9603796ab552ed33eda1ac71e1994649e1a99bdfff933601fb",
+    "exploration.py": "e58fb05a2ed60b8dca40eb7d4488b81d1ad6b994f8b532b19e1a864f8c06c887",
+    "factors.py": "1940c180a5a3ff708480820f3ebfb685d5f9be5e9628234135d58f88be0de198",
+    "reporting.py": "30d78047936b4b2c384a84cfc8299f83448e6ad935bd94433251023dd573d7ed",
+    "signals.py": "559acf846c472bdbf3edc1cf55a2cb471313f5476702473b633dd6098007a492"
+  },
+  "selection_notice": "Highlighted examples and extrema are chosen after observing this full grid. Overlapping windows are dependent; counts are not independent success probabilities. Periods are not tradable advance-known regimes.",
+  "universe_notice": "Eleven-sector comparison starts Jan2020 after warm-up; both universes are newly formed from cash on the same date and use the same engine, costs and base snapshot. It is separate from slices of the continuous Jan2000 original path.",
+  "product_sources": {
+    "XLRE": "https://www.ssga.com/us/en/individual/etfs/state-street-real-estate-select-sector-spdr-etf-xlre",
+    "XLC": "https://www.ssga.com/us/en/individual/etfs/state-street-communication-services-select-sector-spdr-etf-xlc"
+  }
+}

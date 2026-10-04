@@ -12,3 +12,4 @@ reports/demo/
 build/
 dist/
 *.whl
+reports/exploration/

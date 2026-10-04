@@ -22,6 +22,13 @@ def main() -> None:
     run.add_argument('--out', default='reports/local')
     run.add_argument('--config', default='research_config.json')
     run.add_argument('--no-plots', action='store_true')
+    explore = commands.add_parser('explore', help='Publish full ex-post window grid and optional eleven-sector sensitivity')
+    explore.add_argument('--prices', required=True)
+    explore.add_argument('--out', default='reports/exploration')
+    extra = explore.add_mutually_exclusive_group()
+    extra.add_argument('--expanded-prices', help='Saved twelve-column ETF input: eleven sectors and SPY')
+    extra.add_argument('--download-extra', action='store_true', help='Download XLRE/XLC and retain the base snapshot')
+    explore.add_argument('--no-plots', action='store_true')
     demo = commands.add_parser('demo', help='Synthetic pipeline demo, not historical performance')
     demo.add_argument('--out', default='reports/demo')
     demo.add_argument('--config', default='research_config.json')
@@ -34,6 +41,13 @@ def main() -> None:
     elif args.command == 'run':
         run_research(args.prices, args.out, args.config, args.rf, plots=not args.no_plots)
         print(f'Reports saved to {args.out}; read manager_memo.md and analysis.json.')
+    elif args.command == 'explore':
+        from .exploration import download_expanded, run_exploration
+        expanded = args.expanded_prices
+        if args.download_extra:
+            expanded = download_expanded(args.prices, Path(args.prices).parent / 'extended')
+        run_exploration(args.prices, args.out, expanded, plots=not args.no_plots)
+        print(f'Ex-post exploration saved to {args.out}; all tested windows are disclosed.')
     else:
         import exchange_calendars as xcals
         config = json.loads(Path(args.config).read_text())
