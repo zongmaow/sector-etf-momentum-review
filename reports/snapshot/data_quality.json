@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "calendar": "XNYS",
+  "calendar_library": "exchange_calendars",
+  "calendar_library_version": "4.13.2",
+  "research_start_inclusive": "1998-12-31",
+  "research_end_inclusive": "2025-12-31",
+  "expected_sessions": 6792,
+  "observed_sessions": 6792,
+  "missing_sessions": 0,
+  "non_session_observations": 0,
+  "observations_outside_window": 0,
+  "limitation": "Coverage checked against the library schedule; adjusted-return accuracy is not certified.",
+  "monthly_return_observations": 312,
+  "corporate_action_spot_check": {
+    "ticker": "XLU",
+    "date": "2025-12-05",
+    "supplier_split_ratio": 2.0,
+    "adjusted_level_return": -0.00938004069809717,
+    "source_close_ratio": 0.9906199987188342,
+    "official_source": "https://www.ssga.com/library-content/products/fund-docs/etfs/us/tax-documents/us-tax-form-state-street-utilities-select-sector-spdr-etf-2025.pdf",
+    "interpretation": "Supplier records a 2:1 split. Its Close field is already split-adjusted in this snapshot. No independent dividend/total-return reconstruction is claimed."
+  },
+  "max_daily_pnl_reconciliation_error_dollars": 2.5902409106492996e-09,
+  "unit_tests_passed": 44
+}

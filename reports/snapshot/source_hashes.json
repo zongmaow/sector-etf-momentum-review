@@ -1,0 +1,10 @@
+{
+  "src/sector_momentum/__init__.py": "2a3e27dc25eff682db467fff4aed78b1f2ee5691259ab44d0af0554cd8040457",
+  "src/sector_momentum/__main__.py": "1e872aeaae24a1e9d5fe50b6e19611ac97812f4fe3ea98c530a3fa923976b1b6",
+  "src/sector_momentum/data.py": "08faaf542580bc62a304d531226486123435c99d29ad9056907e115296d05aef",
+  "src/sector_momentum/engine.py": "4057da0368e7751e99f522c0bd15a5a5a7f542c6d4e6064e0007492b10454592",
+  "src/sector_momentum/evaluation.py": "bc9e4fc10211bb9603796ab552ed33eda1ac71e1994649e1a99bdfff933601fb",
+  "src/sector_momentum/factors.py": "1940c180a5a3ff708480820f3ebfb685d5f9be5e9628234135d58f88be0de198",
+  "src/sector_momentum/reporting.py": "268d5256ba19f3283c8b789185626d8fde8fba1772fcf0b2e9e9e31655c160ca",
+  "src/sector_momentum/signals.py": "559acf846c472bdbf3edc1cf55a2cb471313f5476702473b633dd6098007a492"
+}

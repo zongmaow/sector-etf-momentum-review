@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "data_start": "1998-12-31",
+  "start": "2000-01-01",
+  "end": "2025-12-31",
+  "initial_nav": 1000000,
+  "cost_bps_per_side": [0, 5, 10],
+  "primary_cost_bps": 5,
+  "sleeve_fraction": 0.2,
+  "bootstrap_block_months": 6,
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 2026,
+  "hac_lags": 3,
+  "time_splits": {
+    "development": ["2000-01-31", "2010-12-31"],
+    "confirmation": ["2011-01-31", "2017-12-31"],
+    "final_historical": ["2018-01-31", "2025-12-31"]
+  },
+  "episodes": {
+    "dotcom_bust": ["2000-03-31", "2002-10-31"],
+    "global_financial_crisis": ["2007-10-31", "2009-03-31"],
+    "covid_crash_and_rebound": ["2020-02-29", "2020-12-31"],
+    "inflation_and_rate_shock": ["2022-01-31", "2022-12-31"]
+  },
+  "account_te_budget_vs_spy": 0.02,
+  "historical_holdout_notice": "Retrospective split of known history; not a genuinely unseen preregistered test."
+}

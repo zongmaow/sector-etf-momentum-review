@@ -1,0 +1,8 @@
+{
+  "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+  "downloaded_at_utc": "2026-10-04T09:06:49.925136+00:00",
+  "archive_sha256": "593f4fbef03181bc0b22ff6292f217689dd1fb79355049ca905d95b262040a66",
+  "risk_free_csv_sha256": "51bc8592868419486806f9832f0adc27f982bc2738d9f508a0038c59eda4a6ae",
+  "units": "decimal monthly RF; source percentage divided by 100",
+  "note": "SPY total return is the market proxy. French Mkt-RF is not used. Historical supplier revisions, including CRSP format changes, remain possible."
+}

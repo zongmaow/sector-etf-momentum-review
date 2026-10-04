@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "source": "Yahoo Finance via yfinance",
+  "source_url": "https://finance.yahoo.com/",
+  "yfinance_version": "0.2.66",
+  "downloaded_at_utc": "2026-10-04T09:01:25.709571+00:00",
+  "requested_start_inclusive": "1998-12-31",
+  "requested_end_exclusive": "2026-01-01",
+  "tickers": [
+    "XLK",
+    "XLF",
+    "XLE",
+    "XLY",
+    "XLP",
+    "XLV",
+    "XLI",
+    "XLB",
+    "XLU",
+    "SPY"
+  ],
+  "observed_start": "1998-12-31",
+  "observed_end": "2025-12-31",
+  "observations": 6792,
+  "download_options": {
+    "auto_adjust": false,
+    "back_adjust": false,
+    "actions": true,
+    "repair": false,
+    "keepna": true,
+    "ignore_tz": true
+  },
+  "files": {
+    "raw_yahoo.csv": {
+      "sha256": "07fb58e218a1e24dfd1a7637cd8f3bde400ab82a505efa5ae426fb2e184c41f7",
+      "column_levels": 2
+    },
+    "total_return.csv": {
+      "sha256": "e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c",
+      "value_type": "supplier Adj Close levels"
+    }
+  },
+  "return_treatment": "Compute returns from Adj Close ratios; do not add supplier dividends again.",
+  "close_treatment": "Close is preserved as supplied and may reflect vendor split adjustments; it is not certified unadjusted data.",
+  "checks_performed": [
+    "all requested tickers present",
+    "distinct increasing daily dates",
+    "finite strictly positive adjusted levels",
+    "OHLC and action fields retained"
+  ],
+  "limitations": [
+    "No independent reconstruction or certification of total returns or corporate actions.",
+    "No independent exchange-calendar check for missing trading sessions.",
+    "Vendor adjustments and historical data may be revised; hashes identify this saved snapshot only.",
+    "Recorded action fields are for audit; they are not an additional cash-flow input to adjusted-level returns."
+  ]
+}
