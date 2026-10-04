@@ -57,7 +57,7 @@ Offline synthetic demonstration:
 python -m sector_momentum demo --out reports/demo
 ```
 
-Synthetic output is marked throughout and is not historical ETF performance. Tests run offline and do not require Yahoo, network access, or matplotlib. All 44 tests passed locally. A [GitHub Actions configuration example](docs/ci_workflow_example.yml) is included but has not been activated, because the publishing credential does not have workflow permission. The initial verified run's direct package versions are in [requirements-reproduce.txt](requirements-reproduce.txt); they are not a complete transitive lockfile.
+Synthetic output is marked throughout and is not historical ETF performance. Tests run offline and do not require Yahoo, network access, or matplotlib. All 44 tests passed locally. GitHub Actions runs that same offline suite on every push to `main` and on pull requests ([.github/workflows/tests.yml](.github/workflows/tests.yml)). [docs/ci_workflow_example.yml](docs/ci_workflow_example.yml) is the earlier draft and is not what Actions runs. The initial verified run's direct package versions are in [requirements-reproduce.txt](requirements-reproduce.txt); they are not a complete transitive lockfile.
 
 ## Evidence and limits
 
