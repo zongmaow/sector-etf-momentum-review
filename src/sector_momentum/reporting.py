@@ -112,6 +112,7 @@ def run_research(prices_path: str | Path, out: str | Path, config_path: str | Pa
                 'paired_block_bootstrap': paired_block_bootstrap(a - b, config['bootstrap_block_months'],
                                                                config['bootstrap_draws'], config['bootstrap_seed'])}
         for name in ['MOM12_1', 'EW9', 'BUFFER12_1']:
+            # Strategy at primary_cost versus SPY at 0 bp slightly lowers the intercept.
             stats[period][name + '_market_regression'] = capm_hac(sample[f'{name}_{primary_cost}bps'],
                                                                sample['SPY_0bps'], rf,
                                                                config['hac_lags'])
@@ -172,6 +173,7 @@ def write_memo(out: Path, summary: pd.DataFrame, metadata: dict, demo: bool) -> 
             lines.append('The primary rule has positive average historical active return, but the uncertainty, period stability, or account risk gate is insufficient. The evidence does not justify automatic adoption.')
         else:
             lines.append('The primary rule does not improve average net return over EW9 in this snapshot. Do not select a different window just because it wins this table; secondary variants require a new prospective test.')
+        lines += ['', f'The CAPM market regression uses each reported strategy at {cost} bps per side against buy-and-hold SPY at 0 bp. Charging trading costs on the strategy and not on the market slightly lowers the intercept.']
     lines += ['', 'The full account must be compared with both SPY and an 80% SPY / 20% EW9 account. Their difference helps isolate the implemented selection rule from the decision to add a sector sleeve.', '',
               'The buffer changes both trading and holdings. Compare its gross and net outcomes before attributing an improvement to cost savings. See summary.csv, episodes.csv, and analysis.json for fixed window/cost/time comparisons.', '',
               'The four historical episodes are explanations of failure or resilience, not four separate experiments used to choose the rule. Daily dollar P&L records reconcile sector gains, SPY gains and fees to total wealth changes.', '',

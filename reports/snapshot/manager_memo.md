@@ -28,6 +28,8 @@ Final historical period interval: [-2.64%, 4.75%].
 
 The primary rule does not improve average net return over EW9 in this snapshot. Do not select a different window just because it wins this table; secondary variants require a new prospective test.
 
+The CAPM market regression uses each reported strategy at 5 bps per side against buy-and-hold SPY at 0 bp. Charging trading costs on the strategy and not on the market slightly lowers the intercept.
+
 The full account must be compared with both SPY and an 80% SPY / 20% EW9 account. Their difference helps isolate the implemented selection rule from the decision to add a sector sleeve.
 
 The buffer changes both trading and holdings. Compare its gross and net outcomes before attributing an improvement to cost savings. See summary.csv, episodes.csv, and analysis.json for fixed window/cost/time comparisons.
