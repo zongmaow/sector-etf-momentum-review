@@ -1,0 +1,107 @@
+{
+  "feature_formula_max_errors": {
+    "rank_agreement_3": 1.1102230246251565e-16,
+    "signal_std": 9.71445146547012e-17,
+    "market_past3": 9.8879238130678e-17,
+    "market_past24": 9.71445146547012e-17
+  },
+  "selected_months_verified": 312,
+  "three_way_intersections_verified": 310,
+  "threshold": 0.11786584746618972,
+  "threshold_error": 0.0,
+  "all_primary_valid": true,
+  "independent_ledgers": {
+    "F1_avoid_recovery": {
+      "relative_nav_max_error": 2.220446049250313e-15,
+      "fee_dollar_max_error": 3.637978807091713e-12,
+      "half_turnover_max_error": 2.445960101127298e-16,
+      "daily_pnl_dollar_max_error": 2.1318555809557438e-09
+    },
+    "F2_rank_agreement": {
+      "relative_nav_max_error": 2.6645352591003757e-15,
+      "fee_dollar_max_error": 8.640199666842818e-12,
+      "half_turnover_max_error": 3.3306690738754696e-16,
+      "daily_pnl_dollar_max_error": 1.735315890982747e-09
+    },
+    "F3_joint": {
+      "relative_nav_max_error": 3.219646771412954e-15,
+      "fee_dollar_max_error": 8.185452315956354e-12,
+      "half_turnover_max_error": 2.220446049250313e-16,
+      "daily_pnl_dollar_max_error": 2.7030182536691427e-09
+    },
+    "MOM": {
+      "relative_nav_max_error": 4.107825191113079e-15,
+      "fee_dollar_max_error": 1.5916157281026244e-11,
+      "half_turnover_max_error": 2.7755575615628914e-16,
+      "daily_pnl_dollar_max_error": 1.5133991837501526e-09
+    },
+    "EW9": {
+      "relative_nav_max_error": 2.220446049250313e-15,
+      "fee_dollar_max_error": 8.100187187665142e-13,
+      "half_turnover_max_error": 2.3592239273284576e-16,
+      "daily_pnl_dollar_max_error": 2.2628228180110455e-09
+    }
+  },
+  "hac_max_error": 5.88418203051333e-15,
+  "conditional_mean_max_error": 1.0408340855860843e-16,
+  "holm_max_error": 5.551115123125783e-16,
+  "constant_engine_monthly_checks": [
+    {
+      "cost": 0,
+      "gate": "MOM",
+      "max_monthly_error": 9.8879238130678e-17
+    },
+    {
+      "cost": 0,
+      "gate": "EW9",
+      "max_monthly_error": 9.8879238130678e-17
+    },
+    {
+      "cost": 5,
+      "gate": "MOM",
+      "max_monthly_error": 9.71445146547012e-17
+    },
+    {
+      "cost": 5,
+      "gate": "EW9",
+      "max_monthly_error": 9.93129189996722e-17
+    },
+    {
+      "cost": 10,
+      "gate": "MOM",
+      "max_monthly_error": 9.725293487194975e-17
+    },
+    {
+      "cost": 10,
+      "gate": "EW9",
+      "max_monthly_error": 9.974659986866641e-17
+    }
+  ],
+  "hash_matches": {
+    "prices": true,
+    "protocol": true,
+    "script": true
+  },
+  "bootstrap_empty_repetitions": [
+    {
+      "hypothesis": "H1_recovery",
+      "block6_invalid": 3629,
+      "block12_invalid": 4858
+    },
+    {
+      "hypothesis": "H2_agreement",
+      "block6_invalid": 0,
+      "block12_invalid": 0
+    },
+    {
+      "hypothesis": "H3_dispersion",
+      "block6_invalid": 0,
+      "block12_invalid": 0
+    },
+    {
+      "hypothesis": "H4_joint",
+      "block6_invalid": 0,
+      "block12_invalid": 0
+    }
+  ]
+}

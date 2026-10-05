@@ -66,10 +66,25 @@ The first script parses only the **monthly value-weighted industry** section, tr
 
 French industry portfolios are research baskets classified by SIC, not sector ETFs. Their monthly timing allows theoretical prior-month-end formation, not the ETF engine's next-session-close execution. Five basis points are hypothetical outer-basket trading costs; constituent turnover and historically attainable implementation costs are not measured. A changed result cannot be attributed solely to the industry count.
 
-## What this integration verifies
+## Verify the regenerated numerical outputs
 
-Every included historical snapshot file remains byte-identical to its source bundle. Syntax and all six `--help` paths were checked during integration; these checks perform no data calculation. The completed financial research was not rerun merely to move files. Portability changes concern paths, CLI lifecycle, output placement and audit-input provenance, with no changes to thresholds, signals, seeds, test families or trading equations.
+After running the numerical commands above, compare their outputs with the preserved snapshot:
 
-The original independent review predates the final source's switch from cached baseline returns to recomputation. Its references to that cache and original local file names are preserved as historical audit observations, not descriptions of the integrated scripts. Original one-machine packaging/report-generation code is excluded; the published main memo and figures are retained as historical artifacts.
+```sh
+python research/effectiveness/verify_reproduction.py \
+  --snapshot reports/effectiveness_snapshot \
+  --etf-dir reports/local/effectiveness \
+  --mechanism-dir reports/local/effectiveness/mechanism \
+  --external-dir reports/local/effectiveness/external \
+  --out reports/local/effectiveness/comparison.json
+```
+
+The offline comparator checks 25 CSV files for ordered schema, row counts, text and numeric equality, and three core JSON files for structure and all non-provenance fields. Only named top-level provenance fields are excluded; actual input and script identities are separately recorded. Missing artifacts, changed fields or differences above `1e-12` fail with a nonzero exit status. The [2026-10-05 check](../../reports/reproduction_check/README.md) found zero numerical differences and retained the regenerated independent audit. Seven synthetic offline smoke tests cover this comparator and known HAC/Holm numerical cases without supplier data.
+
+## What the integration and follow-up verify
+
+Every included historical snapshot file remains byte-identical to its source bundle. Syntax and all six original `--help` paths were checked during integration; these checks perform no data calculation. The completed financial research was not rerun merely to move files. A separate 2026-10-05 numerical rerun subsequently verified the portable calculations, as documented above. Portability changes concern paths, CLI lifecycle, output placement and audit-input provenance, with no changes to thresholds, signals, seeds, test families or trading equations.
+
+The original independent review predates the final source's switch from cached baseline returns to recomputation. Its references to that cache and original local file names are preserved as historical audit observations, not descriptions of the integrated scripts. Original one-machine packaging/report-generation code is excluded; the published main memo and figures are retained as historical artifacts. The two PNG figures were not redrawn by the numerical verification, and the French narrative writer was not rerun in that check. Figure and narrative regeneration therefore remain outside its verified scope. [Snapshot provenance](../../docs/snapshot_provenance.md) explains the historical source hashes and editorial changes.
 
 If vendor history has been revised, new hashes and results are a different data snapshot. Matching the historical raw-input hashes is necessary for an exact numerical comparison; the historical snapshot is not a point-in-time data feed or a prospective validation.

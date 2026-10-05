@@ -295,5 +295,17 @@
     "duplicated mechanism run_output.json",
     "original one-machine packaging/report builder"
   ],
-  "validation_scope": "Syntax and six --help commands; all 39 preserved snapshot hashes and six ported-script hashes; main memo/new index local links; 21 unchanged ETF/French numerical-function ASTs; four primary CLIs explicitly reject missing saved inputs. Financial study is the preserved 2026-10-04 run, not rerun during integration."
+  "validation_scope": "Syntax and six --help commands; all 39 preserved snapshot hashes and six ported-script hashes; main memo/new index local links; 21 unchanged ETF/French numerical-function ASTs; four primary CLIs explicitly reject missing saved inputs. Financial study is the preserved 2026-10-04 run, not rerun during integration.",
+  "subsequent_numerical_verification": {
+    "date": "2026-10-05",
+    "verified_research_commit": "dd1c4a9",
+    "record": "reports/reproduction_check/verification_manifest.json",
+    "comparison": "reports/reproduction_check/comparison.json",
+    "csv_files": 25,
+    "core_json_files": 3,
+    "max_abs_numeric_difference": 0.0,
+    "historical_hashes_preserved": true,
+    "figure_rendering_rerun": false,
+    "mechanism_baseline_rebuilt_from_saved_inputs": true
+  }
 }

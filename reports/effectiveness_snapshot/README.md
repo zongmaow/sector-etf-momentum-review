@@ -20,6 +20,7 @@ The ETF study did not confirm a stable, cost-adjusted enable/disable rule. Reali
 | [French validation](external/external_validation_zh.md) / [provenance](external/provenance.json) | External industry classification/timing/cost limits, results and original source hashes |
 | [Original ETF manifest](etf_study_manifest.json) | Original price, protocol, engine, signal and script hashes |
 | [Integration manifest](integration_manifest.json) | Byte-identical snapshot files; original/integrated script hashes and portability changes |
+| [Numerical reproduction check](../reproduction_check/README.md) | Follow-up rerun: 25 CSV and three core JSON summaries agree; regenerated independent audit retained |
 
 The included monthly return/ledger/attribution tables support tracing the narrative without publishing original vendor data. Raw ETF prices, risk-free input, French supplier downloads, and parsed raw French return/factor histories are excluded. Full filter trades/P&L can be regenerated locally instead of duplicating them in the public snapshot.
 
@@ -31,4 +32,6 @@ The original baseline report uses **2,000 draws, seed 2026, six-month blocks**. 
 
 H1 has only five ETF months in one episode. Six/twelve-month bootstraps omit 18.15%/24.29% of draws with missing conditional groups; its retained-draw intervals are fragile descriptions, not reliable general crisis-recovery evidence. Original histories were already explored, so neither the calendar splits nor the external history is genuinely untouched prospective data.
 
-Historical review text and original manifests retain original file names and source hashes. The integrated scripts have different hashes after portability changes; the integration manifest makes this difference explicit. During integration, only syntax/CLI/hash checks were run. The complete underlying financial calculation and independent audit date remains 2026-10-04.
+Historical review text and original manifests retain original file names and source hashes. The integrated scripts have different hashes after portability changes; the integration manifest makes this difference explicit. During integration, only syntax/CLI/hash checks were run. The original research and audit date remains 2026-10-04; a separate 2026-10-05 follow-up rerun verified the portable numerical calculations and retained its own audit and identities. Historical hashes were not replaced. [Snapshot provenance](../../docs/snapshot_provenance.md) explains that distinction.
+
+The two historical effectiveness PNG files were produced by the excluded one-machine builder. This follow-up reproduced their underlying numerical tables but did not rerender the figures or run the French narrative writer; it therefore makes no claim of complete image/narrative regeneration.

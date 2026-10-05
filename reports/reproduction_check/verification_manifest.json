@@ -1,0 +1,72 @@
+{
+  "verification_date": "2026-10-05",
+  "verified_research_commit": "dd1c4a9",
+  "classification": "numerical reproduction of an existing retrospective snapshot; no new inference",
+  "original_saved_inputs_sha256": {
+    "data/raw/total_return.csv": "e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c",
+    "data/raw/risk_free.csv": "51bc8592868419486806f9832f0adc27f982bc2738d9f508a0038c59eda4a6ae",
+    "10_Industry_Portfolios.csv": "18ed376fc42e2327ceaf3d65a02521a6512e7f9e3001007c4da69d7db108aa82",
+    "F-F_Research_Data_Factors.csv": "d7d7fe37b150b5b15c9c069b3ba101dfe1af568c6d7b5db6e73cd0a6c0c9e5e5"
+  },
+  "ported_script_sha256": {
+    "research/effectiveness/analyze_mechanism.py": "30fc92bf91428accda1fad29c3119cfb0b212d84affdff69dc349ef78a94b0d2",
+    "research/effectiveness/external/analyze_conditions.py": "29122a0c187c69ed21bc4354afb8069a720d2740a55fa2c2d3964b6cad39dc84",
+    "research/effectiveness/external/analyze_external.py": "80776490198497f1efa6e5bd50d581d536789b21fa61e5b22d693cf60d65563f",
+    "research/effectiveness/external/write_summary.py": "c9cd5224a95d1e288d665a4aea2eb06860e518a579f261e6c22b564655fc5383",
+    "research/effectiveness/independent_audit.py": "03f93f1f4e3852debfcadf4db044f9a3784c56ea00edeb310e2b1894f7045902",
+    "research/effectiveness/study.py": "956557e0129b132a4215276f75cfca2d6859f81a4972f90cb18f27da06d615b8"
+  },
+  "imported_project_source_sha256": {
+    "src/sector_momentum/engine.py": "670f7b1e6917fd6c1ce3cea01db72ff7bacd4376194b9bb61d30bd20e8da2b1a",
+    "src/sector_momentum/signals.py": "559acf846c472bdbf3edc1cf55a2cb471313f5476702473b633dd6098007a492",
+    "src/sector_momentum/evaluation.py": "bc9e4fc10211bb9603796ab552ed33eda1ac71e1994649e1a99bdfff933601fb"
+  },
+  "protocol_sha256": "9cdb1e71ccfdfb7b10631cacc8337a4a496b1c6692fe572dd038feccb403c823",
+  "comparator_sha256": "f1f5e7da38e18938c03cb5055bcc57c599ba86e708af9376532068e488427525",
+  "comparison_record": "comparison.json",
+  "comparison_record_sha256": "05ae4101ea849de1f19dba9ecaf86458be86d7b0df649c6f117a7ff95e861cb8",
+  "numerical_comparison": {
+    "csv_files": 25,
+    "core_json_files": 3,
+    "max_abs_numeric_difference": 0.0,
+    "csv_schema_and_text_equal": true,
+    "json_non_provenance_fields_equal": true
+  },
+  "excluded_from_numeric_json_comparison": {
+    "external/conditional_results.json": [
+      "raw_input_sha256",
+      "script_sha256"
+    ],
+    "mechanism/mechanism_statistics.json": [
+      "input_sha256"
+    ]
+  },
+  "independent_audit_record": "independent_calculation_audit.json",
+  "boundaries": [
+    "Supplier files and daily baseline audit outputs remain local and are not distributed.",
+    "PNG figures and original one-machine report builder were not rerendered; figure rendering is not reproduced by this check.",
+    "The external summary writer has a recorded script identity but was not run in the numerical rerun.",
+    "This comparison cannot certify vendor accuracy or create untouched out-of-sample evidence."
+  ],
+  "independent_audit_record_sha256": "de5b022ed51f8ab4dd5c3356c2f2c479adc289f6f6ea3e5e959830bfe1a7013b",
+  "fresh_baseline_rebuild": {
+    "executed": true,
+    "command": "PYTHONPATH=src python -m sector_momentum run --prices data/raw/total_return.csv --rf data/raw/risk_free.csv --out reports/local --no-plots",
+    "path_notice": "Repository-relative normalized output location; actual rerun used a separate private working directory.",
+    "mechanism_inputs_sha256": {
+      "reports/local/daily_nav.csv": "06769ede54f4115de8a93ac454d72d2b55434889c66d4064b9e0efe02826a720",
+      "reports/local/audit/MOM12_1/decisions.csv": "82a85ca13b3db6b3863b75e20686909db80979a18a2db226b62f291bb166ee16",
+      "reports/local/audit/MOM12_1/trades.csv": "88d2390745ab41074605c4d9b46bc467c6fec99ca7f444a88974777c7ac646f0",
+      "reports/local/audit/EW9/trades.csv": "ed621283877a28fcb3a6b4850177d2d35b05a3499b938e0801e29e927ff4e0e9",
+      "reports/local/audit/MOM12_1/daily_pnl_dollars.csv": "9cdb069e68e39c53c44cbee2b3b788a37614943c63e4f147c25a4909a93584ca",
+      "reports/local/audit/EW9/daily_pnl_dollars.csv": "e8d9ac5d18e252d8b322a2618bcd726f531b5ec6885ecef2b317ffadd7c9106a"
+    },
+    "config_sha256": "af0eaedad8d28e8b6be7931bfd7637713f384496903b0afc0d8baf7bb98911e1",
+    "source_files_sha256_at_check": {
+      "src/sector_momentum/__main__.py": "261bd9e2cef8a2c9657970c16529564fb562e31f5f476416688be8346c6fe265",
+      "src/sector_momentum/reporting.py": "30d78047936b4b2c384a84cfc8299f83448e6ad935bd94433251023dd573d7ed",
+      "src/sector_momentum/engine.py": "670f7b1e6917fd6c1ce3cea01db72ff7bacd4376194b9bb61d30bd20e8da2b1a"
+    },
+    "validation_scope": "Baseline rerun supplies fresh mechanism inputs; not a comparison of every original primary snapshot artifact."
+  }
+}

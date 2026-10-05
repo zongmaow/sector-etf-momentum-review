@@ -1,11 +1,11 @@
 {
   "study": "Retrospective matched-concentration diagnostics; not an alpha significance test",
-  "generated_at_utc": "2026-10-05T22:09:26.816219+00:00",
+  "generated_at_utc": "2026-10-05T07:40:13.840814+00:00",
   "start": "2000-01-01",
   "end": "2025-12-31",
   "prices_sha256": "e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c",
-  "script_sha256": "4c916177097283647a41410afe17c33fdebcd6328f537731dda3aa817287a900",
-  "protocol_sha256": "625ae6b0c3c9e34188a69c2bb949a175a3616a8ba323dd3c6545ab1091a72969",
+  "script_sha256": "442f021729e9859019b7bfad4eb36968fe714931d18beaac6c307944aceb2cdb",
+  "protocol_sha256": "986a8a999330e36b9fa6315d6f5a3d446a5f03e98ae0043e2bc822bda1c4ffef",
   "numpy_version": "2.3.5",
   "pandas_version": "2.2.3",
   "coverage": {
@@ -68,13 +68,6 @@
       "share_random_cagr_above_ew9": 0.430908203125,
       "share_random_cagr_above_spy": 0.619873046875,
       "momentum_cagr_percentile_midrank": 0.547607421875,
-      "momentum_shallower_drawdown_percentile_midrank": 0.94677734375,
-      "share_random_drawdown_shallower_than_momentum": 0.05322265625,
-      "momentum_drawdown_episode": {
-        "max_drawdown": -0.4610077543346177,
-        "peak_date": "2008-05-20",
-        "trough_date": "2009-03-09"
-      },
       "quantiles": {
         "cagr": [
           0.06241232778835587,
@@ -150,13 +143,6 @@
       "share_random_cagr_above_ew9": 0.4140625,
       "share_random_cagr_above_spy": 0.633056640625,
       "momentum_cagr_percentile_midrank": 0.56103515625,
-      "momentum_shallower_drawdown_percentile_midrank": 0.955078125,
-      "share_random_drawdown_shallower_than_momentum": 0.044921875,
-      "momentum_drawdown_episode": {
-        "max_drawdown": -0.4610077543346177,
-        "peak_date": "2008-05-20",
-        "trough_date": "2009-03-09"
-      },
       "quantiles": {
         "cagr": [
           0.06535854453958623,
@@ -232,13 +218,6 @@
       "share_random_cagr_above_ew9": 0.35498046875,
       "share_random_cagr_above_spy": 0.5390625,
       "momentum_cagr_percentile_midrank": 0.548095703125,
-      "momentum_shallower_drawdown_percentile_midrank": 0.94873046875,
-      "share_random_drawdown_shallower_than_momentum": 0.05126953125,
-      "momentum_drawdown_episode": {
-        "max_drawdown": -0.4619951434318772,
-        "peak_date": "2008-05-20",
-        "trough_date": "2009-03-09"
-      },
       "quantiles": {
         "cagr": [
           0.05950996078614973,
@@ -314,13 +293,6 @@
       "share_random_cagr_above_ew9": 0.326416015625,
       "share_random_cagr_above_spy": 0.54052734375,
       "momentum_cagr_percentile_midrank": 0.561767578125,
-      "momentum_shallower_drawdown_percentile_midrank": 0.95703125,
-      "share_random_drawdown_shallower_than_momentum": 0.04296875,
-      "momentum_drawdown_episode": {
-        "max_drawdown": -0.4619951434318772,
-        "peak_date": "2008-05-20",
-        "trough_date": "2009-03-09"
-      },
       "quantiles": {
         "cagr": [
           0.06245450781723255,
@@ -396,13 +368,6 @@
       "share_random_cagr_above_ew9": 0.2890625,
       "share_random_cagr_above_spy": 0.453369140625,
       "momentum_cagr_percentile_midrank": 0.54833984375,
-      "momentum_shallower_drawdown_percentile_midrank": 0.950439453125,
-      "share_random_drawdown_shallower_than_momentum": 0.049560546875,
-      "momentum_drawdown_episode": {
-        "max_drawdown": -0.4629807384077155,
-        "peak_date": "2008-05-20",
-        "trough_date": "2009-03-09"
-      },
       "quantiles": {
         "cagr": [
           0.056617956338984865,
@@ -478,13 +443,6 @@
       "share_random_cagr_above_ew9": 0.250244140625,
       "share_random_cagr_above_spy": 0.440185546875,
       "momentum_cagr_percentile_midrank": 0.561767578125,
-      "momentum_shallower_drawdown_percentile_midrank": 0.958740234375,
-      "share_random_drawdown_shallower_than_momentum": 0.041259765625,
-      "momentum_drawdown_episode": {
-        "max_drawdown": -0.4629807384077155,
-        "peak_date": "2008-05-20",
-        "trough_date": "2009-03-09"
-      },
       "quantiles": {
         "cagr": [
           0.059558328941398064,

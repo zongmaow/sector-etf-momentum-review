@@ -1,0 +1,293 @@
+{
+  "passed": true,
+  "absolute_numeric_tolerance": 1e-12,
+  "csv_files_compared": 25,
+  "core_json_files_compared": 3,
+  "csv_results": [
+    {
+      "file": "etf_condition_tests.csv",
+      "reference_sha256": "dfafb600b42cc1729e4128f466d31298c4aee041e461d8e1d0ddd146b5f7580d",
+      "regenerated_sha256": "dfafb600b42cc1729e4128f466d31298c4aee041e461d8e1d0ddd146b5f7580d",
+      "rows": 12,
+      "columns": 34,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 284,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "etf_condition_time_checks.csv",
+      "reference_sha256": "757e771daede17cc1a236b8994840ecc18c653d87a5f25d4dbb4c3be0bb8f85d",
+      "regenerated_sha256": "757e771daede17cc1a236b8994840ecc18c653d87a5f25d4dbb4c3be0bb8f85d",
+      "rows": 12,
+      "columns": 7,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 58,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "etf_leave_one_year_out.csv",
+      "reference_sha256": "2237cf278f8511ab2fecc4a5d01969f80db8940d579ed2e65e6c0a9feb4948e4",
+      "regenerated_sha256": "2237cf278f8511ab2fecc4a5d01969f80db8940d579ed2e65e6c0a9feb4948e4",
+      "rows": 64,
+      "columns": 5,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 255,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "etf_monthly_features.csv",
+      "reference_sha256": "623b1d8f0059efd131994dbe49ca6a9f5f6f1a536d94d5e50fa4177ebbe0945d",
+      "regenerated_sha256": "623b1d8f0059efd131994dbe49ca6a9f5f6f1a536d94d5e50fa4177ebbe0945d",
+      "rows": 312,
+      "columns": 15,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 1858,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "filter_inference.csv",
+      "reference_sha256": "ca40e389502f9c6c35310ff95d1ec1fc09c4b9777c8458a6125682a4e863683a",
+      "regenerated_sha256": "ca40e389502f9c6c35310ff95d1ec1fc09c4b9777c8458a6125682a4e863683a",
+      "rows": 18,
+      "columns": 14,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 168,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "filter_summary.csv",
+      "reference_sha256": "06e77cfef41227f11cd5072466503aefe0ab4fe9a9633c1807d65dce235dc157",
+      "regenerated_sha256": "06e77cfef41227f11cd5072466503aefe0ab4fe9a9633c1807d65dce235dc157",
+      "rows": 15,
+      "columns": 10,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 135,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "filter_time_checks.csv",
+      "reference_sha256": "acce9ad3cfba96e44243122e47e25853b5531f1651bc26ea70ec6750ceff7466",
+      "regenerated_sha256": "acce9ad3cfba96e44243122e47e25853b5531f1651bc26ea70ec6750ceff7466",
+      "rows": 30,
+      "columns": 7,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 150,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "filters_daily_nav_5bps.csv",
+      "reference_sha256": "1bd5c98d228a69e05bb91cbe3ebcf8cd880f9af06def280578bb1d13e8a4af5f",
+      "regenerated_sha256": "1bd5c98d228a69e05bb91cbe3ebcf8cd880f9af06def280578bb1d13e8a4af5f",
+      "rows": 4025,
+      "columns": 6,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 20125,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "filters_monthly_0bps.csv",
+      "reference_sha256": "29f20ac8795a2d4b91baae2930a3ff53281849682054e2574918fbfcc91167c2",
+      "regenerated_sha256": "29f20ac8795a2d4b91baae2930a3ff53281849682054e2574918fbfcc91167c2",
+      "rows": 192,
+      "columns": 6,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 960,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "filters_monthly_5bps.csv",
+      "reference_sha256": "e381ae40905ff44539ad7856eefa537ec859fb1e200cdcf39c74eab8e6cf42fb",
+      "regenerated_sha256": "e381ae40905ff44539ad7856eefa537ec859fb1e200cdcf39c74eab8e6cf42fb",
+      "rows": 192,
+      "columns": 6,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 960,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "filters_monthly_10bps.csv",
+      "reference_sha256": "5533cd03c45c660409b3aa5c5fdf05c5d6f679ffaa1ecea5cfdfbac496e10a97",
+      "regenerated_sha256": "5533cd03c45c660409b3aa5c5fdf05c5d6f679ffaa1ecea5cfdfbac496e10a97",
+      "rows": 192,
+      "columns": 6,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 960,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "ledger_validation.csv",
+      "reference_sha256": "63ba555909bb1ed028f6b09d36577a8e8d22f3b40b90cef96088f51f28c03695",
+      "regenerated_sha256": "63ba555909bb1ed028f6b09d36577a8e8d22f3b40b90cef96088f51f28c03695",
+      "rows": 6,
+      "columns": 3,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 12,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "recomputed_baseline_monthly.csv",
+      "reference_sha256": "391f4365a3ce177b2c81cd6c64b21727262c8a2fbe458fe79f66a552748dd43a",
+      "regenerated_sha256": "391f4365a3ce177b2c81cd6c64b21727262c8a2fbe458fe79f66a552748dd43a",
+      "rows": 312,
+      "columns": 8,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 2184,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "external/basic_summary.csv",
+      "reference_sha256": "344d0bf22096aa9fd77f4e35719daff9a6ca75d6d32fdd56c16c99b0f1e8fbd5",
+      "regenerated_sha256": "344d0bf22096aa9fd77f4e35719daff9a6ca75d6d32fdd56c16c99b0f1e8fbd5",
+      "rows": 10,
+      "columns": 21,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 193,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "external/comparison_returns.csv",
+      "reference_sha256": "df6dd4ccd77c1f5d1ecaa241de2a0ce98a9177e84d9456787f3dffdea542147a",
+      "regenerated_sha256": "df6dd4ccd77c1f5d1ecaa241de2a0ce98a9177e84d9456787f3dffdea542147a",
+      "rows": 792,
+      "columns": 4,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 2376,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "external/conditional_results.csv",
+      "reference_sha256": "243a318393e5cfc0fd5a7146dbc4b918aa6e5811fa137ddb9debb0f87fe06b22",
+      "regenerated_sha256": "243a318393e5cfc0fd5a7146dbc4b918aa6e5811fa137ddb9debb0f87fe06b22",
+      "rows": 16,
+      "columns": 19,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 240,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "external/conditions_and_outcomes.csv",
+      "reference_sha256": "6a728b6a764ab00b56a018e1157d43d41ab2959df4fa73d407eb845d98344916",
+      "regenerated_sha256": "6a728b6a764ab00b56a018e1157d43d41ab2959df4fa73d407eb845d98344916",
+      "rows": 792,
+      "columns": 20,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 8712,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "external/ew10_monthly_ledger.csv",
+      "reference_sha256": "54e26c5f36dec8f3a393fbfca9b99eb769eed6f622c5c31a24feb629d02ade9d",
+      "regenerated_sha256": "54e26c5f36dec8f3a393fbfca9b99eb769eed6f622c5c31a24feb629d02ade9d",
+      "rows": 792,
+      "columns": 38,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 26928,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "external/ff10_holding_month_scores.csv",
+      "reference_sha256": "0530ee5b216cad3e64313b5c19291537912e8c92bb1c068fb90fb08bb2975c37",
+      "regenerated_sha256": "0530ee5b216cad3e64313b5c19291537912e8c92bb1c068fb90fb08bb2975c37",
+      "rows": 792,
+      "columns": 11,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 7920,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "external/leave_one_year_out.csv",
+      "reference_sha256": "a864ea4a53b5c4af0064f096e3b9b7b7be62eaa41097671008daf7c6235007be",
+      "regenerated_sha256": "a864ea4a53b5c4af0064f096e3b9b7b7be62eaa41097671008daf7c6235007be",
+      "rows": 264,
+      "columns": 13,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 2376,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "external/mom12_1_monthly_ledger.csv",
+      "reference_sha256": "a7d166677fd9dd7824e803d226f06617f566367800902ace75c1fc865e60410d",
+      "regenerated_sha256": "a7d166677fd9dd7824e803d226f06617f566367800902ace75c1fc865e60410d",
+      "rows": 792,
+      "columns": 38,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 26928,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "mechanism/calendar_month_active_attribution.csv",
+      "reference_sha256": "edfd686fa2f11cfb7d7a4df45a69b67cdf4ed3754770e2997f519ad7f97d4d25",
+      "regenerated_sha256": "edfd686fa2f11cfb7d7a4df45a69b67cdf4ed3754770e2997f519ad7f97d4d25",
+      "rows": 312,
+      "columns": 12,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 3432,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "mechanism/calendar_year_active_attribution.csv",
+      "reference_sha256": "f0c221ca29e3096b30efb6a70ccdeac928ee8b7adb7b88927166f030d5070a2d",
+      "regenerated_sha256": "f0c221ca29e3096b30efb6a70ccdeac928ee8b7adb7b88927166f030d5070a2d",
+      "rows": 26,
+      "columns": 12,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 286,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "mechanism/execution_intervals.csv",
+      "reference_sha256": "d27da590be4046d71f3ef91cee144bce1a077fa63a04bee5353e9f6114fa9467",
+      "regenerated_sha256": "d27da590be4046d71f3ef91cee144bce1a077fa63a04bee5353e9f6114fa9467",
+      "rows": 311,
+      "columns": 23,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 5909,
+      "max_abs_numeric_difference": 0.0
+    },
+    {
+      "file": "mechanism/interval_sector_gross_active.csv",
+      "reference_sha256": "fbd7a91008dfad47cc54481cf40b016e5e8d3fb13763fb4817b38d7bead6d396",
+      "regenerated_sha256": "fbd7a91008dfad47cc54481cf40b016e5e8d3fb13763fb4817b38d7bead6d396",
+      "rows": 311,
+      "columns": 10,
+      "schema_and_text_equal": true,
+      "numeric_cell_count": 2799,
+      "max_abs_numeric_difference": 0.0
+    }
+  ],
+  "json_results": [
+    {
+      "file": "external/basic_summary.json",
+      "reference_sha256": "da4d0e7d8717ae05fa971e910d3b0e3de1afaafce53328e038707713c4dafaec",
+      "regenerated_sha256": "da4d0e7d8717ae05fa971e910d3b0e3de1afaafce53328e038707713c4dafaec",
+      "numeric_leaf_count": 493,
+      "max_abs_numeric_difference": 0.0,
+      "non_numeric_fields_equal": true,
+      "excluded_top_level_keys": []
+    },
+    {
+      "file": "external/conditional_results.json",
+      "reference_sha256": "523f023a77dbb1358e8b423d050e99176b9abdcfc967401ff0d835cc6e86acc2",
+      "regenerated_sha256": "95bb405187af5b610fd40c3690112a41e80277cc297ea954ffbd269d9f73b72f",
+      "numeric_leaf_count": 3500,
+      "max_abs_numeric_difference": 0.0,
+      "non_numeric_fields_equal": true,
+      "excluded_top_level_keys": [
+        "raw_input_sha256",
+        "script_sha256"
+      ]
+    },
+    {
+      "file": "mechanism/mechanism_statistics.json",
+      "reference_sha256": "2d532f42c377cfd9703e32e23cf731df7876bab12818576bb81b8a916fe07f7a",
+      "regenerated_sha256": "89fe6a5f68c0360ccace35b96f5acb2f6baa81ab3d8ea6ac5b1cb3bd55d781f3",
+      "numeric_leaf_count": 608,
+      "max_abs_numeric_difference": 0.0,
+      "non_numeric_fields_equal": true,
+      "excluded_top_level_keys": [
+        "input_sha256"
+      ]
+    }
+  ],
+  "failures": []
+}

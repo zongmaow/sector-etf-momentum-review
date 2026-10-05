@@ -1,0 +1,114 @@
+{
+  "format": "UTF-8 CSV, gzip with mtime=0",
+  "all_cost_levels_retained_bps": [
+    0,
+    5,
+    10
+  ],
+  "files": [
+    {
+      "file": "example_daily_nav_5bps.csv.gz",
+      "decompressed_csv_sha256": "1938c26b3caa96d1e9ee29f65778183d7e06320366fb6f321c41b9b3a12c4245",
+      "csv_bytes": 256137,
+      "archive_bytes": 102771,
+      "prior_file": "example_daily_nav_5bps.csv",
+      "prior_csv_sha256": "1938c26b3caa96d1e9ee29f65778183d7e06320366fb6f321c41b9b3a12c4245",
+      "decompressed_matches_prior_bytes": true
+    },
+    {
+      "file": "identity_mappings.csv.gz",
+      "decompressed_csv_sha256": "3f1b0c3cec07e5fa04d33ab029e384cf26f7cf1ca91d408fe1d178d84dfd7b57",
+      "csv_bytes": 166870,
+      "archive_bytes": 34678,
+      "prior_file": "identity_mappings.csv",
+      "prior_csv_sha256": "3f1b0c3cec07e5fa04d33ab029e384cf26f7cf1ca91d408fe1d178d84dfd7b57",
+      "decompressed_matches_prior_bytes": true
+    },
+    {
+      "file": "identity_remap_0bps_paths.csv.gz",
+      "decompressed_csv_sha256": "3d233d1b5490025eb81440e8724ce11a6c53ec5cb0171323f94157960073abbe",
+      "csv_bytes": 466836,
+      "archive_bytes": 205438,
+      "prior_file": "identity_remap_0bps_paths.csv",
+      "prior_csv_sha256": "3d233d1b5490025eb81440e8724ce11a6c53ec5cb0171323f94157960073abbe",
+      "decompressed_matches_prior_bytes": true
+    },
+    {
+      "file": "identity_remap_10bps_paths.csv.gz",
+      "decompressed_csv_sha256": "d75f7d880085910d83d26b4dbb9a74cb3979c0ee14f1224880f9de971478a4fd",
+      "csv_bytes": 528688,
+      "archive_bytes": 231672,
+      "prior_file": "identity_remap_10bps_paths.csv",
+      "prior_csv_sha256": "d75f7d880085910d83d26b4dbb9a74cb3979c0ee14f1224880f9de971478a4fd",
+      "decompressed_matches_prior_bytes": true
+    },
+    {
+      "file": "identity_remap_5bps_paths.csv.gz",
+      "decompressed_csv_sha256": "a082ebda60a7512f2cc56b8e91f3030913432997e5ea84dc6cadd883c98a6159",
+      "csv_bytes": 528343,
+      "archive_bytes": 231166,
+      "prior_file": "identity_remap_5bps_paths.csv",
+      "prior_csv_sha256": "a082ebda60a7512f2cc56b8e91f3030913432997e5ea84dc6cadd883c98a6159",
+      "decompressed_matches_prior_bytes": true
+    },
+    {
+      "file": "identity_remap_sample_trades_5bps.csv.gz",
+      "decompressed_csv_sha256": "777a719890568628262c1386c13ebaa7fd119828eb54122414952a69c5e4628d",
+      "csv_bytes": 66190,
+      "archive_bytes": 27164,
+      "prior_file": "identity_remap_sample_trades_5bps.csv",
+      "prior_csv_sha256": "777a719890568628262c1386c13ebaa7fd119828eb54122414952a69c5e4628d",
+      "decompressed_matches_prior_bytes": true
+    },
+    {
+      "file": "overlap_matched_0bps_paths.csv.gz",
+      "decompressed_csv_sha256": "cc39bf1795d537bd274b5f94580b89fb8fd53efbcc9f374a2f9d118a4318958f",
+      "csv_bytes": 467498,
+      "archive_bytes": 205690,
+      "prior_file": "overlap_matched_0bps_paths.csv",
+      "prior_csv_sha256": "cc39bf1795d537bd274b5f94580b89fb8fd53efbcc9f374a2f9d118a4318958f",
+      "decompressed_matches_prior_bytes": true
+    },
+    {
+      "file": "overlap_matched_10bps_paths.csv.gz",
+      "decompressed_csv_sha256": "3808f3be8ba8fa07c616878544e78269e588e1abe4f20dd29577bd43902d4016",
+      "csv_bytes": 529189,
+      "archive_bytes": 232017,
+      "prior_file": "overlap_matched_10bps_paths.csv",
+      "prior_csv_sha256": "3808f3be8ba8fa07c616878544e78269e588e1abe4f20dd29577bd43902d4016",
+      "decompressed_matches_prior_bytes": true
+    },
+    {
+      "file": "overlap_matched_5bps_paths.csv.gz",
+      "decompressed_csv_sha256": "68d858f5eec1aa0bb3077be3ec6e464661bdd41fe272bbd3f67749cac551543e",
+      "csv_bytes": 528914,
+      "archive_bytes": 231697,
+      "prior_file": "overlap_matched_5bps_paths.csv",
+      "prior_csv_sha256": "68d858f5eec1aa0bb3077be3ec6e464661bdd41fe272bbd3f67749cac551543e",
+      "decompressed_matches_prior_bytes": true
+    },
+    {
+      "file": "overlap_matched_sample_trades_5bps.csv.gz",
+      "decompressed_csv_sha256": "b87df6d68a2b79fe72cd0403f21cef52f04637005d4f990b941998069603bb17",
+      "csv_bytes": 65870,
+      "archive_bytes": 27234,
+      "prior_file": "overlap_matched_sample_trades_5bps.csv",
+      "prior_csv_sha256": "b87df6d68a2b79fe72cd0403f21cef52f04637005d4f990b941998069603bb17",
+      "decompressed_matches_prior_bytes": true
+    }
+  ],
+  "prior_results_commit": "dd1c4a9475ed3cf998d5825ea3b21e6eabf3b40f",
+  "prior_summary_record": "summary_dd1c4a9.json",
+  "prior_summary_sha256": "fddc88a91d6100900676b72d650a0e99e55418b8878df6dc7049d024896341f7",
+  "regenerated_summary_sha256": "e41046788b0a29223dc37625893494c6d6cc10012bf949f49c6ec4f024d3974a",
+  "unchanged_financial_results": {
+    "all_original_summary_values_equal": true,
+    "selection_hashes_equal": true,
+    "distribution_and_ledger_csv_bytes_equal": true
+  },
+  "report_additions": [
+    "Maximum-drawdown historical midrank and peak/trough dates; retrospective follow-up",
+    "Headless plotting backend",
+    "Lossless gzip storage; all original paths and cost levels retained"
+  ]
+}

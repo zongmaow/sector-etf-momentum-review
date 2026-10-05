@@ -12,28 +12,28 @@ A hypothetical US equity portfolio manager is considering a sector rotation slee
 
 Momentum beat SPY on full-period CAGR but lagged EW9; its shallower historical drawdown is a separate risk outcome. EW9's historical ranking is not evidence that all passive strategies beat all active strategies. The primary mean active return versus EW9 was −0.28 percentage points per year, and its uncertainty interval crossed zero. Subsequent mechanism, environment and external-data checks did not establish a reliable way to decide in advance when this nine-ETF rule should be enabled.
 
-The new [concentrated controls](reports/random_control_snapshot/README.md) place momentum CAGR around the **55th–56th historical percentile** under identity remapping and monthly overlap matching. This diagnostic does not show a pronounced return advantage from the selected industry identities; momentum's shallower historical drawdown remains a separate observation. These percentiles are not significance tests or future success probabilities.
+The [concentrated controls](reports/random_control_snapshot/README.md) place momentum CAGR around the **55th–56th historical percentile** under identity remapping and monthly overlap matching. Its maximum drawdown was shallower than **94.87% / 95.70%** of the respective control paths. These are historical diagnostics; the risk difference has not been established across independent events, and neither percentile is a significance test or future success probability.
 
 ![Three-sector random-control CAGR distributions](reports/random_control_snapshot/cagr_distribution.png)
 
-[Final review (中文)](docs/final_review_zh.md) · [Final manager memo](docs/final_manager_memo.md) · [Research plan (中文)](docs/research_plan_zh.md) · [Investment case (中文)](docs/investment_case_zh.md)
+[Brief framework (中文)](docs/framework_zh.md) · [Final review (中文)](docs/final_review_zh.md) · [Manager decision](docs/final_manager_memo.md) · [Research design (中文)](docs/research_plan_zh.md) · [Investment case (中文)](docs/investment_case_zh.md)
 
 ## Evidence map
 
 | Stage | Question | Evidence |
 |---|---|---|
-| Original investment review | Does the fixed rule add net value and fit the account? | [Original snapshot](reports/snapshot), including its unchanged [generated memo](reports/snapshot/manager_memo.md) |
+| Original investment review | Does the fixed rule add net value and fit the account? | [Original snapshot](reports/snapshot); [provenance](docs/snapshot_provenance.md) distinguishes generated output from later memo edits |
 | Period and universe exploration | Where did it succeed or fail? | [Complete period grid and eleven-sector sensitivity](reports/exploratory_snapshot/regime_comparison_zh.md) |
-| Mechanism and conditions | What explains realized P&L, and can known conditions improve the rule? | [Effectiveness study](reports/effectiveness_snapshot/industry_rotation_effectiveness_zh.md), [frozen protocol](reports/effectiveness_snapshot/research_protocol_zh.md), independent audits and French ten-industry replication |
+| Mechanism and conditions | What explains realized P&L, and can known conditions improve the rule? | [Effectiveness study](reports/effectiveness_snapshot/industry_rotation_effectiveness_zh.md), [recorded protocol](reports/effectiveness_snapshot/research_protocol_zh.md), independent audits and French ten-industry replication |
 | Concentrated control | Does the ranking add value beyond holding three sectors? | [Industry-identity random remapping](reports/random_control_snapshot/README.md), with an overlap-matched monthly sensitivity |
 
-The original snapshot remains unchanged. Its six-month circular-block interval for annualized arithmetic active return is [−2.76, +2.05] percentage points (2,000 draws, seed 2026). The follow-up calculation reports [−2.62, +2.07] (20,000 draws, seed 20261004), with block-length sensitivity and separate statistical settings recorded in its protocol. Both intervals cross zero; neither is a confidence interval for CAGR or a future profit probability.
+Original numerical outputs and their generation-time hashes are retained; the earlier manager memo was subsequently edited. See [snapshot provenance](docs/snapshot_provenance.md). The original six-month circular-block interval for annualized arithmetic active return is [−2.76, +2.05] percentage points (2,000 draws, seed 2026); the follow-up reports [−2.62, +2.07] (20,000 draws, seed 20261004), with separate settings and block-length sensitivity. Both cross zero; neither estimates CAGR uncertainty or future profit probability. The ported follow-up scripts have been rerun and compared with the published numeric outputs: [reproduction check](reports/reproduction_check/README.md).
 
 ## Favorable and unfavorable paths
 
 The unchanged nine-sector rule produces all four outcomes: 2022 gained **9.48%** and beat EW9; 2011 lost **2.16%** and lagged EW9; 2006 made money but lagged EW9; 2002 lost money but lost less than EW9. These are net calendar-year returns, rather than CAGRs. Energy holdings contributed +18.58 percentage points in 2022 and −4.75 points in 2023; these are portfolio P&L contributions, not XLE buy-and-hold returns.
 
-A separate **2020–2025 common-start test** adds XLRE and XLC to cover all eleven sector products. Both universes are formed from cash on the same date, using unchanged signals, execution and costs. Eleven-sector momentum earned **16.48% CAGR**, versus **11.97%** for EW11 and **14.80%** for SPY; the comparable nine-sector momentum account earned **14.55%**. The expanded strategy still lagged EW11 in 2021 and 2023, and both added sectors had negative contribution years.
+A separate **2020–2025 common-start test** adds XLRE and XLC. Accounts form from cash on the same date with the same signal definition, execution and costs: nine-sector momentum earned **14.55% CAGR** versus **12.38% EW9**; eleven-sector momentum earned **16.48%** versus **11.97% EW11**; SPY earned **14.80%**. Momentum outperformed equal-weighting in both universes in this six-year test. Changing the universe changes both its momentum choices and equal-weight benchmark; the difference is not solely the returns of the added ETFs. The expanded strategy still lagged EW11 in 2021 and 2023, and both added sectors had negative contribution years.
 
 The [exploratory snapshot](reports/exploratory_snapshot) discloses all 26 calendar years, five non-overlapping five-year blocks plus the remaining year, and all 277 overlapping three-year windows. Highlighted examples are chosen after observing this grid. They describe historical conditions; they do not provide a tested rule for recognizing a favorable regime in advance or change the primary full-history conclusion.
 
@@ -88,7 +88,7 @@ Offline synthetic demonstration:
 python -m sector_momentum demo --out reports/demo
 ```
 
-Synthetic output is marked throughout and is not historical ETF performance. Tests run offline and do not require Yahoo, network access, or matplotlib. The current offline suite passed all **65 tests** locally, including concentrated-control accounting and timing checks. The original snapshot's 57-test record is retained as historical provenance. GitHub Actions runs the offline suite on every push to main and on pull requests ([workflow](.github/workflows/tests.yml)). The initial verified run's direct package versions are in [requirements-reproduce.txt](requirements-reproduce.txt); they are not a complete transitive lockfile.
+Synthetic output is marked throughout and is not historical ETF performance. Tests run offline and do not require Yahoo, network access, or matplotlib. The current suite passed **75 tests**, including numerical reproduction checks, concentrated-control accounting and timing, lossless storage and drawdown diagnostics. The initial release had **44 tests**, the period/universe expansion **57**, and `dd1c4a9` **65**; see [test and snapshot provenance](docs/snapshot_provenance.md). GitHub Actions runs the suite on every push to main and on pull requests ([workflow](.github/workflows/tests.yml)). The initial run's direct package versions are in [requirements-reproduce.txt](requirements-reproduce.txt); they are not a complete transitive lockfile.
 
 To reproduce the complete period grid and the eleven-sector sensitivity test:
 
@@ -106,7 +106,7 @@ To reproduce the concentrated controls from the same saved price input:
 python -m sector_momentum random-control --prices data/raw/total_return.csv --out reports/random_local
 ```
 
-The default run uses 4,096 paths per method, fixed seeds, and all 0/5/10 bps scenarios. `--no-plots` omits figures. The [protocol](research/random_control_protocol_zh.md) freezes identity remapping and monthly overlap-matched sensitivity before this diagnostic is run. Actual costs and turnover are recomputed for every path. Historical percentiles describe this sample and construction; they are not alpha p-values or future win probabilities.
+The default run uses 4,096 paths per method, fixed seeds, and all 0/5/10 bps scenarios. `--no-plots` omits figures. The authors record writing the [protocol](research/random_control_protocol_zh.md) before computation; methods and results were published in the same commit, without independent public preregistration. Actual costs and turnover are recomputed for every path. Historical percentiles describe this retrospective diagnostic, not alpha p-values or future win probabilities.
 
 ## Evidence and limits
 

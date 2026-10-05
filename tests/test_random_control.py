@@ -1,5 +1,8 @@
 """Accounting and no-look-ahead checks for the new concentration diagnostics."""
 import unittest
+import gzip
+from pathlib import Path
+import tempfile
 
 import numpy as np
 import pandas as pd
@@ -9,6 +12,7 @@ from sector_momentum.engine import Strategy, backtest, self_financing_trade
 from sector_momentum.random_control import (
     _rebalance, remapped_targets, overlap_matched_targets,
     simulate_target_paths, independent_path_nav,
+    _write_csv_archive, _empirical_midrank, _drawdown_episode,
 )
 
 
@@ -132,6 +136,29 @@ class BatchLedgerTests(unittest.TestCase):
         bad[0, 0, 0] = .5
         with self.assertRaises(ValueError):
             simulate_target_paths(prices, executions, bad, ref.nav.index[0], 5)
+
+
+class DiagnosticOutputTests(unittest.TestCase):
+    def test_compressed_csv_preserves_exact_ledger_bytes_and_pandas_loading(self):
+        frame = pd.DataFrame({'sector': ['XLK,XLF,XLU', 'XLE'], 'fee': [.000123456789, 0.]})
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'ledger.csv.gz'
+            other = Path(folder) / 'other.csv.gz'
+            _write_csv_archive(frame, path, index=False, float_format='%.12g')
+            _write_csv_archive(frame, other, index=False, float_format='%.12g')
+            self.assertEqual(gzip.decompress(path.read_bytes()).decode(), frame.to_csv(index=False, float_format='%.12g'))
+            self.assertEqual(path.read_bytes(), other.read_bytes())
+            pd.testing.assert_frame_equal(pd.read_csv(path), frame)
+
+    def test_shallower_drawdown_has_high_rank_with_half_weight_for_ties(self):
+        depths = [-.65, -.60, -.55, -.46]
+        self.assertEqual(_empirical_midrank(depths, -.45), 1.)
+        self.assertEqual(_empirical_midrank(depths, -.70), 0.)
+        self.assertEqual(_empirical_midrank(depths, -.55), .625)
+
+    def test_drawdown_episode_uses_peak_before_trough_and_ignores_later_high(self):
+        nav = pd.Series([1., 2., 1.5, 1., 3.], index=pd.date_range('2000-01-01', periods=5))
+        self.assertEqual(_drawdown_episode(nav), {'max_drawdown': -.5, 'peak_date': '2000-01-02', 'trough_date': '2000-01-04'})
 
 
 if __name__ == '__main__':

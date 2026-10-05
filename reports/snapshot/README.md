@@ -14,3 +14,5 @@ The tables and figures use Yahoo supplier-adjusted ETF levels for 2000–2025, w
 Local reproduction also writes daily NAV and detailed audit files, which are intentionally excluded from this Git snapshot. Different vendor revisions can change results. Never use synthetic demo output as historical evidence.
 
 The later [period and sector exploration](../exploratory_snapshot) is reported separately. This original primary snapshot and its source identities are retained.
+
+The [source/version history](../../docs/snapshot_provenance.md) identifies this initial snapshot with `950d28a` (44 tests), the exploration release with `18e09dc` (57 tests), and the concentration/effectiveness integration with `dd1c4a9` (65 tests). These are different test suites. All entries in this snapshot's `source_hashes.json` match `950d28a`; the reporting writer changed later, and the memo received a CAPM-cost explanation in `a93b5f8`. The saved reporting hash describes the original generated memo before that documented editorial addition, not the current writer. Historical hashes remain unchanged.

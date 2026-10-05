@@ -6,6 +6,7 @@ an alpha significance test. Every simulated portfolio pays its own cash costs.
 from __future__ import annotations
 
 from dataclasses import dataclass
+import gzip
 import hashlib
 import json
 from pathlib import Path
@@ -27,6 +28,27 @@ class PathResults:
     sample_nav: pd.DataFrame
     sample_trades: pd.DataFrame
     audit: dict
+
+
+def _write_csv_archive(frame, path, **kwargs):
+    """Keep complete path ledgers in a deterministic, lossless CSV archive."""
+    raw = frame.to_csv(**kwargs).encode('utf-8')
+    Path(path).write_bytes(gzip.compress(raw, mtime=0))
+
+
+def _empirical_midrank(values, reference):
+    """Fraction below the reference plus half the ties; larger is higher."""
+    values = np.asarray(values)
+    ties = np.isclose(values, reference, atol=1e-12, rtol=0)
+    return float(((values < reference) & ~ties).mean() + .5 * ties.mean())
+
+
+def _drawdown_episode(nav):
+    drawdown = nav / nav.cummax() - 1
+    trough = drawdown.idxmin()
+    peak = nav.loc[:trough].idxmax()
+    return {'max_drawdown': float(drawdown.loc[trough]),
+            'peak_date': peak.date().isoformat(), 'trough_date': trough.date().isoformat()}
 
 
 def remapped_targets(template: np.ndarray, draws: int = 4096, seed: int = 20261005):
@@ -275,7 +297,7 @@ def run_random_controls(prices_path, out, draws=4096, seed=20261005, plots=True)
                 # At most two random examples, with identity row removed and ids restored.
                 trades = result.sample_trades.loc[result.sample_trades.path_id > 0].copy()
                 trades['path_id'] -= 1
-                trades.to_csv(out / f'{method}_sample_trades_5bps.csv', index=False)
+                _write_csv_archive(trades, out / f'{method}_sample_trades_5bps.csv.gz', index=False)
             audits.append(audit)
             random_metrics = result.metrics.iloc[1:].copy()
             random_metrics['path_id'] -= 1
@@ -285,7 +307,7 @@ def run_random_controls(prices_path, out, draws=4096, seed=20261005, plots=True)
             active = monthly[:, 1:] - ew_monthly[:, None]
             random_metrics['annualized_arithmetic_active_vs_ew9'] = active.mean(axis=0) * 12
             random_metrics['tracking_error_vs_ew9'] = active.std(axis=0, ddof=1) * np.sqrt(12)
-            random_metrics.to_csv(out / f'{method}_{cost}bps_paths.csv', index=False, float_format='%.12g')
+            _write_csv_archive(random_metrics, out / f'{method}_{cost}bps_paths.csv.gz', index=False, float_format='%.12g')
             original_active = float((monthly_returns(originals['MOM12_1'].nav).to_numpy() - ew_monthly).mean() * 12)
             record = {'method': method, 'cost_bps': cost, 'paths': draws,
                       'reference_metrics': base_metrics,
@@ -293,19 +315,27 @@ def run_random_controls(prices_path, out, draws=4096, seed=20261005, plots=True)
                       'share_random_cagr_above_momentum': float((random_metrics.cagr > base_metrics['MOM12_1']['cagr']).mean()),
                       'share_random_cagr_above_ew9': float((random_metrics.cagr > base_metrics['EW9']['cagr']).mean()),
                       'share_random_cagr_above_spy': float((random_metrics.cagr > base_metrics['SPY']['cagr']).mean()),
-                      'momentum_cagr_percentile_midrank': float((((random_metrics.cagr < base_metrics['MOM12_1']['cagr'])
-                                                                  & ~np.isclose(random_metrics.cagr, base_metrics['MOM12_1']['cagr'], atol=1e-12, rtol=0)).sum()
-                                                                 + .5 * np.isclose(random_metrics.cagr, base_metrics['MOM12_1']['cagr'], atol=1e-12, rtol=0).sum()) / draws),
+                      'momentum_cagr_percentile_midrank': _empirical_midrank(random_metrics.cagr, base_metrics['MOM12_1']['cagr']),
+                      'momentum_shallower_drawdown_percentile_midrank': _empirical_midrank(random_metrics.max_drawdown, base_metrics['MOM12_1']['max_drawdown']),
+                      'share_random_drawdown_shallower_than_momentum': float((random_metrics.max_drawdown > base_metrics['MOM12_1']['max_drawdown']).mean()),
+                      'momentum_drawdown_episode': _drawdown_episode(originals['MOM12_1'].nav),
                       'quantiles': {name: np.quantile(random_metrics[name], [.05, .5, .95]).tolist()
                                     for name in random_metrics.columns if name != 'path_id'}}
             for name, quantiles in record['quantiles'].items():
                 summary_rows.append({'method': method, 'cost_bps': cost, 'metric': name,
                                      'p05': quantiles[0], 'p50': quantiles[1], 'p95': quantiles[2]})
             all_summaries.append(record)
-    pd.DataFrame(np.array(SECTORS)[mappings], columns=SECTORS).assign(path_id=np.arange(draws)).to_csv(out / 'identity_mappings.csv', index=False)
+    _write_csv_archive(pd.DataFrame(np.array(SECTORS)[mappings], columns=SECTORS).assign(path_id=np.arange(draws)), out / 'identity_mappings.csv.gz', index=False)
     pd.DataFrame(summary_rows).to_csv(out / 'distribution_summary.csv', index=False, float_format='%.12g')
     pd.DataFrame(audits).to_csv(out / 'ledger_validation.csv', index=False, float_format='%.12g')
-    pd.DataFrame(sample_curves).to_csv(out / 'example_daily_nav_5bps.csv', index_label='date', float_format='%.12g')
+    _write_csv_archive(pd.DataFrame(sample_curves), out / 'example_daily_nav_5bps.csv.gz', index_label='date', float_format='%.12g')
+    archives = []
+    for path in sorted(out.glob('*.csv.gz')):
+        raw = gzip.decompress(path.read_bytes())
+        archives.append({'file': path.name, 'decompressed_csv_sha256': hashlib.sha256(raw).hexdigest(),
+                         'csv_bytes': len(raw), 'archive_bytes': path.stat().st_size})
+    (out / 'storage_manifest.json').write_text(json.dumps({'format': 'UTF-8 CSV, gzip with mtime=0',
+        'all_cost_levels_retained_bps': [0, 5, 10], 'files': archives}, indent=2) + '\n')
     price_hash = hashlib.sha256(Path(prices_path).read_bytes()).hexdigest()
     protocol = Path(__file__).resolve().parents[2] / 'research/random_control_protocol_zh.md'
     payload = {'study': 'Retrospective matched-concentration diagnostics; not an alpha significance test',
@@ -344,12 +374,12 @@ def _write_report(out, payload):
     lines = ['# 随机三行业对照：集中持仓与行业身份选择', '',
              '本报告是已观察历史上的诊断；随机路径百分位不是未来盈利概率，也不是 alpha 显著性检验。', '',
              f"固定样本 2000–2025；每方案 {payload['draws_per_method']} 条路径；单边费用 0/5/10bp，以下主表为 5bp。",
-             '', '| 方案 | 随机 CAGR 5/50/95 百分位 | 原动量 CAGR 历史百分位 | 随机超过 EW9 的比例 |',
-             '|---|---|---:|---:|']
+             '', '| 方案 | 随机 CAGR 5/50/95 百分位 | 原动量 CAGR 历史百分位 | 原动量回撤较浅百分位 | 随机超过 EW9 的比例 |',
+             '|---|---|---:|---:|---:|']
     names = {'identity_remap': '固定行业身份重映射（主方案）', 'overlap_matched': '逐月匹配名单重合（敏感性）'}
     for r in records:
         q = r['quantiles']['cagr']
-        lines.append(f"| {names[r['method']]} | {q[0]:.2%} / {q[1]:.2%} / {q[2]:.2%} | {r['momentum_cagr_percentile_midrank']:.1%} | {r['share_random_cagr_above_ew9']:.1%} |")
+        lines.append(f"| {names[r['method']]} | {q[0]:.2%} / {q[1]:.2%} / {q[2]:.2%} | {r['momentum_cagr_percentile_midrank']:.1%} | {r['momentum_shallower_drawdown_percentile_midrank']:.1%} | {r['share_random_cagr_above_ew9']:.1%} |")
     ref = records[0]['reference_metrics']
     lines += ['', f"同日重算基准净 CAGR：MOM12−1 {ref['MOM12_1']['cagr']:.2%}，EW9 {ref['EW9']['cagr']:.2%}，SPY {ref['SPY']['cagr']:.2%}。动量落后等权，但没有落后 SPY。", '',
               '## 方法与成本', '',
@@ -363,15 +393,22 @@ def _write_report(out, payload):
         b = r['quantiles']['annualized_fee_fraction_including_initial']
         d = r['quantiles']['max_drawdown']
         lines.append(f"| {names[r['method']]} | {a[0]:.2f} / {a[1]:.2f} / {a[2]:.2f} | {b[0]:.2%} / {b[1]:.2%} / {b[2]:.2%} | {d[0]:.2%} / {d[1]:.2%} / {d[2]:.2%} |")
-    lines += ['', '## 怎样解释', '',
+    episode = records[0]['momentum_drawdown_episode']
+    cagr_ranks = ' / '.join(f"{r['momentum_cagr_percentile_midrank']:.1%}" for r in records)
+    risk_ranks = ' / '.join(f"{r['momentum_shallower_drawdown_percentile_midrank']:.1%}" for r in records)
+    lines += ['', '## 收益和回撤需要分开判断', '',
+              f"按主方案 / 敏感性方案顺序，原动量净 CAGR 历史百分位为 {cagr_ranks}；回撤较浅百分位为 {risk_ranks}。全期最大回撤 {episode['max_drawdown']:.2%}，从 {episode['peak_date']} 高点至 {episode['trough_date']} 谷底。回撤列越高表示历史回撤越浅，不是未来防守成功率。",
+              '收益结果不能抹去这个历史风险优点，但全期最大回撤由一次最深峰谷决定。这段峰谷属于 2008–2009 年金融危机；这里尚未验证不同危机和后续时期是否重复出现同样的优势，因此不能把它直接当作稳定的防守能力或启用条件。', '',
+              '## 怎样解释', '',
               '原动量在随机分布中的位置回答：给定这段市场历史、三行业集中度以及原规则的进出节奏，其具体行业身份选择取得了什么历史位置。它不单独识别价格信号的经济因果；行业相关性、风险暴露和共持结构仍不同。', '',
               '若原规则没有明显高于这些随机集中路径，现有历史不足以把收益归功于有用排序。即使排名较高，也不能据此确认未来 alpha，因为行业身份不可交换、规则和历史已被观察，且路径共享同一市场。', '',
               '随机组合优于/劣于 EW9 的比例，不是主动投资普遍成功率。集中组合的复合收益还受波动、行业偏好、再平衡及成本影响。这里没有检验反转，也不能把动量结果取负。', '',
               '## 资料与复算', '',
-              '- [计算前固定方案](../../research/random_control_protocol_zh.md)。',
+              '- [本轮方法与时间记录](../../research/random_control_protocol_zh.md)。协议与首批结果同次公开，属于回顾性诊断。',
               '- [完整结果与配置](summary.json)、[分布表](distribution_summary.csv)、[账本验证](ledger_validation.csv)。',
-              '- `*_paths.csv` 披露所有随机路径在每个成本下的指标；`identity_mappings.csv` 保存固定映射。',
-              '- `*_sample_trades_5bps.csv` 保存预定前两条随机路径交易；`example_daily_nav_5bps.csv` 保存各方案第一条路径净值。它们均未按表现挑选。', '',
+              '- `*_paths.csv.gz` 披露所有随机路径在每个成本下的指标；`identity_mappings.csv.gz` 保存固定映射。',
+              '- `*_sample_trades_5bps.csv.gz` 保存预定前两条随机路径交易；`example_daily_nav_5bps.csv.gz` 保存各方案第一条路径净值。它们均未按表现挑选。',
+              '- [压缩存储清单](storage_manifest.json) 保存解压后 CSV 的哈希；pandas.read_csv 自动读取 `.csv.gz`，也可以用 gzip 解压。压缩没有删除 0/5/10bp 的结果。', '',
               '在仓库根目录：', '', '```sh',
               'python -m sector_momentum random-control --prices data/raw/total_return.csv --out reports/random_local',
               '```', '', '本输入价格哈希：`' + payload['prices_sha256'] + '`。重新下载可能有供应商修订，需另记哈希。0/10bp 的全部结果见 CSV 和 JSON。', '']
@@ -379,12 +416,14 @@ def _write_report(out, payload):
 
 
 def _plot(out, payload):
+    import matplotlib
+    matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     records = [r for r in payload['results'] if r['cost_bps'] == 5]
     fig, axes = plt.subplots(1, 2, figsize=(11, 4), sharey=True)
     labels = {'identity_remap': 'Fixed industry-label remapping', 'overlap_matched': 'Monthly overlap-matched sampling'}
     for ax, r in zip(axes, records):
-        frame = pd.read_csv(out / f"{r['method']}_5bps_paths.csv")
+        frame = pd.read_csv(out / f"{r['method']}_5bps_paths.csv.gz")
         ax.hist(frame.cagr * 100, bins=35, color='#7e9db5', edgecolor='white')
         for label, color in [('MOM12_1', '#a44535'), ('EW9', '#23694a'), ('SPY', '#66519d')]:
             ax.axvline(r['reference_metrics'][label]['cagr'] * 100, color=color, label=label, linewidth=1.7)
