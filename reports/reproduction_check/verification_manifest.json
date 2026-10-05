@@ -1,6 +1,6 @@
 {
   "verification_date": "2026-10-05",
-  "verified_research_commit": "dd1c4a9",
+  "verified_research_commit": "9114780",
   "classification": "numerical reproduction of an existing retrospective snapshot; no new inference",
   "original_saved_inputs_sha256": {
     "data/raw/total_return.csv": "e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c",

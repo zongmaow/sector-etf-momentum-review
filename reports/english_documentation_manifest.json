@@ -1,7 +1,7 @@
 {
   "updated_at_utc": "2026-10-05T23:02:13.856751+00:00",
   "classification": "English documentation, filenames and report writers; no new financial research",
-  "prior_public_commit": "e1f97af84a3db16316e25e13a7cd468ee0eaff4e",
+  "prior_public_commit": "9f7ce3e625793fa2f14e453558bb773656d0fe2c",
   "document_renames_and_translations": [
     {
       "prior_path": "docs/investment_case_zh.md",
@@ -334,14 +334,14 @@
     },
     {
       "file": "reports/random_control_snapshot/storage_manifest.json",
-      "sha256": "27acf8dd59bef4fe93b305fd75bdfa2d38bae5f4654ed95bee919465da54b3b7"
+      "sha256": "92d0ade005f153f2f5a0f562982f2673845fdb8c3210a29ed97522ed0d78627a"
     },
     {
       "file": "reports/random_control_snapshot/summary.json",
       "sha256": "e41046788b0a29223dc37625893494c6d6cc10012bf949f49c6ec4f024d3974a"
     },
     {
-      "file": "reports/random_control_snapshot/summary_dd1c4a9.json",
+      "file": "reports/random_control_snapshot/summary_9114780.json",
       "sha256": "fddc88a91d6100900676b72d650a0e99e55418b8878df6dc7049d024896341f7"
     },
     {
@@ -354,7 +354,7 @@
     },
     {
       "file": "reports/reproduction_check/verification_manifest.json",
-      "sha256": "a3ab256aef3683028048a1ec5b69aff1e264c79d014d915fdeba4b677c0f144b"
+      "sha256": "bb84a09dee53a03dfef62e6f70a4c7ee96ff282770eda3b0a8e815c1f052cc55"
     },
     {
       "file": "reports/snapshot/analysis.json",

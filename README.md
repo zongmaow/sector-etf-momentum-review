@@ -78,7 +78,7 @@ Offline synthetic demonstration:
 python -m sector_momentum demo --out reports/demo
 ```
 
-Synthetic output is marked throughout and is not historical ETF performance. Tests run offline and do not require Yahoo, network access, or matplotlib. The current suite passed **75 tests**, including numerical reproduction checks, concentrated-control accounting and timing, lossless storage and drawdown diagnostics. The initial release had **44 tests**, the period/universe expansion **57**, and `dd1c4a9` **65**; see [test and snapshot provenance](docs/snapshot_provenance.md). GitHub Actions runs the suite on every push to main and on pull requests ([workflow](.github/workflows/tests.yml)). The initial run's direct package versions are in [requirements-reproduce.txt](requirements-reproduce.txt); they are not a complete transitive lockfile.
+Synthetic output is marked throughout and is not historical ETF performance. Tests run offline and do not require Yahoo, network access, or matplotlib. The current suite passed **75 tests**, including numerical reproduction checks, concentrated-control accounting and timing, lossless storage and drawdown diagnostics. The initial release had **44 tests**, the period/universe expansion **57**, and `9114780` **65**; see [test and snapshot provenance](docs/snapshot_provenance.md). GitHub Actions runs the suite on every push to main and on pull requests ([workflow](.github/workflows/tests.yml)). The initial run's direct package versions are in [requirements-reproduce.txt](requirements-reproduce.txt); they are not a complete transitive lockfile.
 
 To reproduce the complete period grid and the eleven-sector sensitivity test:
 

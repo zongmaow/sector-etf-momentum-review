@@ -83,7 +83,7 @@
       "sha256": "238f5d23a3d27715f831820f33739b821283ffadb1966296962481c839b2fcf3",
       "byte_identical": false,
       "historical_import_sha256": "33036be36a4e0372d32939844bc74dcf3d96c84b4a11902488ccf14a11e3836f",
-      "note": "historical_import_sha256 is the Chinese source imported at dd1c4a9; sha256 and repository_path describe the published English translation"
+      "note": "historical_import_sha256 is the Chinese source imported at 9114780; sha256 and repository_path describe the published English translation"
     },
     {
       "source_bundle_path": "external/ff10_holding_month_scores.csv",
@@ -169,7 +169,7 @@
       "sha256": "6eca82749a0dd674ce56e9c8822f04deba36499a5d60f24888c13b97e4bc9d26",
       "byte_identical": false,
       "historical_import_sha256": "b609f03df445b7623b056d3dbc3214c44c2fedb9cf21e8099d29928db0961649",
-      "note": "historical_import_sha256 is the Chinese source imported at dd1c4a9; sha256 and repository_path describe the published English translation"
+      "note": "historical_import_sha256 is the Chinese source imported at 9114780; sha256 and repository_path describe the published English translation"
     },
     {
       "source_bundle_path": "industry_rotation_effectiveness_zh.md",
@@ -177,7 +177,7 @@
       "sha256": "bbe99c19ebd7c77c1ae7090ba5760cc98fcd09fc5614249061fd70ab90f987bb",
       "byte_identical": false,
       "historical_import_sha256": "9f50fcd1e3798a2604210d05e609f04bb56e01835530219b334138f76ed55a11",
-      "note": "historical_import_sha256 is the Chinese source imported at dd1c4a9; sha256 and repository_path describe the published English translation"
+      "note": "historical_import_sha256 is the Chinese source imported at 9114780; sha256 and repository_path describe the published English translation"
     },
     {
       "source_bundle_path": "ledger_validation.csv",
@@ -215,7 +215,7 @@
       "sha256": "6c04a47ddc5c460b406a62147b673fef83ebacf6e4ba6b9ab1245942e27fe936",
       "byte_identical": false,
       "historical_import_sha256": "ebaefd083ee88c01297f14a974a0bbafca548a309079ebe0fa69f95c40aa7aa4",
-      "note": "historical_import_sha256 is the Chinese source imported at dd1c4a9; sha256 and repository_path describe the published English translation"
+      "note": "historical_import_sha256 is the Chinese source imported at 9114780; sha256 and repository_path describe the published English translation"
     },
     {
       "source_bundle_path": "mechanism/mechanism_statistics.json",
@@ -235,7 +235,7 @@
       "sha256": "b9688c065b5ba2bb52c751438e3013a83dfec44226d7cfd4c7a9924392f50281",
       "byte_identical": false,
       "historical_import_sha256": "52599157a984e4eea133fe521c8e68d5246c471f302f277ef6abec9626fa0fb6",
-      "note": "historical_import_sha256 is the Chinese source imported at dd1c4a9; sha256 and repository_path describe the published English translation"
+      "note": "historical_import_sha256 is the Chinese source imported at 9114780; sha256 and repository_path describe the published English translation"
     },
     {
       "source_bundle_path": "recomputed_baseline_monthly.csv",
@@ -249,7 +249,7 @@
       "sha256": "f92c8b5d80401d779a74c903fa58853376ec6e40ac3133cae2768a4158fb71a9",
       "byte_identical": false,
       "historical_import_sha256": "9cdb1e71ccfdfb7b10631cacc8337a4a496b1c6692fe572dd038feccb403c823",
-      "note": "historical_import_sha256 is the Chinese source imported at dd1c4a9; sha256 and repository_path describe the published English translation"
+      "note": "historical_import_sha256 is the Chinese source imported at 9114780; sha256 and repository_path describe the published English translation"
     }
   ],
   "ported_scripts": [
@@ -310,7 +310,7 @@
   "validation_scope": "Syntax and six --help commands; all 39 preserved snapshot hashes and six ported-script hashes; main memo/new index local links; 21 unchanged ETF/French numerical-function ASTs; four primary CLIs explicitly reject missing saved inputs. Financial study is the preserved 2026-10-04 run, not rerun during integration.",
   "subsequent_numerical_verification": {
     "date": "2026-10-05",
-    "verified_research_commit": "dd1c4a9",
+    "verified_research_commit": "9114780",
     "record": "reports/reproduction_check/verification_manifest.json",
     "comparison": "reports/reproduction_check/comparison.json",
     "csv_files": 25,
@@ -320,10 +320,10 @@
     "figure_rendering_rerun": false,
     "mechanism_baseline_rebuilt_from_saved_inputs": true
   },
-  "identity_record_scope": "Original integration identities at dd1c4a9; translated documentation and later writer paths are mapped separately.",
+  "identity_record_scope": "Original integration identities at 9114780; translated documentation and later writer paths are mapped separately.",
   "english_documentation_update": {
     "record": "reports/english_documentation_manifest.json",
-    "prior_public_commit": "e1f97af84a3db16316e25e13a7cd468ee0eaff4e",
+    "prior_public_commit": "9f7ce3e625793fa2f14e453558bb773656d0fe2c",
     "numerical_artifacts_unchanged": true,
     "historical_identities_preserved": true,
     "repository_paths_point_to_english_translations": true

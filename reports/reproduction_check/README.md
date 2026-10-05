@@ -1,6 +1,6 @@
 # Numerical reproduction check — 2026-10-05
 
-This record verifies the portable effectiveness research published in `dd1c4a9` against the preserved 2026-10-04 snapshot. It adds calculation evidence, not a new parameter search or investment conclusion.
+This record verifies the portable effectiveness research published in `9114780` against the preserved 2026-10-04 snapshot. It adds calculation evidence, not a new parameter search or investment conclusion.
 
 | Check | Result |
 |---|---|

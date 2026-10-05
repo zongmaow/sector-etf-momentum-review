@@ -1,8 +1,8 @@
 # Concentrated random controls: methods and timing record
 
-Method record dated 2026-10-05. The author records writing this protocol before the first random-control calculation. The protocol and first results were published together in commit `dd1c4a9`, so public Git history alone cannot independently establish their ordering. This is not public preregistration. The original ETF history and momentum results had already been observed; this is a retrospective diagnostic, not a new out-of-sample test.
+Method record dated 2026-10-05. The author records writing this protocol before the first random-control calculation. The protocol and first results were published together in commit `9114780`, so public Git history alone cannot independently establish their ordering. This is not public preregistration. The original ETF history and momentum results had already been observed; this is a retrospective diagnostic, not a new out-of-sample test.
 
-Review update: the original seeds, path counts, costs, sample and trading rules were retained when compressed results were regenerated and maximum-drawdown percentiles and peak/trough dates were added. Those risk interpretations followed inspection of the first results; they are not prespecified hypotheses. The original `summary.json` is retained as `summary_dd1c4a9.json` in the results directory, preserving producer hashes and the result history.
+Review update: the original seeds, path counts, costs, sample and trading rules were retained when compressed results were regenerated and maximum-drawdown percentiles and peak/trough dates were added. Those risk interpretations followed inspection of the first results; they are not prespecified hypotheses. The original `summary.json` is retained as `summary_9114780.json` in the results directory, preserving producer hashes and the result history.
 
 ## Purpose and primary method
 
