@@ -18,7 +18,7 @@ import pandas as pd
 
 from analyze_external import REPO, ROOT, RAW_DIR, parse_monthly_value_weighted, signals_for_holding_month
 
-PROTOCOL = REPO / "reports/effectiveness_snapshot/research_protocol_zh.md"
+PROTOCOL = REPO / "reports/effectiveness_snapshot/research_protocol.md"
 SEED = 20261004
 DRAWS = 20000
 

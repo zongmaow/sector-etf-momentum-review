@@ -18,6 +18,8 @@ The [comparison](comparison.json) records every compared file's reference and re
 
 The following are repository-relative, path-normalized forms of the executed numerical commands. The verification used the original saved supplier files and freshly rebuilt baseline audit outputs. Local file placement has been normalized to the documented `reports/local/` layout; these are the same CLI operations, not a claim that vendor inputs are bundled here.
 
+The protocol path below uses the current English filename. The recorded run used its prior filename and original text hash, retained in the verification manifest. Translation changes that text identity without changing the frozen settings or financial results; see the [English documentation record](../english_documentation_manifest.json).
+
 ```sh
 PYTHONPATH=src python -m sector_momentum run \
   --prices data/raw/total_return.csv --rf data/raw/risk_free.csv \
@@ -42,7 +44,7 @@ PYTHONPATH=src python research/effectiveness/external/analyze_external.py \
 
 PYTHONPATH=src python research/effectiveness/external/analyze_conditions.py \
   --raw-dir data/raw/french \
-  --protocol reports/effectiveness_snapshot/research_protocol_zh.md \
+  --protocol reports/effectiveness_snapshot/research_protocol.md \
   --out reports/local/effectiveness/external
 
 python research/effectiveness/verify_reproduction.py \

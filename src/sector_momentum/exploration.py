@@ -104,7 +104,7 @@ def reset_generated_outputs(directory: Path) -> None:
     names = ['all_windows.csv', 'calendar_years.csv', 'annual_sector_contributions.csv',
              'universe_comparisons.csv', 'universe_annual_contributions.csv',
              'universe_holdings_comparison.csv', 'universe_selection_counts.csv',
-             'exploration.json', 'regime_comparison_zh.md', 'period_comparison.png']
+             'exploration.json', 'regime_comparison.md', 'regime_comparison_zh.md', 'period_comparison.png']
     names += [f'{label}_{strategy}_trades.csv' for label in ['nine', 'eleven'] for strategy in ['MOM12_1', 'EW', 'SPY']]
     for name in names:
         path = directory / name
@@ -200,62 +200,65 @@ def write_exploration_note(directory: Path, grid: pd.DataFrame, contributions: p
                            universes: pd.DataFrame, metadata: dict, expanded_contributions: pd.DataFrame,
                            selection_counts: pd.DataFrame) -> None:
     annual = grid[grid.kind == 'calendar_year'].set_index('start')
-    lines = ['# 同一规则在不同区间与行业环境中的表现', '',
-             '本页属于事后探索。主规则、九行业全样本结论和成本口径保持不变；完整结果见 all_windows.csv。所有数字使用单边 5 bp，分红已经包含在供应商调整价代理中。', '',
-             '## 赚钱与跑赢基准是两个问题', '',
-             '| 年份 | 策略净累计收益 | EW9 | SPY | 观察 |', '|---|---:|---:|---:|---|']
+    lines = ['# A fixed rule across periods and sector environments', '',
+             'This is an ex-post exploration. The primary rule, full-history nine-sector conclusion and cost convention remain unchanged. All windows are disclosed in all_windows.csv. Results use 5bp per side; dividends are included in the supplier adjusted-price proxy.', '',
+             '## Making money and beating a benchmark are separate questions', '',
+             '| Year | Strategy net cumulative return | EW9 | SPY | Outcome |', '|---|---:|---:|---:|---|']
     for year in [2022, 2011, 2006, 2002]:
         row = annual.loc[f'{year}-01-01']
-        label = {'profit_outperform': '赚钱且跑赢EW9', 'profit_underperform': '赚钱但落后EW9',
-                 'loss_outperform': '亏钱但比EW9少亏', 'loss_underperform': '亏钱且落后EW9'}.get(row.outcome_vs_ew, row.outcome_vs_ew)
+        label = {'profit_outperform': 'Profit and outperformance vs EW9',
+                 'profit_underperform': 'Profit but underperformance vs EW9',
+                 'loss_outperform': 'Loss, but a smaller loss than EW9',
+                 'loss_underperform': 'Loss and underperformance vs EW9'}.get(row.outcome_vs_ew, row.outcome_vs_ew)
         lines.append(f'| {year} | {row.mom_total_return:.2%} | {row.ew_total_return:.2%} | {row.spy_total_return:.2%} | {label} |')
-    lines += ['', '这四个年份是在查看全部 26 个完整日历年之后选出的说明例子，不是事前独立检验。较基准少亏也不能称为绝对盈利。', '',
-              '## 行业贡献为什么会变', '',
-              '| 区间与持仓 | 对策略累计收益的贡献 | 解读 |', '|---|---:|---|']
-    for year, ticker, explanation in [(2005, 'XLE', '当年持有能源的损益贡献为正'),
-                                      (2013, 'XLV', '医疗持仓贡献为正'), (2013, 'XLY', '可选消费持仓贡献为正'),
-                                      (2020, 'XLK', '科技持仓贡献为正，仍须与宽基比较'),
-                                      (2022, 'XLE', '同一能源产品的持有期贡献为正'),
-                                      (2023, 'XLE', '下一年同一能源产品的持有期贡献转负')]:
-        selected = contributions[(contributions.start == f'{year}-01-01') & (contributions.ticker == ticker)]
-        value = selected.iloc[0].pnl_return_contribution
-        lines.append(f'| {year} / {ticker} | {100*value:+.2f} 个百分点 | {explanation} |')
-    lines += ['', '贡献按该年起始组合 NAV 归一：实际模拟持有期美元 P&L / 年初 NAV。它包含买入、卖出与权重路径，不能当作该 ETF 整年买入持有收益，也不是行业的因果 alpha。交易费用在 COST 中另列，行业贡献与 COST 之和对账到策略该年净收益。', '',
-              '这些差异说明，同一个规则在不同的行业领先与反转路径中会有不同结果；并未建立能够事前识别这些环境的交易信号。', '',
-              '## 连续区间的完整对照', '',
-              '| 完整日历区间 | 策略 CAGR | EW9 CAGR | SPY CAGR |', '|---|---:|---:|---:|']
+    lines += ['', 'These four examples were selected after inspecting all 26 complete calendar years. They are illustrations, not independent prespecified tests. Losing less than a benchmark is not an absolute profit.', '',
+              '## Why sector contributions change', '',
+              '| Period and holding | Contribution to strategy cumulative return | Interpretation |', '|---|---:|---|']
+    for year, ticker, explanation in [(2005, 'XLE', 'Energy holdings contributed positively'),
+                                      (2013, 'XLV', 'Health-care holdings contributed positively'),
+                                      (2013, 'XLY', 'Consumer-discretionary holdings contributed positively'),
+                                      (2020, 'XLK', 'Technology holdings contributed positively; market comparison still matters'),
+                                      (2022, 'XLE', 'The same energy product contributed positively during actual holding periods'),
+                                      (2023, 'XLE', 'The same energy product contributed negatively in the following year')]:
+        value = contributions[(contributions.start == f'{year}-01-01') &
+                              (contributions.ticker == ticker)].pnl_return_contribution.iloc[0]
+        lines.append(f'| {year} / {ticker} | {100*value:+.2f} percentage points | {explanation} |')
+    lines += ['', 'Contributions equal actual simulated holding-period dollar P&L divided by beginning-of-year portfolio NAV. They include purchase, sale and weight paths; they are neither full-year ETF buy-and-hold returns nor causal sector alpha. Fees are separately recorded in COST. Sector contributions plus COST reconcile to the net annual strategy return.', '',
+              'The same rule has different outcomes under different leadership and reversal paths. This does not establish an advance trading signal that identifies those environments.', '',
+              '## Complete continuous-period comparisons', '',
+              '| Full calendar period | Strategy CAGR | EW9 CAGR | SPY CAGR |', '|---|---:|---:|---:|']
     for row in grid[grid.kind.isin(['five_year_block', 'remaining_years'])].itertuples():
         lines.append(f'| {row.start[:4]}–{row.end[:4]} | {row.mom_cagr:.2%} | {row.ew_cagr:.2%} | {row.spy_cagr:.2%} |')
     rolling = grid[grid.kind == 'rolling_36m']
+    counts = metadata['rolling_descriptive_counts']
     best = rolling.loc[rolling.cagr_difference_vs_ew.idxmax()]
     worst = rolling.loc[rolling.cagr_difference_vs_ew.idxmin()]
-    counts = metadata['rolling_descriptive_counts']
-    lines += ['', f'全部 {len(rolling)} 个三年滚动窗口中，策略绝对盈利 {counts["profitable"]} 个，跑赢 EW9 {counts["outperform_ew"]} 个，跑赢 SPY {counts["outperform_spy"]} 个。窗口高度重叠，这些是样本描述，不能当作独立成功率或未来概率。', '',
-              f'事后相对 EW9 最有利的三年窗口：{best.start[:7]} 至 {best.end[:7]}，CAGR 为 {best.mom_cagr:.2%} 对 {best.ew_cagr:.2%}；最不利的窗口：{worst.start[:7]} 至 {worst.end[:7]}，为 {worst.mom_cagr:.2%} 对 {worst.ew_cagr:.2%}。完整窗口均披露，不因突出窗口而改写主样本结论。', '',
-              '## 加入房地产与通信服务', '',
-              '[XLRE](https://www.ssga.com/us/en/individual/etfs/state-street-real-estate-select-sector-spdr-etf-xlre) 于 2015 年成立，[XLC](https://www.ssga.com/us/en/individual/etfs/state-street-communication-services-select-sector-spdr-etf-xlc) 于 2018 年成立。不能将它们的基金历史回填至 2000 年。比较采用 2018-12-31 起的预热数据，九行业与十一行业均在 2020 年首交易日收盘从现金建仓，并回测至 2025 年末。', '',
-              '保持 MOM12−1、前三等权、执行时点与费用相同。各自使用 EW9 / EW11 基准，因为扩大行业池也改变了等权基准与暴露。', '']
+    lines += ['', f'Of all {len(rolling)} rolling three-year windows, the strategy made money in {counts["profitable"]}, beat EW9 in {counts["outperform_ew"]}, and beat SPY in {counts["outperform_spy"]}. Windows overlap heavily; these counts are sample descriptions, not independent success rates or future probabilities.', '',
+              f'The ex-post best window relative to EW9 was {best.start[:7]} to {best.end[:7]}, with CAGRs {best.mom_cagr:.2%} versus {best.ew_cagr:.2%}. The worst was {worst.start[:7]} to {worst.end[:7]}, with {worst.mom_cagr:.2%} versus {worst.ew_cagr:.2%}. Every window is disclosed; highlighted windows do not replace the primary sample.', '',
+              '## Adding real estate and communication services', '',
+              '[XLRE](https://www.ssga.com/us/en/individual/etfs/state-street-real-estate-select-sector-spdr-etf-xlre) launched in 2015 and [XLC](https://www.ssga.com/us/en/individual/etfs/state-street-communication-services-select-sector-spdr-etf-xlc) in 2018. Their histories are not backfilled to 2000. Warm-up starts on 2018-12-31; both nine- and eleven-sector accounts form from cash at the first 2020 session close and run through the end of 2025.', '',
+              'MOM12−1, three equal target weights, execution and costs are unchanged. Each universe uses its own EW9/EW11 benchmark because adding sectors also changes equal-weight exposures.', '']
     if universes.empty:
-        lines.append('此次未提供扩展行业输入，尚未计算十一行业对照。')
+        lines.append('No expanded-sector input was supplied; the eleven-sector comparison was not calculated.')
     else:
-        lines += ['| 2020–2025 新建账户 | 策略 CAGR | 对应等权 CAGR | SPY CAGR |', '|---|---:|---:|---:|']
+        lines += ['| New 2020–2025 account | Strategy CAGR | Same-universe equal-weight CAGR | SPY CAGR |', '|---|---:|---:|---:|']
         for row in universes[universes.kind == 'common_history'].itertuples():
             lines.append(f'| {row.universe} | {row.mom_cagr:.2%} | {row.ew_cagr:.2%} | {row.spy_cagr:.2%} |')
-        lines += ['', '完整共同区间、年度及全部三年滚动结果见 universe_comparisons.csv。这个比较检验产品池敏感性，不支持“挑一组历史赢家行业就证明策略有效”。', '',
-                  '| 新行业与年份 | 对十一行业策略当年收益的贡献 |', '|---|---:|']
+        lines += ['', 'All common-period, annual and rolling three-year results are in universe_comparisons.csv. This is a product-universe sensitivity check; selecting historical winning sectors would not establish strategy effectiveness.', '',
+                  '| Added sector and year | Contribution to eleven-sector annual strategy return |', '|---|---:|']
         for year, ticker in [(2020, 'XLC'), (2021, 'XLC'), (2021, 'XLRE'), (2022, 'XLRE')]:
             row = expanded_contributions[(expanded_contributions.universe == 'eleven') &
                                          (expanded_contributions.start == f'{year}-01-01') &
                                          (expanded_contributions.ticker == ticker)].iloc[0]
-            lines.append(f'| {year} / {ticker} | {100*row.pnl_return_contribution:+.2f} 个百分点 |')
+            lines.append(f'| {year} / {ticker} | {100*row.pnl_return_contribution:+.2f} percentage points |')
         for ticker in EXTRA_SECTORS:
             row = selection_counts[(selection_counts.universe == 'eleven') & (selection_counts.ticker == ticker)].iloc[0]
-            lines.append(f'\n{ticker} 在 {row.total_monthly_executions} 次月度执行中入选 {row.selected_monthly_executions} 次。')
-        lines += ['', '新增行业的贡献也会转负；十一行业策略在 2021 和 2023 年仍落后于 EW11。新增 ETF 的贡献不等于扩展池的净改善，因为它同时替换了旧行业持仓。完整贡献与替换路径见 universe_annual_contributions.csv 和 universe_holdings_comparison.csv。']
-    lines += ['', '## 可以据此判断什么', '',
-              '现在可以观察规则如何在盈利、亏损、追上基准与落后基准之间变化，并审查具体持仓的贡献。要把这些描述变成“只在有利环境交易”，还需要事前可观测的环境定义、新规则和真正后续的验证；本次没有增加择时条件或将选中年份包装成新样本外结果。', '',
-              '原始九行业的 2000–2025 主结论仍保留。代码和全部探索网格使有利与不利例子都可复算。']
-    (directory / 'regime_comparison_zh.md').write_text('\n'.join(lines) + '\n')
+            lines.append(f'\n{ticker} was selected at {row.selected_monthly_executions} of {row.total_monthly_executions} monthly executions.')
+        lines += ['', 'Added-sector contributions also turn negative. Eleven-sector momentum still lagged EW11 in 2021 and 2023. Added-ETF contributions are not the net improvement from expansion: the new holdings also replace original sectors. Full contributions and replacement paths are in universe_annual_contributions.csv and universe_holdings_comparison.csv.']
+    lines += ['', '## What this establishes', '',
+              'The outputs show how one rule moves between profit, loss, outperformance and underperformance, with auditable holding contributions. Turning this explanation into selective trading requires decision-time environment definitions, a new rule and subsequent validation. This exploration adds no timing condition and does not present selected historical years as fresh out-of-sample evidence.', '',
+              'The original 2000–2025 nine-sector conclusion is retained. The code and complete grid support reproduction of favorable and unfavorable examples.']
+    (directory / 'regime_comparison.md').write_text('\n'.join(lines) + '\n')
 
 
 def plot_exploration(directory: Path, annual: pd.DataFrame, rolling: pd.DataFrame) -> None:

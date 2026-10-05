@@ -8,7 +8,7 @@ The proposed sleeve holds the three highest-ranked original sector ETFs under MO
 
 The follow-up research did not establish a reliable advance enablement rule. Concentrated controls placed momentum's CAGR near the middle of their historical distributions. Its maximum drawdown was shallower than most control paths, but that observation has not been established as protection across independent risk events. French research portfolios supply evidence in a different universe and implementation, rather than approval for this ETF sleeve.
 
-The [final review in Chinese](final_review_zh.md) retains the full results, separate statistical settings, drawdown percentiles, external-data boundaries and the distinction between sector equal-weighting and passive market exposure. This decision concerns one fixed rule; it does not settle active versus passive management or imply a profitable reversal strategy.
+The [final review in Chinese](final_review.md) retains the full results, separate statistical settings, drawdown percentiles, external-data boundaries and the distinction between sector equal-weighting and passive market exposure. This decision concerns one fixed rule; it does not settle active versus passive management or imply a profitable reversal strategy.
 
 ## Reconsideration
 

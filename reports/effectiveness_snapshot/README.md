@@ -1,6 +1,6 @@
 # Effectiveness research snapshot — 2026-10-04
 
-Read [行业轮动何时有效：收益机制、事前条件与证据强度](industry_rotation_effectiveness_zh.md) for the completed study. It evaluates realized return mechanisms, four information-available-at-decision conditions and three actual switching filters. The original frozen protocol and numerical results are preserved; this publication adds no successful rule or new inference.
+Read [When industry rotation works: mechanisms, advance conditions and evidence](industry_rotation_effectiveness.md) for the completed study. It evaluates realized return mechanisms, four information-available-at-decision conditions and three actual switching filters. The original frozen protocol and numerical results are preserved; this publication adds no successful rule or new inference.
 
 The ETF study did not confirm a stable, cost-adjusted enable/disable rule. Realized forward ranking and dispersion explain outcomes after the fact; they do not predict them. The French transfer check uses different research baskets and execution timing, and does not turn the ETF result into a universal claim about momentum or active investing.
 
@@ -8,18 +8,18 @@ The ETF study did not confirm a stable, cost-adjusted enable/disable rule. Reali
 
 | Artifact | Purpose |
 |---|---|
-| [Frozen protocol](research_protocol_zh.md) | H1–H4, F1–F3, calibration periods, costs, fixed statistical families and reporting threshold |
-| [Method review](protocol_audit_zh.md) | Literature, identification limits and review of the frozen protocol |
-| [Independent calculation audit](independent_calculation_audit_zh.md) / [JSON](independent_calculation_audit.json) | Independent features, self-financing ledgers, HAC and Holm checks |
+| [Frozen protocol](research_protocol.md) | H1–H4, F1–F3, calibration periods, costs, fixed statistical families and reporting threshold |
+| [Method review](protocol_audit.md) | Literature, identification limits and review of the frozen protocol |
+| [Independent calculation audit](independent_calculation_audit.md) / [JSON](independent_calculation_audit.json) | Independent features, self-financing ledgers, HAC and Holm checks |
 | [ETF condition tests](etf_condition_tests.csv) | All four hypotheses and all three costs; monthly arithmetic units |
 | [Monthly features](etf_monthly_features.csv) | Observable information, labels and subsequent net active returns; H3/H4 calibration applies after 2009 |
 | [Time checks](etf_condition_time_checks.csv) / [leave-one-year-out](etf_leave_one_year_out.csv) | Direction stability and concentration in particular years |
 | [Filter summary](filter_summary.csv) / [inference](filter_inference.csv) | Actual switching portfolios and the separate six-comparison test family |
 | [Filter NAV](filters_daily_nav_5bps.csv) / [ledger validation](ledger_validation.csv) | Actual daily performance and constant-filter accounting checks |
-| [Mechanism review](mechanism/mechanism_review_zh.md) / [statistics](mechanism/mechanism_statistics.json) | 311 execution intervals, 312 calendar months, realized ranks and attribution |
-| [French validation](external/external_validation_zh.md) / [provenance](external/provenance.json) | External industry classification/timing/cost limits, results and original source hashes |
+| [Mechanism review](mechanism/mechanism_review.md) / [statistics](mechanism/mechanism_statistics.json) | 311 execution intervals, 312 calendar months, realized ranks and attribution |
+| [French validation](external/external_validation.md) / [provenance](external/provenance.json) | External industry classification/timing/cost limits, results and original source hashes |
 | [Original ETF manifest](etf_study_manifest.json) | Original price, protocol, engine, signal and script hashes |
-| [Integration manifest](integration_manifest.json) | Byte-identical snapshot files; original/integrated script hashes and portability changes |
+| [Integration manifest](integration_manifest.json) | Original snapshot/script identities and portability history; [English translations](../english_documentation_manifest.json) are recorded separately |
 | [Numerical reproduction check](../reproduction_check/README.md) | Follow-up rerun: 25 CSV and three core JSON summaries agree; regenerated independent audit retained |
 
 The included monthly return/ledger/attribution tables support tracing the narrative without publishing original vendor data. Raw ETF prices, risk-free input, French supplier downloads, and parsed raw French return/factor histories are excluded. Full filter trades/P&L can be regenerated locally instead of duplicating them in the public snapshot.
@@ -32,6 +32,6 @@ The original baseline report uses **2,000 draws, seed 2026, six-month blocks**. 
 
 H1 has only five ETF months in one episode. Six/twelve-month bootstraps omit 18.15%/24.29% of draws with missing conditional groups; its retained-draw intervals are fragile descriptions, not reliable general crisis-recovery evidence. Original histories were already explored, so neither the calendar splits nor the external history is genuinely untouched prospective data.
 
-Historical review text and original manifests retain original file names and source hashes. The integrated scripts have different hashes after portability changes; the integration manifest makes this difference explicit. During integration, only syntax/CLI/hash checks were run. The original research and audit date remains 2026-10-04; a separate 2026-10-05 follow-up rerun verified the portable numerical calculations and retained its own audit and identities. Historical hashes were not replaced. [Snapshot provenance](../../docs/snapshot_provenance.md) explains that distinction.
+The current reviews and protocol are English translations; numerical results are unchanged. Original manifests retain their generation-time file names and hashes, so their historical text entries are not checksums of today's translations. The integration and English documentation records distinguish these stages. During integration, only syntax/CLI/hash checks were run. The original research/audit date remains 2026-10-04; a separate 2026-10-05 follow-up rerun verified the portable numerical calculations and retained its own audit and identities. Historical hashes were not replaced. [Snapshot provenance](../../docs/snapshot_provenance.md) explains the sequence.
 
-The two historical effectiveness PNG files were produced by the excluded one-machine builder. This follow-up reproduced their underlying numerical tables but did not rerender the figures or run the French narrative writer; it therefore makes no claim of complete image/narrative regeneration.
+The two historical effectiveness PNG files were produced by the excluded one-machine builder. The numerical follow-up reproduced their underlying tables but did not rerender those figures or run the French narrative writer. The later English conversion separately rendered the external memo from stored results; it did not add a new numerical study or verify the historical figure rendering.

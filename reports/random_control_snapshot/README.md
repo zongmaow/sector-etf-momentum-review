@@ -1,53 +1,53 @@
-# 随机三行业对照：集中持仓与行业身份选择
+# Three-sector random controls: concentration and industry selection
 
-本报告是已观察历史上的诊断；随机路径百分位不是未来盈利概率，也不是 alpha 显著性检验。
+This is a diagnostic on previously observed history. Path percentiles are neither future profit probabilities nor alpha significance tests.
 
-固定样本 2000–2025；每方案 4096 条路径；单边费用 0/5/10bp，以下主表为 5bp。
+Fixed sample: 2000–2025; 4096 paths per method; 0/5/10bp per side. The main tables below use 5bp.
 
-| 方案 | 随机 CAGR 5/50/95 百分位 | 原动量 CAGR 历史百分位 | 原动量回撤较浅百分位 | 随机超过 EW9 的比例 |
+| Method | Random CAGR P05 / P50 / P95 | Momentum CAGR historical percentile | Momentum shallower-drawdown percentile | Share beating EW9 |
 |---|---|---:|---:|---:|
-| 固定行业身份重映射（主方案） | 5.95% / 8.15% / 10.46% | 54.8% | 94.9% | 35.5% |
-| 逐月匹配名单重合（敏感性） | 6.25% / 8.14% / 10.09% | 56.2% | 95.7% | 32.6% |
+| Fixed industry-label remapping (primary) | 5.95% / 8.15% / 10.46% | 54.8% | 94.9% | 35.5% |
+| Monthly overlap-matched sampling (sensitivity) | 6.25% / 8.14% / 10.09% | 56.2% | 95.7% | 32.6% |
 
-同日重算基准净 CAGR：MOM12−1 8.32%，EW9 8.68%，SPY 8.02%。动量落后等权，但没有落后 SPY。
+Reference net CAGRs recomputed on the same dates: MOM12−1 8.32%, EW9 8.68%, SPY 8.02%.
 
-## 方法与成本
+## Methods and costs
 
-主方案每条路径只抽一次九行业双射，并在全期固定使用。它保留原动量的三个持仓、进出拓扑、名单相邻重合和选择频率的重命名版本。敏感性方案每期随机保留/新增与原动量相同数量的行业，改变长期行业偏好和共持结构。两者都没有用随后收益来选名单。
+The primary method draws one nine-sector bijection per path and keeps it fixed throughout the sample. It preserves three holdings, entry/exit topology, adjacent membership overlap and a relabeled version of the original selection frequencies. The sensitivity method randomly retains and adds the same numbers of sectors each month, changing long-run sector preferences and co-holding structure. Neither uses subsequent returns to choose its labels.
 
-名单数量匹配不等于金额换手匹配。以下均来自各路径真实漂移与自融资交易，不从原动量扣同一固定费用。年化费用负担为各次 fee/pretrade_NAV 之和除以实际经过年数，含初始建仓；它不等于 CAGR 的精确扣减。
+Matching membership counts does not match dollar turnover. Each path uses its own weight drift, self-financing trades and cash fees. Annualized fee burden is the sum of fee/pretrade_NAV divided by elapsed years, including formation; it is not the exact reduction in CAGR.
 
-| 组合/方案 | 年化半边换手 5/50/95 百分位 | 年化费用负担 5/50/95 百分位 | 最大回撤 5/50/95 百分位 |
+| Portfolio/method | Annualized half-gross turnover P05 / P50 / P95 | Annualized fee burden P05 / P50 / P95 | Maximum drawdown P05 / P50 / P95 |
 |---|---|---|---|
-| 原动量 | 2.70 | 0.27% | -46.20% |
-| 固定行业身份重映射（主方案） | 2.70 / 2.71 / 2.72 | 0.27% / 0.27% / 0.27% | -62.51% / -54.45% / -46.16% |
-| 逐月匹配名单重合（敏感性） | 2.70 / 2.71 / 2.72 | 0.27% / 0.27% / 0.27% | -62.99% / -54.20% / -46.39% |
+| Original momentum | 2.70 | 0.27% | -46.20% |
+| Fixed industry-label remapping (primary) | 2.70 / 2.71 / 2.72 | 0.27% / 0.27% / 0.27% | -62.51% / -54.45% / -46.16% |
+| Monthly overlap-matched sampling (sensitivity) | 2.70 / 2.71 / 2.72 | 0.27% / 0.27% / 0.27% | -62.99% / -54.20% / -46.39% |
 
-## 收益和回撤需要分开判断
+## Assess returns and drawdowns separately
 
-按主方案 / 敏感性方案顺序，原动量净 CAGR 历史百分位为 54.8% / 56.2%；回撤较浅百分位为 94.9% / 95.7%。全期最大回撤 -46.20%，从 2008-05-20 高点至 2009-03-09 谷底。回撤列越高表示历史回撤越浅，不是未来防守成功率。
-收益结果不能抹去这个历史风险优点，但全期最大回撤由一次最深峰谷决定。这段峰谷属于 2008–2009 年金融危机；这里尚未验证不同危机和后续时期是否重复出现同样的优势，因此不能把它直接当作稳定的防守能力或启用条件。
+In primary / sensitivity order, momentum CAGR percentiles are 54.8% / 56.2%; shallower-drawdown percentiles are 94.9% / 95.7%. Maximum drawdown was -46.20%, from the 2008-05-20 peak to the 2009-03-09 trough. A higher drawdown percentile means a shallower historical loss, not a probability of future protection.
+The return result does not erase this historical risk advantage. However, full-period maximum drawdown is determined by one deepest peak-to-trough episode, here in the 2008–2009 financial crisis. Persistence across different crises and later periods has not been established, so this observation does not establish dependable protection or an enablement condition.
 
-## 怎样解释
+## Interpretation
 
-原动量在随机分布中的位置回答：给定这段市场历史、三行业集中度以及原规则的进出节奏，其具体行业身份选择取得了什么历史位置。它不单独识别价格信号的经济因果；行业相关性、风险暴露和共持结构仍不同。
+The percentile describes the historical position of the chosen industry identities, conditional on this market history, three-sector concentration and the original entry/exit schedule. It does not separately identify the economic cause of the price signal: sector correlations, exposures and co-holding structures still differ.
 
-若原规则没有明显高于这些随机集中路径，现有历史不足以把收益归功于有用排序。即使排名较高，也不能据此确认未来 alpha，因为行业身份不可交换、规则和历史已被观察，且路径共享同一市场。
+A rule near the middle of these concentrated controls does not provide strong historical evidence of useful ranking. Even a high percentile would not establish future alpha: sectors are not exchangeable, the rule and history were already observed, and all paths share one market history.
 
-随机组合优于/劣于 EW9 的比例，不是主动投资普遍成功率。集中组合的复合收益还受波动、行业偏好、再平衡及成本影响。这里没有检验反转，也不能把动量结果取负。
+The share of random portfolios beating EW9 is not the general success rate of active investing. Compound returns also depend on volatility, sector preferences, rebalancing and costs. Reversal is not tested here and cannot be inferred by negating momentum returns.
 
-## 资料与复算
+## Files and reproduction
 
-- [本轮方法与时间记录](../../research/random_control_protocol_zh.md)。协议与首批结果同次公开，属于回顾性诊断。
-- [完整结果与配置](summary.json)、[分布表](distribution_summary.csv)、[账本验证](ledger_validation.csv)。
-- `*_paths.csv.gz` 披露所有随机路径在每个成本下的指标；`identity_mappings.csv.gz` 保存固定映射。
-- `*_sample_trades_5bps.csv.gz` 保存预定前两条随机路径交易；`example_daily_nav_5bps.csv.gz` 保存各方案第一条路径净值。它们均未按表现挑选。
-- [压缩存储清单](storage_manifest.json) 保存解压后 CSV 的哈希；pandas.read_csv 自动读取 `.csv.gz`，也可以用 gzip 解压。压缩没有删除 0/5/10bp 的结果。
+- [Methods and timing record](../../research/random_control_protocol.md). The protocol and first results were published together; this remains a retrospective diagnostic.
+- [Complete results and settings](summary.json), [distribution table](distribution_summary.csv), [ledger validation](ledger_validation.csv).
+- `*_paths.csv.gz` disclose every random path at each cost; `identity_mappings.csv.gz` retains the fixed mappings.
+- `*_sample_trades_5bps.csv.gz` retain the first two prespecified random trading paths; `example_daily_nav_5bps.csv.gz` retains the first path from each method. Examples were not selected for performance.
+- The [storage manifest](storage_manifest.json) records decompressed CSV hashes. `pandas.read_csv` reads `.csv.gz` directly; gzip can also decompress it. All 0/5/10bp results remain available.
 
-在仓库根目录：
+Run from the repository root:
 
 ```sh
 python -m sector_momentum random-control --prices data/raw/total_return.csv --out reports/random_local
 ```
 
-本输入价格哈希：`e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c`。重新下载可能有供应商修订，需另记哈希。0/10bp 的全部结果见 CSV 和 JSON。
+Saved price SHA-256: `e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c`. A later vendor download may revise history and needs its own hash. Complete 0/10bp results are retained in CSV and JSON.

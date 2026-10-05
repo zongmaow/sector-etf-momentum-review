@@ -1,6 +1,6 @@
 # Ex-post period and sector diagnostics
 
-[Chinese comparison report](regime_comparison_zh.md)
+[Period and universe comparison report](regime_comparison.md)
 
 This follows the original historical run. It retains the fixed MOM12−1 signal, top-three equal targets, next-close execution and 5 bps per-side costs. The original nine-sector full-history result remains in [../snapshot](../snapshot).
 

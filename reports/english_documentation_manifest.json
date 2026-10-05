@@ -1,0 +1,425 @@
+{
+  "updated_at_utc": "2026-10-05T22:24:51.610897+00:00",
+  "classification": "English documentation, filenames and report writers; no new financial research",
+  "prior_public_commit": "e1f97af84a3db16316e25e13a7cd468ee0eaff4e",
+  "document_renames_and_translations": [
+    {
+      "prior_path": "docs/investment_case_zh.md",
+      "english_path": "docs/investment_case.md",
+      "prior_sha256": "9047390242cb762785aa6de816d4711ac14b9802077ac0634628cfd98612d077",
+      "english_sha256": "5de409ed93c70a69f4be19ee613bff15c4551da5faba6a029ba2dea1d106c436"
+    },
+    {
+      "prior_path": "docs/research_plan_zh.md",
+      "english_path": "docs/research_design.md",
+      "prior_sha256": "720681b768cc9d7e3356905a9194723408245be3f3a1dda7b0f7f5edb1a3edc5",
+      "english_sha256": "d886539db61f8882d3c05a45740a8e9b7022f9d12fc5964aacec32851c3e6e2b"
+    },
+    {
+      "prior_path": "docs/final_review_zh.md",
+      "english_path": "docs/final_review.md",
+      "prior_sha256": "928465fef3780475d077bbed7add8017a51c8d331998d5eca2b5e5c9aa2d4b26",
+      "english_sha256": "741a3670c382339fb413e06c3941a906ddeed7c7a25cb8a591bfdfbbca1f0d3f"
+    },
+    {
+      "prior_path": "docs/framework_zh.md",
+      "english_path": "docs/framework.md",
+      "prior_sha256": "8cf0122884461810463462998d1f37326ed4b0ba09407acc586ed3b3c697192f",
+      "english_sha256": "c2f498c60088ed3ae8b8b11c2ffda4102cd25cc4b6f8ab41026ce15515041fb6"
+    },
+    {
+      "prior_path": "reports/exploratory_snapshot/regime_comparison_zh.md",
+      "english_path": "reports/exploratory_snapshot/regime_comparison.md",
+      "prior_sha256": "30ed48fc1f22f0f62118ce717a77b6ada411d71b59eda26141bf44b751f38c2d",
+      "english_sha256": "8483d46261d4d6b5e77c5b93436735a464f79917aa197c8fd442b2732939d476"
+    },
+    {
+      "prior_path": "reports/effectiveness_snapshot/research_protocol_zh.md",
+      "english_path": "reports/effectiveness_snapshot/research_protocol.md",
+      "prior_sha256": "9cdb1e71ccfdfb7b10631cacc8337a4a496b1c6692fe572dd038feccb403c823",
+      "english_sha256": "f92c8b5d80401d779a74c903fa58853376ec6e40ac3133cae2768a4158fb71a9"
+    },
+    {
+      "prior_path": "reports/effectiveness_snapshot/protocol_audit_zh.md",
+      "english_path": "reports/effectiveness_snapshot/protocol_audit.md",
+      "prior_sha256": "52599157a984e4eea133fe521c8e68d5246c471f302f277ef6abec9626fa0fb6",
+      "english_sha256": "b9688c065b5ba2bb52c751438e3013a83dfec44226d7cfd4c7a9924392f50281"
+    },
+    {
+      "prior_path": "reports/effectiveness_snapshot/independent_calculation_audit_zh.md",
+      "english_path": "reports/effectiveness_snapshot/independent_calculation_audit.md",
+      "prior_sha256": "b609f03df445b7623b056d3dbc3214c44c2fedb9cf21e8099d29928db0961649",
+      "english_sha256": "6eca82749a0dd674ce56e9c8822f04deba36499a5d60f24888c13b97e4bc9d26"
+    },
+    {
+      "prior_path": "reports/effectiveness_snapshot/industry_rotation_effectiveness_zh.md",
+      "english_path": "reports/effectiveness_snapshot/industry_rotation_effectiveness.md",
+      "prior_sha256": "9f50fcd1e3798a2604210d05e609f04bb56e01835530219b334138f76ed55a11",
+      "english_sha256": "bbe99c19ebd7c77c1ae7090ba5760cc98fcd09fc5614249061fd70ab90f987bb"
+    },
+    {
+      "prior_path": "reports/effectiveness_snapshot/external/external_validation_zh.md",
+      "english_path": "reports/effectiveness_snapshot/external/external_validation.md",
+      "prior_sha256": "33036be36a4e0372d32939844bc74dcf3d96c84b4a11902488ccf14a11e3836f",
+      "english_sha256": "238f5d23a3d27715f831820f33739b821283ffadb1966296962481c839b2fcf3"
+    },
+    {
+      "prior_path": "reports/effectiveness_snapshot/mechanism/mechanism_review_zh.md",
+      "english_path": "reports/effectiveness_snapshot/mechanism/mechanism_review.md",
+      "prior_sha256": "ebaefd083ee88c01297f14a974a0bbafca548a309079ebe0fa69f95c40aa7aa4",
+      "english_sha256": "6c04a47ddc5c460b406a62147b673fef83ebacf6e4ba6b9ab1245942e27fe936"
+    },
+    {
+      "prior_path": "research/random_control_protocol_zh.md",
+      "english_path": "research/random_control_protocol.md",
+      "prior_sha256": "625ae6b0c3c9e34188a69c2bb949a175a3616a8ba323dd3c6545ab1091a72969",
+      "english_sha256": "f46201ba6b52cd1798f905d079938cc1785a113de6dc870ef319ee51f58780a9"
+    }
+  ],
+  "current_writer_sha256": {
+    "src/sector_momentum/exploration.py": "9997628e0f1bbb9d05200e98c49935a78fe882a9f4f38c4c9b8ec7f270c2eccd",
+    "src/sector_momentum/random_control.py": "5f8e40237dc2b9282555ecc380fc17e590abb8c6840ea2a4f190a7a1772b4882",
+    "research/effectiveness/external/write_summary.py": "a378800a99397e8209ad7d009f5c2265be8620db045aa83c9d0ceb72458ced55",
+    "research/effectiveness/study.py": "1ec556967e66510a81afe88b6c36bd2eefbb55d73045756e047836c36c4d6c7b",
+    "research/effectiveness/external/analyze_conditions.py": "2cf88696b51c574d828300053fa35cd69c8a6350cf7cfc25c7b4e4ca1e9319d3"
+  },
+  "prior_writer_sha256": {
+    "src/sector_momentum/exploration.py": "e58fb05a2ed60b8dca40eb7d4488b81d1ad6b994f8b532b19e1a864f8c06c887",
+    "src/sector_momentum/random_control.py": "4c916177097283647a41410afe17c33fdebcd6328f537731dda3aa817287a900",
+    "research/effectiveness/external/write_summary.py": "c9cd5224a95d1e288d665a4aea2eb06860e518a579f261e6c22b564655fc5383",
+    "research/effectiveness/study.py": "956557e0129b132a4215276f75cfca2d6859f81a4972f90cb18f27da06d615b8",
+    "research/effectiveness/external/analyze_conditions.py": "29122a0c187c69ed21bc4354afb8069a720d2740a55fa2c2d3964b6cad39dc84"
+  },
+  "financial_implementation_checks": [
+    {
+      "file": "src/sector_momentum/exploration.py",
+      "check": "all non-report/non-cleanup function ASTs unchanged after protocol-filename normalization",
+      "function_count": 7,
+      "passed": true
+    },
+    {
+      "file": "src/sector_momentum/random_control.py",
+      "check": "all non-report/non-cleanup function ASTs unchanged after protocol-filename normalization",
+      "function_count": 12,
+      "passed": true
+    },
+    {
+      "file": "research/effectiveness/study.py",
+      "check": "complete module AST unchanged after protocol-filename normalization",
+      "passed": true
+    },
+    {
+      "file": "research/effectiveness/external/analyze_conditions.py",
+      "check": "complete module AST unchanged after protocol-filename normalization",
+      "passed": true
+    }
+  ],
+  "unchanged_numerical_artifacts": [
+    {
+      "file": "reports/effectiveness_snapshot/etf_condition_tests.csv",
+      "sha256": "dfafb600b42cc1729e4128f466d31298c4aee041e461d8e1d0ddd146b5f7580d"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/etf_condition_time_checks.csv",
+      "sha256": "757e771daede17cc1a236b8994840ecc18c653d87a5f25d4dbb4c3be0bb8f85d"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/etf_leave_one_year_out.csv",
+      "sha256": "2237cf278f8511ab2fecc4a5d01969f80db8940d579ed2e65e6c0a9feb4948e4"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/etf_monthly_features.csv",
+      "sha256": "623b1d8f0059efd131994dbe49ca6a9f5f6f1a536d94d5e50fa4177ebbe0945d"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/etf_study_manifest.json",
+      "sha256": "0e4291e4654d7e48e68df03bb9dee1dd6d4fabda289b8beca80f6e0f1c0f2014"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/basic_summary.csv",
+      "sha256": "344d0bf22096aa9fd77f4e35719daff9a6ca75d6d32fdd56c16c99b0f1e8fbd5"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/basic_summary.json",
+      "sha256": "da4d0e7d8717ae05fa971e910d3b0e3de1afaafce53328e038707713c4dafaec"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/comparison_returns.csv",
+      "sha256": "df6dd4ccd77c1f5d1ecaa241de2a0ce98a9177e84d9456787f3dffdea542147a"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/conditional_results.csv",
+      "sha256": "243a318393e5cfc0fd5a7146dbc4b918aa6e5811fa137ddb9debb0f87fe06b22"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/conditional_results.json",
+      "sha256": "523f023a77dbb1358e8b423d050e99176b9abdcfc967401ff0d835cc6e86acc2"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/conditions_and_outcomes.csv",
+      "sha256": "6a728b6a764ab00b56a018e1157d43d41ab2959df4fa73d407eb845d98344916"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/ew10_monthly_ledger.csv",
+      "sha256": "54e26c5f36dec8f3a393fbfca9b99eb769eed6f622c5c31a24feb629d02ade9d"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/ff10_holding_month_scores.csv",
+      "sha256": "0530ee5b216cad3e64313b5c19291537912e8c92bb1c068fb90fb08bb2975c37"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/leave_one_year_out.csv",
+      "sha256": "a864ea4a53b5c4af0064f096e3b9b7b7be62eaa41097671008daf7c6235007be"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/mom12_1_monthly_ledger.csv",
+      "sha256": "a7d166677fd9dd7824e803d226f06617f566367800902ace75c1fc865e60410d"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/external/provenance.json",
+      "sha256": "ef4203fb18284a0b3d2c2a9396cfe4b0a7266698ad2a73ef899bf51e4d2a39fc"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/filter_inference.csv",
+      "sha256": "ca40e389502f9c6c35310ff95d1ec1fc09c4b9777c8458a6125682a4e863683a"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/filter_performance.png",
+      "sha256": "de6ac30ab74f3f359f32437fdf0fb109e4334100a1bbfd841551877fbe14d0f8"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/filter_summary.csv",
+      "sha256": "06e77cfef41227f11cd5072466503aefe0ab4fe9a9633c1807d65dce235dc157"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/filter_time_checks.csv",
+      "sha256": "acce9ad3cfba96e44243122e47e25853b5531f1651bc26ea70ec6750ceff7466"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/filters_daily_nav_5bps.csv",
+      "sha256": "1bd5c98d228a69e05bb91cbe3ebcf8cd880f9af06def280578bb1d13e8a4af5f"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/filters_monthly_0bps.csv",
+      "sha256": "29f20ac8795a2d4b91baae2930a3ff53281849682054e2574918fbfcc91167c2"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/filters_monthly_10bps.csv",
+      "sha256": "5533cd03c45c660409b3aa5c5fdf05c5d6f679ffaa1ecea5cfdfbac496e10a97"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/filters_monthly_5bps.csv",
+      "sha256": "e381ae40905ff44539ad7856eefa537ec859fb1e200cdcf39c74eab8e6cf42fb"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/independent_calculation_audit.json",
+      "sha256": "4efef4334e56be897f1a7b34c356aa44d24533b7b225d551755cf297dbd66326"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/ledger_validation.csv",
+      "sha256": "63ba555909bb1ed028f6b09d36577a8e8d22f3b40b90cef96088f51f28c03695"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/mechanism/calendar_month_active_attribution.csv",
+      "sha256": "edfd686fa2f11cfb7d7a4df45a69b67cdf4ed3754770e2997f519ad7f97d4d25"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/mechanism/calendar_year_active_attribution.csv",
+      "sha256": "f0c221ca29e3096b30efb6a70ccdeac928ee8b7adb7b88927166f030d5070a2d"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/mechanism/execution_intervals.csv",
+      "sha256": "d27da590be4046d71f3ef91cee144bce1a077fa63a04bee5353e9f6114fa9467"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/mechanism/interval_sector_gross_active.csv",
+      "sha256": "fbd7a91008dfad47cc54481cf40b016e5e8d3fb13763fb4817b38d7bead6d396"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/mechanism/mechanism_statistics.json",
+      "sha256": "2d532f42c377cfd9703e32e23cf731df7876bab12818576bb81b8a916fe07f7a"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/mechanism_and_conditions.png",
+      "sha256": "a9d9d9894159b06ea9629b940f802fc5c5d346edf1a69c2212813e4f851c1363"
+    },
+    {
+      "file": "reports/effectiveness_snapshot/recomputed_baseline_monthly.csv",
+      "sha256": "391f4365a3ce177b2c81cd6c64b21727262c8a2fbe458fe79f66a552748dd43a"
+    },
+    {
+      "file": "reports/exploratory_snapshot/all_windows.csv",
+      "sha256": "bf185a898481bd5fcaa82e3ac46d58cf56b4b75a8e9017d17c394b36f2cc3b68"
+    },
+    {
+      "file": "reports/exploratory_snapshot/annual_sector_contributions.csv",
+      "sha256": "61d719ba9eac0ce1a1207a28c323feac4842a741007b4695f71f5bc60e53b9c9"
+    },
+    {
+      "file": "reports/exploratory_snapshot/calendar_years.csv",
+      "sha256": "791afce2bb6872128f88395ecd4a99a86011a661c35713d15af120381483376a"
+    },
+    {
+      "file": "reports/exploratory_snapshot/expanded_data_manifest.json",
+      "sha256": "40a7c6b8c5a6763302a747bf4d09be1378982c87943e6ad58339a9a4c37ee71a"
+    },
+    {
+      "file": "reports/exploratory_snapshot/exploration.json",
+      "sha256": "7c9e7519a242a2c1e0cb3207dcbd370255b075428e5c757d367623de41a57763"
+    },
+    {
+      "file": "reports/exploratory_snapshot/period_comparison.png",
+      "sha256": "fb2ba672bead7e483276eb9cef50ae08b32d1ab56da105ea7909192aea7e140b"
+    },
+    {
+      "file": "reports/exploratory_snapshot/universe_annual_contributions.csv",
+      "sha256": "35b50670b0ecf11f559e51774fa5e49f6e129e947cfe002431ad29d4230ce754"
+    },
+    {
+      "file": "reports/exploratory_snapshot/universe_comparisons.csv",
+      "sha256": "a7a244abe5569b6bb8cc18b70e4ffee90981da9c8ec76e010f44d82f0533c5af"
+    },
+    {
+      "file": "reports/exploratory_snapshot/universe_holdings_comparison.csv",
+      "sha256": "6a23bf88517cd13a8bf9ade43b2c40af603e1864390aa6e1ea170161099fb8c1"
+    },
+    {
+      "file": "reports/exploratory_snapshot/universe_selection_counts.csv",
+      "sha256": "57c1cc8266ab5cc038f78103a4f5acfe50b1029fd3f52cfe1533a27520dc7839"
+    },
+    {
+      "file": "reports/random_control_snapshot/cagr_distribution.png",
+      "sha256": "3965942a131414273436dd95988ee41ecced2960aba9ba68f0672122842a9d9b"
+    },
+    {
+      "file": "reports/random_control_snapshot/distribution_summary.csv",
+      "sha256": "ccfef505337f7771088fc89cc529276353b3c212cd3fed57e5dcb594bc56676f"
+    },
+    {
+      "file": "reports/random_control_snapshot/example_daily_nav_5bps.csv.gz",
+      "sha256": "d4adabff2dcaccef9dcf3fee6c460eab5bde999376c8689b9bcbaa7eef761155"
+    },
+    {
+      "file": "reports/random_control_snapshot/identity_mappings.csv.gz",
+      "sha256": "e1d467e0c3d34358df93ac9f00bd422bce5f561f7559b95a517e8e12c377eabb"
+    },
+    {
+      "file": "reports/random_control_snapshot/identity_remap_0bps_paths.csv.gz",
+      "sha256": "0557f768b49951c7baab12eb317eedcfb355837a0da3cbf92b04fe57a29d7477"
+    },
+    {
+      "file": "reports/random_control_snapshot/identity_remap_10bps_paths.csv.gz",
+      "sha256": "9dffc836cb6599eb7a8b023c4ad27a28d5e682e94dae8c357b8b10e4012f9a1d"
+    },
+    {
+      "file": "reports/random_control_snapshot/identity_remap_5bps_paths.csv.gz",
+      "sha256": "3de189f8a4c1d09e9979d7a54e65358c849a560afe3b19d0d3f793d6654c1ff5"
+    },
+    {
+      "file": "reports/random_control_snapshot/identity_remap_sample_trades_5bps.csv.gz",
+      "sha256": "69fef9c66b4b50ba77505702eca1308df0109c2bee6f812e7dbf16e0044d17a0"
+    },
+    {
+      "file": "reports/random_control_snapshot/ledger_validation.csv",
+      "sha256": "c191dfb8a6e6f4483bbb8935e6539d2e42aad482356f0a75dad1826c709b7532"
+    },
+    {
+      "file": "reports/random_control_snapshot/overlap_matched_0bps_paths.csv.gz",
+      "sha256": "e3c03f778d6a4743d2b0dda3a3f0cc82cd987cba41d8bdb79d0689bb9952fca9"
+    },
+    {
+      "file": "reports/random_control_snapshot/overlap_matched_10bps_paths.csv.gz",
+      "sha256": "1f192bdd05034170dbb6340fbb36caf39800d1b570ad6ba187db42739f6d8804"
+    },
+    {
+      "file": "reports/random_control_snapshot/overlap_matched_5bps_paths.csv.gz",
+      "sha256": "93b8a840af095637b9f7b0ad8f41c29d90a28791b94419e85076241f3c84ad02"
+    },
+    {
+      "file": "reports/random_control_snapshot/overlap_matched_sample_trades_5bps.csv.gz",
+      "sha256": "4d3f5dff18724c5ba48fc8dd1b8f68eb1f4811f89ab36a759b6177e66faaa5be"
+    },
+    {
+      "file": "reports/random_control_snapshot/storage_manifest.json",
+      "sha256": "27acf8dd59bef4fe93b305fd75bdfa2d38bae5f4654ed95bee919465da54b3b7"
+    },
+    {
+      "file": "reports/random_control_snapshot/summary.json",
+      "sha256": "e41046788b0a29223dc37625893494c6d6cc10012bf949f49c6ec4f024d3974a"
+    },
+    {
+      "file": "reports/random_control_snapshot/summary_dd1c4a9.json",
+      "sha256": "fddc88a91d6100900676b72d650a0e99e55418b8878df6dc7049d024896341f7"
+    },
+    {
+      "file": "reports/reproduction_check/comparison.json",
+      "sha256": "05ae4101ea849de1f19dba9ecaf86458be86d7b0df649c6f117a7ff95e861cb8"
+    },
+    {
+      "file": "reports/reproduction_check/independent_calculation_audit.json",
+      "sha256": "de5b022ed51f8ab4dd5c3356c2f2c479adc289f6f6ea3e5e959830bfe1a7013b"
+    },
+    {
+      "file": "reports/reproduction_check/verification_manifest.json",
+      "sha256": "a3ab256aef3683028048a1ec5b69aff1e264c79d014d915fdeba4b677c0f144b"
+    },
+    {
+      "file": "reports/snapshot/analysis.json",
+      "sha256": "3ed09d2f61464999b5079472cc04a15c9beff375a2c2f735cb3d52ec4cf3a923"
+    },
+    {
+      "file": "reports/snapshot/data_quality.json",
+      "sha256": "481d960f05e8368b04fc5e83ec544ed610c4e2263adc9d8db85ce11469e9116c"
+    },
+    {
+      "file": "reports/snapshot/episodes.csv",
+      "sha256": "0bf524a0591310e7dfdf7b367451ac2ebb2a595251ba80368183a8bc1afa1983"
+    },
+    {
+      "file": "reports/snapshot/holdings.png",
+      "sha256": "8458467c9ec8a1d1d912a589226facc6b7cb7c612b47fc1c0ae8b3d23dab8ae2"
+    },
+    {
+      "file": "reports/snapshot/manifest.json",
+      "sha256": "bf060295ce754c5af958000724abb629ed6ac0c9d27e0182521777852db8b8cf"
+    },
+    {
+      "file": "reports/snapshot/monthly_returns.csv",
+      "sha256": "e2d2b2177515c1f281bc4092f3cec3abd5d2abfc088ed79dca7a6a735407d100"
+    },
+    {
+      "file": "reports/snapshot/rf_manifest.json",
+      "sha256": "a15219f975e7eb1ecc8280fd6e739ab4b6ba8f41200cb8041f92522198fe1937"
+    },
+    {
+      "file": "reports/snapshot/source_hashes.json",
+      "sha256": "4e8244e240bc7778a6458b31c579c3968655ee34d852e5f664cba79c721b7848"
+    },
+    {
+      "file": "reports/snapshot/summary.csv",
+      "sha256": "5e3ca4e3d212079d967840b01f6bac5deccec7097fd7e41271bb906657da3bee"
+    },
+    {
+      "file": "reports/snapshot/wealth_drawdown.png",
+      "sha256": "4ca9baa2c23b416efed631a416ef0933352369d3c17a4f57ec70a5e58b347047"
+    }
+  ],
+  "validation": {
+    "translated_documents": 12,
+    "historical_numerical_artifacts_byte_identical": true,
+    "random_and_exploratory_reports_rendered_from_stored_outputs": true,
+    "external_memo_rendered_privately_from_snapshot_and_reproduced_json": true,
+    "new_financial_results_computed": false,
+    "markdown_documents_checked": 22,
+    "Chinese_content_files": 0,
+    "old_Chinese_document_filenames": 0,
+    "broken_local_markdown_links": 0,
+    "offline_tests_passed": 75,
+    "research_CLI_help_paths_passed": 6
+  },
+  "boundaries": [
+    "Historical source/protocol hashes retain their generation-time identities; translated prose has new identities.",
+    "Integration byte_identical fields refer to the original integration commit, not current English narrative text.",
+    "Rendering an English memo from existing JSON is not new investment evidence or historical figure regeneration."
+  ]
+}

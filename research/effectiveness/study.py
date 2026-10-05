@@ -263,17 +263,17 @@ def main():
     parser.add_argument('--repo',type=Path,default=REPO,help='sector-etf-momentum-review checkout with its saved raw prices')
     parser.add_argument('--out',type=Path,default=OUT,help='directory for generated research results')
     parser.add_argument('--prices',type=Path,help='saved ETF total-return CSV; default: REPO/data/raw/total_return.csv')
-    parser.add_argument('--protocol',type=Path,help='frozen protocol; default: REPO/reports/effectiveness_snapshot/research_protocol_zh.md')
+    parser.add_argument('--protocol',type=Path,help='frozen protocol; default: REPO/reports/effectiveness_snapshot/research_protocol.md')
     args=parser.parse_args()
     REPO,OUT=args.repo.resolve(),args.out.resolve()
     prices=(args.prices or REPO/'data/raw/total_return.csv').resolve()
-    protocol=(args.protocol or REPO/'reports/effectiveness_snapshot/research_protocol_zh.md').resolve()
+    protocol=(args.protocol or REPO/'reports/effectiveness_snapshot/research_protocol.md').resolve()
     for required in [prices,protocol]:
         if not required.is_file():
             parser.error(f'Missing saved input: {required}; no data will be downloaded')
     OUT.mkdir(parents=True,exist_ok=True)
-    if protocol != OUT/'research_protocol_zh.md':
-        (OUT/'research_protocol_zh.md').write_bytes(protocol.read_bytes())
+    if protocol != OUT/'research_protocol.md':
+        (OUT/'research_protocol.md').write_bytes(protocol.read_bytes())
     levels=load_total_returns(prices)
     validate_research_coverage(levels)
     f,threshold=features(levels)
@@ -304,7 +304,7 @@ def main():
           'sha256':{name:hashlib.sha256(path.read_bytes()).hexdigest() for name,path in
                     [('prices',prices),('recomputed_monthly_returns',OUT/'recomputed_baseline_monthly.csv'),
                      ('engine',REPO/'src/sector_momentum/engine.py'),('signals',REPO/'src/sector_momentum/signals.py'),
-                     ('protocol',OUT/'research_protocol_zh.md'),('script',Path(__file__))]}}
+                     ('protocol',OUT/'research_protocol.md'),('script',Path(__file__))]}}
     (OUT/'etf_study_manifest.json').write_text(json.dumps(meta,indent=2)+'\n')
     print('Threshold:',threshold)
     print(cond[cond.cost_bps==5].to_string(index=False))

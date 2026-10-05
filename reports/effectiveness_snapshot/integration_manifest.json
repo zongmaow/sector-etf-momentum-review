@@ -307,5 +307,12 @@
     "historical_hashes_preserved": true,
     "figure_rendering_rerun": false,
     "mechanism_baseline_rebuilt_from_saved_inputs": true
+  },
+  "identity_record_scope": "Original integration identities at dd1c4a9; translated documentation and later writer paths are mapped separately.",
+  "english_documentation_update": {
+    "record": "reports/english_documentation_manifest.json",
+    "prior_public_commit": "e1f97af84a3db16316e25e13a7cd468ee0eaff4e",
+    "numerical_artifacts_unchanged": true,
+    "historical_identities_preserved": true
   }
 }

@@ -1,12 +1,12 @@
 # Reproducing the effectiveness study
 
-These scripts reproduce the completed 2026-10-04 retrospective study. They do not search for new rules or download missing data. The published [snapshot](../../reports/effectiveness_snapshot/README.md) retains the original protocol, numerical results, reviews and historical source hashes. The scripts in this directory were subsequently made portable; [integration_manifest.json](../../reports/effectiveness_snapshot/integration_manifest.json) maps the original and integrated script hashes.
+These scripts reproduce the completed 2026-10-04 retrospective study. They do not search for new rules or download missing data. The published [snapshot](../../reports/effectiveness_snapshot/README.md) retains the numerical results and historical source hashes; its protocol and reviews are now available in English. The scripts were subsequently made portable; [integration_manifest.json](../../reports/effectiveness_snapshot/integration_manifest.json) maps the original and integrated hashes, while the [English documentation record](../../reports/english_documentation_manifest.json) records the later translations and report-writer changes.
 
 Run the commands below from the repository root using Python 3.12 and the versions in [requirements-reproduce.txt](../../requirements-reproduce.txt). `PYTHONPATH=src` selects this checkout's engine. Generated output belongs in the ignored `reports/local/` directory. Do not overwrite the historical public snapshot.
 
 ## ETF conditions and actual switching filters
 
-Required saved input: `data/raw/total_return.csv`. The historical price SHA-256 is `e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c`. The required trading-session coverage and nine-sector/SPY schema are validated by the project data loader. The frozen protocol defaults to `reports/effectiveness_snapshot/research_protocol_zh.md`; `--protocol` can explicitly select a byte-identical copy.
+Required saved input: `data/raw/total_return.csv`. The historical price SHA-256 is `e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c`. The required trading-session coverage and nine-sector/SPY schema are validated by the project data loader. The protocol defaults to `reports/effectiveness_snapshot/research_protocol.md`; `--protocol` can explicitly select another copy. The English translation preserves the frozen settings but has a different text hash from the original protocol. Historical manifests retain the original identity; a new run records the supplied English file's hash.
 
 ```sh
 PYTHONPATH=src python research/effectiveness/study.py \
@@ -55,7 +55,7 @@ PYTHONPATH=src python research/effectiveness/external/analyze_external.py \
 
 PYTHONPATH=src python research/effectiveness/external/analyze_conditions.py \
   --raw-dir data/raw/french \
-  --protocol reports/effectiveness_snapshot/research_protocol_zh.md \
+  --protocol reports/effectiveness_snapshot/research_protocol.md \
   --out reports/local/effectiveness/external
 
 PYTHONPATH=src python research/effectiveness/external/write_summary.py \
@@ -83,8 +83,8 @@ The offline comparator checks 25 CSV files for ordered schema, row counts, text 
 
 ## What the integration and follow-up verify
 
-Every included historical snapshot file remains byte-identical to its source bundle. Syntax and all six original `--help` paths were checked during integration; these checks perform no data calculation. The completed financial research was not rerun merely to move files. A separate 2026-10-05 numerical rerun subsequently verified the portable calculations, as documented above. Portability changes concern paths, CLI lifecycle, output placement and audit-input provenance, with no changes to thresholds, signals, seeds, test families or trading equations.
+Historical numerical artifacts remain byte-identical to their source bundle. The original text identities are recorded at their historical commits; current narrative documents are English translations. Syntax and all six original `--help` paths were checked during integration; these checks perform no data calculation. A separate 2026-10-05 numerical rerun subsequently verified the portable calculations. Portability and later language changes concern paths, CLI lifecycle, output placement, audit-input provenance and report text, with no changes to thresholds, signals, seeds, test families or trading equations.
 
-The original independent review predates the final source's switch from cached baseline returns to recomputation. Its references to that cache and original local file names are preserved as historical audit observations, not descriptions of the integrated scripts. Original one-machine packaging/report-generation code is excluded; the published main memo and figures are retained as historical artifacts. The two PNG figures were not redrawn by the numerical verification, and the French narrative writer was not rerun in that check. Figure and narrative regeneration therefore remain outside its verified scope. [Snapshot provenance](../../docs/snapshot_provenance.md) explains the historical source hashes and editorial changes.
+The original independent review predates the final source's switch from cached baseline returns to recomputation. Its cache observations remain historical audit findings, not descriptions of the current scripts. Original one-machine packaging/report-generation code is excluded. The two PNG figures were not redrawn by the numerical verification, and the French narrative writer was not rerun in that check. The later English conversion separately rendered the French memo from saved JSON and checked the report writers; it adds no new financial inference. [Snapshot provenance](../../docs/snapshot_provenance.md) explains the separate calculation and editorial histories.
 
 If vendor history has been revised, new hashes and results are a different data snapshot. Matching the historical raw-input hashes is necessary for an exact numerical comparison; the historical snapshot is not a point-in-time data feed or a prospective validation.

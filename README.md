@@ -16,15 +16,15 @@ The [concentrated controls](reports/random_control_snapshot/README.md) place mom
 
 ![Three-sector random-control CAGR distributions](reports/random_control_snapshot/cagr_distribution.png)
 
-[Brief framework (中文)](docs/framework_zh.md) · [Final review (中文)](docs/final_review_zh.md) · [Manager decision](docs/final_manager_memo.md) · [Research design (中文)](docs/research_plan_zh.md) · [Investment case (中文)](docs/investment_case_zh.md)
+[Brief framework](docs/framework.md) · [Final review](docs/final_review.md) · [Manager decision](docs/final_manager_memo.md) · [Research design](docs/research_design.md) · [Investment case](docs/investment_case.md)
 
 ## Evidence map
 
 | Stage | Question | Evidence |
 |---|---|---|
 | Original investment review | Does the fixed rule add net value and fit the account? | [Original snapshot](reports/snapshot); [provenance](docs/snapshot_provenance.md) distinguishes generated output from later memo edits |
-| Period and universe exploration | Where did it succeed or fail? | [Complete period grid and eleven-sector sensitivity](reports/exploratory_snapshot/regime_comparison_zh.md) |
-| Mechanism and conditions | What explains realized P&L, and can known conditions improve the rule? | [Effectiveness study](reports/effectiveness_snapshot/industry_rotation_effectiveness_zh.md), [recorded protocol](reports/effectiveness_snapshot/research_protocol_zh.md), independent audits and French ten-industry replication |
+| Period and universe exploration | Where did it succeed or fail? | [Complete period grid and eleven-sector sensitivity](reports/exploratory_snapshot/regime_comparison.md) |
+| Mechanism and conditions | What explains realized P&L, and can known conditions improve the rule? | [Effectiveness study](reports/effectiveness_snapshot/industry_rotation_effectiveness.md), [recorded protocol](reports/effectiveness_snapshot/research_protocol.md), independent audits and French ten-industry replication |
 | Concentrated control | Does the ranking add value beyond holding three sectors? | [Industry-identity random remapping](reports/random_control_snapshot/README.md), with an overlap-matched monthly sensitivity |
 
 Original numerical outputs and their generation-time hashes are retained; the earlier manager memo was subsequently edited. See [snapshot provenance](docs/snapshot_provenance.md). The original six-month circular-block interval for annualized arithmetic active return is [−2.76, +2.05] percentage points (2,000 draws, seed 2026); the follow-up reports [−2.62, +2.07] (20,000 draws, seed 20261004), with separate settings and block-length sensitivity. Both cross zero; neither estimates CAGR uncertainty or future profit probability. The ported follow-up scripts have been rerun and compared with the published numeric outputs: [reproduction check](reports/reproduction_check/README.md).
@@ -106,7 +106,7 @@ To reproduce the concentrated controls from the same saved price input:
 python -m sector_momentum random-control --prices data/raw/total_return.csv --out reports/random_local
 ```
 
-The default run uses 4,096 paths per method, fixed seeds, and all 0/5/10 bps scenarios. `--no-plots` omits figures. The authors record writing the [protocol](research/random_control_protocol_zh.md) before computation; methods and results were published in the same commit, without independent public preregistration. Actual costs and turnover are recomputed for every path. Historical percentiles describe this retrospective diagnostic, not alpha p-values or future win probabilities.
+The default run uses 4,096 paths per method, fixed seeds, and all 0/5/10 bps scenarios. `--no-plots` omits figures. The authors record writing the [protocol](research/random_control_protocol.md) before computation; methods and results were published in the same commit, without independent public preregistration. Actual costs and turnover are recomputed for every path. Historical percentiles describe this retrospective diagnostic, not alpha p-values or future win probabilities.
 
 ## Evidence and limits
 
