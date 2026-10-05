@@ -1,6 +1,10 @@
 {
   "format": "UTF-8 CSV, gzip with mtime=0",
-  "all_cost_levels_retained_bps": [
+  "path_archive_cost_levels_bps": [
+    5,
+    10
+  ],
+  "aggregate_cost_levels_retained_bps": [
     0,
     5,
     10
@@ -22,15 +26,6 @@
       "archive_bytes": 34678,
       "prior_file": "identity_mappings.csv",
       "prior_csv_sha256": "3f1b0c3cec07e5fa04d33ab029e384cf26f7cf1ca91d408fe1d178d84dfd7b57",
-      "decompressed_matches_prior_bytes": true
-    },
-    {
-      "file": "identity_remap_0bps_paths.csv.gz",
-      "decompressed_csv_sha256": "3d233d1b5490025eb81440e8724ce11a6c53ec5cb0171323f94157960073abbe",
-      "csv_bytes": 466836,
-      "archive_bytes": 205438,
-      "prior_file": "identity_remap_0bps_paths.csv",
-      "prior_csv_sha256": "3d233d1b5490025eb81440e8724ce11a6c53ec5cb0171323f94157960073abbe",
       "decompressed_matches_prior_bytes": true
     },
     {
@@ -58,15 +53,6 @@
       "archive_bytes": 27164,
       "prior_file": "identity_remap_sample_trades_5bps.csv",
       "prior_csv_sha256": "777a719890568628262c1386c13ebaa7fd119828eb54122414952a69c5e4628d",
-      "decompressed_matches_prior_bytes": true
-    },
-    {
-      "file": "overlap_matched_0bps_paths.csv.gz",
-      "decompressed_csv_sha256": "cc39bf1795d537bd274b5f94580b89fb8fd53efbcc9f374a2f9d118a4318958f",
-      "csv_bytes": 467498,
-      "archive_bytes": 205690,
-      "prior_file": "overlap_matched_0bps_paths.csv",
-      "prior_csv_sha256": "cc39bf1795d537bd274b5f94580b89fb8fd53efbcc9f374a2f9d118a4318958f",
       "decompressed_matches_prior_bytes": true
     },
     {
@@ -109,6 +95,8 @@
   "report_additions": [
     "Maximum-drawdown historical midrank and peak/trough dates; retrospective follow-up",
     "Headless plotting backend",
-    "Lossless gzip storage; all original paths and cost levels retained"
-  ]
+    "Lossless gzip storage for retained path archives",
+    "Published snapshot omits 0 bp per-path CSV archives; aggregate 0 bp metrics remain in summary.json"
+  ],
+  "path_archives_note": "Per-path CSV archives retain 5 bp and 10 bp scenarios. Aggregate 0/5/10 bp metrics remain in summary.json and distribution_summary.csv."
 }

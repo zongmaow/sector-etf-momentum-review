@@ -127,4 +127,4 @@ Reconsideration would require new evidence:
 
 Extension protocols are authors' records of intended methods, without independent public preregistration. Portable ETF, accounting and French scripts were rerun: 25 common CSV files and three core JSON numerical summaries agree with published results. Scope, tolerance and code identities are in the [reproduction record](../reports/reproduction_check/README.md). Reproduction verifies calculation, not independent investment evidence.
 
-***REMOVED***
+Financial assumptions, input versions, validation and limits are retained. The contribution is an auditable investment review. Phase one is closed; economic causes or equal-weight performance sources would be separate research questions, not continuous changes to the same historical rule relabeled validation.

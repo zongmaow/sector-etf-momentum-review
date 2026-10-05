@@ -2,15 +2,9 @@
 
 A hypothetical US equity portfolio manager is considering a sector rotation sleeve. This project asks whether a fixed momentum rule adds enough **net value over sector equal-weighting** to justify its trading and active risk.
 
-**Phase one is complete: the evidence does not justify adding the proposed momentum sleeve to the simulated manager's existing SPY policy allocation.** Over 2000–2025, at an assumed 5 bps per side:
+**Phase one is complete: the evidence does not justify adding the proposed momentum sleeve to the simulated manager's existing SPY policy allocation.** Over 2000–2025 at an assumed 5 bps per side, momentum lagged nine-sector equal-weighting on net CAGR while beating buy-and-hold SPY; its shallower historical drawdown is a separate risk outcome. The full comparison table and supporting statistics are in the [final review](docs/final_review.md).
 
-| Portfolio | Net CAGR | Daily maximum drawdown |
-|---|---:|---:|
-| Nine-sector equal-weighting (EW9) | 8.68% | −53.29% |
-| MOM12−1, three sectors | 8.32% | −46.20% |
-| Buy-and-hold SPY | 8.02% | −55.19% |
-
-Momentum beat SPY on full-period CAGR but lagged EW9; its shallower historical drawdown is a separate risk outcome. EW9's historical ranking is not evidence that all passive strategies beat all active strategies. The primary mean active return versus EW9 was −0.28 percentage points per year, and its uncertainty interval crossed zero. Subsequent mechanism, environment and external-data checks did not establish a reliable way to decide in advance when this nine-ETF rule should be enabled.
+EW9's historical ranking is not evidence that all passive strategies beat all active strategies. The primary mean active return versus EW9 was −0.28 percentage points per year, and its uncertainty interval crossed zero. Subsequent mechanism, environment and external-data checks did not establish a reliable way to decide in advance when this nine-ETF rule should be enabled.
 
 The [concentrated controls](reports/random_control_snapshot/README.md) place momentum CAGR around the **55th–56th historical percentile** under identity remapping and monthly overlap matching. Its maximum drawdown was shallower than **94.87% / 95.70%** of the respective control paths. These are historical diagnostics; the risk difference has not been established across independent events, and neither percentile is a significance test or future success probability.
 
@@ -31,11 +25,7 @@ Original numerical outputs and their generation-time hashes are retained; the ea
 
 ## Favorable and unfavorable paths
 
-The unchanged nine-sector rule produces all four outcomes: 2022 gained **9.48%** and beat EW9; 2011 lost **2.16%** and lagged EW9; 2006 made money but lagged EW9; 2002 lost money but lost less than EW9. These are net calendar-year returns, rather than CAGRs. Energy holdings contributed +18.58 percentage points in 2022 and −4.75 points in 2023; these are portfolio P&L contributions, not XLE buy-and-hold returns.
-
-A separate **2020–2025 common-start test** adds XLRE and XLC. Accounts form from cash on the same date with the same signal definition, execution and costs: nine-sector momentum earned **14.55% CAGR** versus **12.38% EW9**; eleven-sector momentum earned **16.48%** versus **11.97% EW11**; SPY earned **14.80%**. Momentum outperformed equal-weighting in both universes in this six-year test. Changing the universe changes both its momentum choices and equal-weight benchmark; the difference is not solely the returns of the added ETFs. The expanded strategy still lagged EW11 in 2021 and 2023, and both added sectors had negative contribution years.
-
-The [exploratory snapshot](reports/exploratory_snapshot) discloses all 26 calendar years, five non-overlapping five-year blocks plus the remaining year, and all 277 overlapping three-year windows. Highlighted examples are chosen after observing this grid. They describe historical conditions; they do not provide a tested rule for recognizing a favorable regime in advance or change the primary full-history conclusion.
+The unchanged nine-sector rule produces all four outcomes across calendar years: gains with outperformance, gains with underperformance, losses smaller than the benchmark's, and losses with underperformance. A separate 2020–2025 common-start test adds XLRE and XLC; momentum beat equal-weighting in both universes in that six-year window, while still showing adverse years. Full figures, contribution examples and the eleven-sector table are in the [final review](docs/final_review.md); the [exploratory snapshot](reports/exploratory_snapshot) discloses all 26 calendar years, five-year blocks and 277 overlapping three-year windows. Highlighted examples are chosen after observing this grid. They describe historical conditions; they do not provide a tested rule for recognizing a favorable regime in advance or change the primary full-history conclusion.
 
 ## The decision and the rules
 
@@ -120,4 +110,3 @@ This is retrospective research with known historical events, simulated close fil
 
 The simulated manager retains the existing SPY policy allocation rather than selecting EW9 solely because it won this sample. Reconsideration requires frozen decision records, additional independent evidence, and explicit implementation and account-risk review. Studying why industry advantages persist would require information available at the time—such as earnings expectations or valuations—and a new protocol. Repeatedly changing thresholds on the same historical sample is not the next stage of validation. See the [final memo](docs/final_manager_memo.md).
 
-***REMOVED***

@@ -40,9 +40,9 @@ The share of random portfolios beating EW9 is not the general success rate of ac
 
 - [Methods and timing record](../../research/random_control_protocol.md). The protocol and first results were published together; this remains a retrospective diagnostic.
 - [Complete results and settings](summary.json), [distribution table](distribution_summary.csv), [ledger validation](ledger_validation.csv).
-- `*_paths.csv.gz` disclose every random path at each cost; `identity_mappings.csv.gz` retains the fixed mappings.
+- `*_5bps_paths.csv.gz` and `*_10bps_paths.csv.gz` disclose every random path at those costs; `identity_mappings.csv.gz` retains the fixed mappings. Aggregate 0 bp metrics remain in `summary.json`; 0 bp per-path CSVs are omitted from the published snapshot.
 - `*_sample_trades_5bps.csv.gz` retain the first two prespecified random trading paths; `example_daily_nav_5bps.csv.gz` retains the first path from each method. Examples were not selected for performance.
-- The [storage manifest](storage_manifest.json) records decompressed CSV hashes. `pandas.read_csv` reads `.csv.gz` directly; gzip can also decompress it. All 0/5/10bp results remain available.
+- The [storage manifest](storage_manifest.json) records decompressed CSV hashes. `pandas.read_csv` reads `.csv.gz` directly; gzip can also decompress it. Aggregate 0/5/10 bp results remain in JSON and the distribution table; published path archives cover 5/10 bp.
 
 Run from the repository root:
 
@@ -50,4 +50,4 @@ Run from the repository root:
 python -m sector_momentum random-control --prices data/raw/total_return.csv --out reports/random_local
 ```
 
-Saved price SHA-256: `e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c`. A later vendor download may revise history and needs its own hash. Complete 0/10bp results are retained in CSV and JSON.
+Saved price SHA-256: `e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c`. A later vendor download may revise history and needs its own hash. Aggregate 0/5/10 bp results are retained in JSON; published path archives cover 5/10 bp.

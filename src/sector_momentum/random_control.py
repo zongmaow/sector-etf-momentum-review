@@ -307,7 +307,9 @@ def run_random_controls(prices_path, out, draws=4096, seed=20261005, plots=True)
             active = monthly[:, 1:] - ew_monthly[:, None]
             random_metrics['annualized_arithmetic_active_vs_ew9'] = active.mean(axis=0) * 12
             random_metrics['tracking_error_vs_ew9'] = active.std(axis=0, ddof=1) * np.sqrt(12)
-            _write_csv_archive(random_metrics, out / f'{method}_{cost}bps_paths.csv.gz', index=False, float_format='%.12g')
+            # Keep aggregate 0 bp metrics in summary.json; omit bulky 0 bp per-path archives.
+            if cost != 0:
+                _write_csv_archive(random_metrics, out / f'{method}_{cost}bps_paths.csv.gz', index=False, float_format='%.12g')
             original_active = float((monthly_returns(originals['MOM12_1'].nav).to_numpy() - ew_monthly).mean() * 12)
             record = {'method': method, 'cost_bps': cost, 'paths': draws,
                       'reference_metrics': base_metrics,
@@ -334,8 +336,16 @@ def run_random_controls(prices_path, out, draws=4096, seed=20261005, plots=True)
         raw = gzip.decompress(path.read_bytes())
         archives.append({'file': path.name, 'decompressed_csv_sha256': hashlib.sha256(raw).hexdigest(),
                          'csv_bytes': len(raw), 'archive_bytes': path.stat().st_size})
-    (out / 'storage_manifest.json').write_text(json.dumps({'format': 'UTF-8 CSV, gzip with mtime=0',
-        'all_cost_levels_retained_bps': [0, 5, 10], 'files': archives}, indent=2) + '\n')
+    (out / 'storage_manifest.json').write_text(json.dumps({
+        'format': 'UTF-8 CSV, gzip with mtime=0',
+        'path_archive_cost_levels_bps': [5, 10],
+        'aggregate_cost_levels_retained_bps': [0, 5, 10],
+        'path_archives_note': (
+            'Per-path CSV archives retain 5 bp and 10 bp scenarios. '
+            'Aggregate 0/5/10 bp metrics remain in summary.json and distribution_summary.csv.'
+        ),
+        'files': archives,
+    }, indent=2) + '\n')
     price_hash = hashlib.sha256(Path(prices_path).read_bytes()).hexdigest()
     protocol = Path(__file__).resolve().parents[2] / 'research/random_control_protocol.md'
     payload = {'study': 'Retrospective matched-concentration diagnostics; not an alpha significance test',
@@ -407,12 +417,12 @@ def _write_report(out, payload):
               '## Files and reproduction', '',
               '- [Methods and timing record](../../research/random_control_protocol.md). The protocol and first results were published together; this remains a retrospective diagnostic.',
               '- [Complete results and settings](summary.json), [distribution table](distribution_summary.csv), [ledger validation](ledger_validation.csv).',
-              '- `*_paths.csv.gz` disclose every random path at each cost; `identity_mappings.csv.gz` retains the fixed mappings.',
+              '- `*_5bps_paths.csv.gz` and `*_10bps_paths.csv.gz` disclose every random path at those costs; `identity_mappings.csv.gz` retains the fixed mappings. Aggregate 0 bp metrics remain in `summary.json`; 0 bp per-path CSVs are omitted from the published snapshot.',
               '- `*_sample_trades_5bps.csv.gz` retain the first two prespecified random trading paths; `example_daily_nav_5bps.csv.gz` retains the first path from each method. Examples were not selected for performance.',
-              '- The [storage manifest](storage_manifest.json) records decompressed CSV hashes. `pandas.read_csv` reads `.csv.gz` directly; gzip can also decompress it. All 0/5/10bp results remain available.', '',
+              '- The [storage manifest](storage_manifest.json) records decompressed CSV hashes. `pandas.read_csv` reads `.csv.gz` directly; gzip can also decompress it. Aggregate 0/5/10 bp results remain in JSON and the distribution table; published path archives cover 5/10 bp.', '',
               'Run from the repository root:', '', '```sh',
               'python -m sector_momentum random-control --prices data/raw/total_return.csv --out reports/random_local',
-              '```', '', 'Saved price SHA-256: `' + payload['prices_sha256'] + '`. A later vendor download may revise history and needs its own hash. Complete 0/10bp results are retained in CSV and JSON.', '']
+              '```', '', 'Saved price SHA-256: `' + payload['prices_sha256'] + '`. A later vendor download may revise history and needs its own hash. Aggregate 0/5/10 bp results are retained in JSON; published path archives cover 5/10 bp.', '']
     (out / 'README.md').write_text('\n'.join(lines))
 
 

@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-05T22:24:51.610897+00:00",
+  "updated_at_utc": "2026-10-05T23:02:13.856751+00:00",
   "classification": "English documentation, filenames and report writers; no new financial research",
   "prior_public_commit": "e1f97af84a3db16316e25e13a7cd468ee0eaff4e",
   "document_renames_and_translations": [
@@ -78,7 +78,7 @@
   ],
   "current_writer_sha256": {
     "src/sector_momentum/exploration.py": "9997628e0f1bbb9d05200e98c49935a78fe882a9f4f38c4c9b8ec7f270c2eccd",
-    "src/sector_momentum/random_control.py": "5f8e40237dc2b9282555ecc380fc17e590abb8c6840ea2a4f190a7a1772b4882",
+    "src/sector_momentum/random_control.py": "a7c5766a9b3a2bb030e498e002e794d896fc6c161dd5177c802446f284bfce20",
     "research/effectiveness/external/write_summary.py": "a378800a99397e8209ad7d009f5c2265be8620db045aa83c9d0ceb72458ced55",
     "research/effectiveness/study.py": "1ec556967e66510a81afe88b6c36bd2eefbb55d73045756e047836c36c4d6c7b",
     "research/effectiveness/external/analyze_conditions.py": "2cf88696b51c574d828300053fa35cd69c8a6350cf7cfc25c7b4e4ca1e9319d3"
@@ -112,7 +112,8 @@
       "file": "research/effectiveness/external/analyze_conditions.py",
       "check": "complete module AST unchanged after protocol-filename normalization",
       "passed": true
-    }
+    },
+    "random_control.py no longer writes 0 bp per-path CSV archives; aggregate 0 bp metrics unchanged"
   ],
   "unchanged_numerical_artifacts": [
     {
@@ -304,10 +305,6 @@
       "sha256": "e1d467e0c3d34358df93ac9f00bd422bce5f561f7559b95a517e8e12c377eabb"
     },
     {
-      "file": "reports/random_control_snapshot/identity_remap_0bps_paths.csv.gz",
-      "sha256": "0557f768b49951c7baab12eb317eedcfb355837a0da3cbf92b04fe57a29d7477"
-    },
-    {
       "file": "reports/random_control_snapshot/identity_remap_10bps_paths.csv.gz",
       "sha256": "9dffc836cb6599eb7a8b023c4ad27a28d5e682e94dae8c357b8b10e4012f9a1d"
     },
@@ -322,10 +319,6 @@
     {
       "file": "reports/random_control_snapshot/ledger_validation.csv",
       "sha256": "c191dfb8a6e6f4483bbb8935e6539d2e42aad482356f0a75dad1826c709b7532"
-    },
-    {
-      "file": "reports/random_control_snapshot/overlap_matched_0bps_paths.csv.gz",
-      "sha256": "e3c03f778d6a4743d2b0dda3a3f0cc82cd987cba41d8bdb79d0689bb9952fca9"
     },
     {
       "file": "reports/random_control_snapshot/overlap_matched_10bps_paths.csv.gz",
@@ -420,6 +413,7 @@
   "boundaries": [
     "Historical source/protocol hashes retain their generation-time identities; translated prose has new identities.",
     "Integration byte_identical fields refer to the original integration commit, not current English narrative text.",
-    "Rendering an English memo from existing JSON is not new investment evidence or historical figure regeneration."
+    "Rendering an English memo from existing JSON is not new investment evidence or historical figure regeneration.",
+    "Published random-control snapshot omits 0 bp per-path CSV archives; 5/10 bp path archives and all aggregate cost summaries remain."
   ]
 }

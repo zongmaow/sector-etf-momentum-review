@@ -30,4 +30,4 @@ The manager therefore **does not add the momentum sleeve and retains the existin
 
 Phase one ends with a reproducible decision. Frozen rules and genuinely new decision and implementation records would be necessary for prospective evidence. Explaining why sector advantages persist or reverse would require point-in-time earnings expectations, valuations or policy information and a separate protocol.
 
-***REMOVED***
+Input versions, financial ledgers and independent reproduction records are retained. This case does not represent live client performance; it provides a review connecting a proposal, execution constraints, evidence and an account decision.
