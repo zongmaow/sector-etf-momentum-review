@@ -1,0 +1,77 @@
+{
+  "download_date_client_local": "2026-10-04",
+  "data_vintage_header": "This file was created using the 202608 CRSP database.",
+  "sources": [
+    "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/10_Industry_Portfolios_CSV.zip",
+    "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html",
+    "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+    "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Siccodes10.zip",
+    "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip"
+  ],
+  "sha256": {
+    "conditional_results.json": "523f023a77dbb1358e8b423d050e99176b9abdcfc967401ff0d835cc6e86acc2",
+    "conditions_and_outcomes.csv": "6a728b6a764ab00b56a018e1157d43d41ab2959df4fa73d407eb845d98344916",
+    "ff_factors_monthly_through_2025.csv": "35aa9c957f6bd4ef98205162a46656b7ac079ae25b1583aeeae73d21f02aeb6f",
+    "external_validation_zh.md": "33036be36a4e0372d32939844bc74dcf3d96c84b4a11902488ccf14a11e3836f",
+    "F-F_Research_Data_Factors_CSV.zip": "593f4fbef03181bc0b22ff6292f217689dd1fb79355049ca905d95b262040a66",
+    "ff10_monthly_returns_through_2025.csv": "26a7116d1de37b9af195a930c2b34f7c10c30b2b392ae23ca15464082511caec",
+    "official_construction.html": "5f3aabad81824cb48019a6d837be1da89ff1c80ce62f2fc634af69fd42c9e82c",
+    "ew10_monthly_ledger.csv": "54e26c5f36dec8f3a393fbfca9b99eb769eed6f622c5c31a24feb629d02ade9d",
+    "basic_summary.json": "da4d0e7d8717ae05fa971e910d3b0e3de1afaafce53328e038707713c4dafaec",
+    "analyze_external.py": "48cc2d9779f7f9c649e382d12d87037b8952a2150fd868934f443aff9291f2d5",
+    "basic_summary.csv": "344d0bf22096aa9fd77f4e35719daff9a6ca75d6d32fdd56c16c99b0f1e8fbd5",
+    "analyze_conditions.py": "40acafe2583fad7ab2f767ecfc629714b685671ab4bb9eac1fddb4fe029ce043",
+    "write_summary.py": "cc0de6eadfb50a951ee9dcff06ed49066c1a5434fa498f90f7c3c63b5b66d3c0",
+    "Siccodes10.zip": "d7022df07d9e9d1f8ceddf5499cdd6aff9dff28e1b3dedf8b4b6d91ef8780429",
+    "10_Industry_Portfolios.csv": "18ed376fc42e2327ceaf3d65a02521a6512e7f9e3001007c4da69d7db108aa82",
+    "F-F_Research_Data_Factors.csv": "d7d7fe37b150b5b15c9c069b3ba101dfe1af568c6d7b5db6e73cd0a6c0c9e5e5",
+    "conditional_results.csv": "243a318393e5cfc0fd5a7146dbc4b918aa6e5811fa137ddb9debb0f87fe06b22",
+    "ff10_holding_month_scores.csv": "0530ee5b216cad3e64313b5c19291537912e8c92bb1c068fb90fb08bb2975c37",
+    "comparison_returns.csv": "df6dd4ccd77c1f5d1ecaa241de2a0ce98a9177e84d9456787f3dffdea542147a",
+    "10_Industry_Portfolios_CSV.zip": "ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5",
+    "mom12_1_monthly_ledger.csv": "a7d166677fd9dd7824e803d226f06617f566367800902ace75c1fc865e60410d",
+    "leave_one_year_out.csv": "a864ea4a53b5c4af0064f096e3b9b7b7be62eaa41097671008daf7c6235007be"
+  },
+  "imported_project_source_sha256": {
+    "src/sector_momentum/engine.py": "670f7b1e6917fd6c1ce3cea01db72ff7bacd4376194b9bb61d30bd20e8da2b1a",
+    "src/sector_momentum/evaluation.py": "bc9e4fc10211bb9603796ab552ed33eda1ac71e1994649e1a99bdfff933601fb"
+  },
+  "input_first_month": "1926-07",
+  "input_last_month": "2025-12",
+  "test_start": "1960-01",
+  "test_end": "2025-12",
+  "industry_names": [
+    "NoDur",
+    "Durbl",
+    "Manuf",
+    "Enrgy",
+    "HiTec",
+    "Telcm",
+    "Shops",
+    "Hlth",
+    "Utils",
+    "Other"
+  ],
+  "cost_bps_per_side": 5.0,
+  "classification": "French 10 SIC industry portfolios; stocks within each portfolio value weighted; portfolio weights across industries equal/top-three equal",
+  "execution": "prior-month-end theoretical formation; no next-trading-close execution can be represented in monthly data",
+  "signal": "holding month t uses compounded eleven monthly returns t-12 through t-2; excludes t-1",
+  "limitations": [
+    "These research portfolios are not ETFs, nor reconstructed SPDR histories.",
+    "Cost is a hypothetical external basket switching cost; constituent turnover, fund fees, bid-ask spreads and impact are not measured.",
+    "Full history is revised by French/CRSP; this snapshot is not a vintage point-in-time feed.",
+    "Current French returns use CRSP CIZ with daily compounding and ex-date dividend reinvestment; this changes history relative to earlier FIZ snapshots.",
+    "1960–1999 is a transfer check outside the ETF product sample, not genuinely unseen prospective out-of-sample evidence.",
+    "Initial formation fee is included in January 1960; subperiods use the continuous ledger and do not reset cash or charge another formation fee.",
+    "Final holdings are valued without liquidation costs."
+  ],
+  "validation": {
+    "initial_formation_cost_reconciles": true,
+    "all_monthly_accounting_reconciles": true,
+    "signal_direct_compounding_max_abs_error": 1.1102230246251565e-15,
+    "excluded_recent_and_future_returns_do_not_change_signal": true,
+    "prior_return_drift_matches_independent_direct_weights": true,
+    "holding_signal_latest_return_lag_months": 2,
+    "holding_signal_return_count": 11
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "classification": "retrospective frozen-family research, not untouched out-of-sample",
+  "date": "2026-10-04",
+  "sample": "ETF inference2010-2025; thresholdcalibration2000-2009",
+  "signal_std_threshold": 0.11786584746618972,
+  "seed": 20261004,
+  "bootstrap_draws": 20000,
+  "block_lengths": [
+    6,
+    12
+  ],
+  "hypotheses": [
+    "H1_recovery",
+    "H2_agreement",
+    "H3_dispersion",
+    "H4_joint"
+  ],
+  "condition_pvalue_family_size": 8,
+  "filter_pvalue_family_size": 6,
+  "sha256": {
+    "prices": "e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c",
+    "recomputed_monthly_returns": "391f4365a3ce177b2c81cd6c64b21727262c8a2fbe458fe79f66a552748dd43a",
+    "engine": "670f7b1e6917fd6c1ce3cea01db72ff7bacd4376194b9bb61d30bd20e8da2b1a",
+    "signals": "559acf846c472bdbf3edc1cf55a2cb471313f5476702473b633dd6098007a492",
+    "protocol": "9cdb1e71ccfdfb7b10631cacc8337a4a496b1c6692fe572dd038feccb403c823",
+    "script": "9a46159b39cc29aa4688bd2091340d9c45dcdde4edc8655317b18fb8d80afe0d"
+  }
+}

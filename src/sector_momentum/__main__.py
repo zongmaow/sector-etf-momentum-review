@@ -29,6 +29,12 @@ def main() -> None:
     extra.add_argument('--expanded-prices', help='Saved twelve-column ETF input: eleven sectors and SPY')
     extra.add_argument('--download-extra', action='store_true', help='Download XLRE/XLC and retain the base snapshot')
     explore.add_argument('--no-plots', action='store_true')
+    random = commands.add_parser('random-control', help='Retrospective matched-concentration industry controls')
+    random.add_argument('--prices', required=True)
+    random.add_argument('--out', default='reports/random_local')
+    random.add_argument('--draws', type=int, default=4096)
+    random.add_argument('--seed', type=int, default=20261005)
+    random.add_argument('--no-plots', action='store_true')
     demo = commands.add_parser('demo', help='Synthetic pipeline demo, not historical performance')
     demo.add_argument('--out', default='reports/demo')
     demo.add_argument('--config', default='research_config.json')
@@ -48,6 +54,10 @@ def main() -> None:
             expanded = download_expanded(args.prices, Path(args.prices).parent / 'extended')
         run_exploration(args.prices, args.out, expanded, plots=not args.no_plots)
         print(f'Ex-post exploration saved to {args.out}; all tested windows are disclosed.')
+    elif args.command == 'random-control':
+        from .random_control import run_random_controls
+        run_random_controls(args.prices, args.out, args.draws, args.seed, plots=not args.no_plots)
+        print(f'Random controls saved to {args.out}; these are historical diagnostics, not alpha p-values.')
     else:
         import exchange_calendars as xcals
         config = json.loads(Path(args.config).read_text())

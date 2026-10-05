@@ -13,3 +13,4 @@ build/
 dist/
 *.whl
 reports/exploration/
+reports/random_local/

@@ -1,0 +1,497 @@
+{
+  "study": "Retrospective matched-concentration diagnostics; not an alpha significance test",
+  "generated_at_utc": "2026-10-05T07:40:13.840814+00:00",
+  "start": "2000-01-01",
+  "end": "2025-12-31",
+  "prices_sha256": "e03d2506e51d1a5bdbd8dcb37ffd6e80364c88cbb88449ca0866b74b3dcae11c",
+  "script_sha256": "442f021729e9859019b7bfad4eb36968fe714931d18beaac6c307944aceb2cdb",
+  "protocol_sha256": "986a8a999330e36b9fa6315d6f5a3d446a5f03e98ae0043e2bc822bda1c4ffef",
+  "numpy_version": "2.3.5",
+  "pandas_version": "2.2.3",
+  "coverage": {
+    "status": "passed",
+    "calendar": "XNYS",
+    "calendar_library": "exchange_calendars",
+    "calendar_library_version": "4.13.2",
+    "research_start_inclusive": "1998-12-31",
+    "research_end_inclusive": "2025-12-31",
+    "expected_sessions": 6792,
+    "observed_sessions": 6792,
+    "missing_sessions": 0,
+    "non_session_observations": 0,
+    "observations_outside_window": 0,
+    "limitation": "Coverage checked against the library schedule; adjusted-return accuracy is not certified."
+  },
+  "seeds": {
+    "identity_remap": 20261005,
+    "overlap_matched": 20261006
+  },
+  "draws_per_method": 4096,
+  "random_generator": "numpy.default_rng / PCG64",
+  "protocol_defaults_used": true,
+  "unique_identity_mappings": 4076,
+  "selection_sha256": {
+    "identity_remap": "4fec17c2744170778d8277016960f6d25e03ef096fdab7e7550895dcfcb7fc14",
+    "overlap_matched": "ca07c9c4cba1cb5d7f189b825324b340449b5d215bd7a02d95c231883f62c1b8"
+  },
+  "all_concentration_and_overlap_checks": true,
+  "results": [
+    {
+      "method": "identity_remap",
+      "cost_bps": 0,
+      "paths": 4096,
+      "reference_metrics": {
+        "MOM12_1": {
+          "cagr": 0.08615101165008054,
+          "annualized_volatility": 0.19048971770850054,
+          "max_drawdown": -0.4610077543346177,
+          "annualized_half_gross_turnover_ex_initial": 2.6981027850071575,
+          "annualized_fee_fraction_including_initial": 4.962822377872903e-24
+        },
+        "EW9": {
+          "cagr": 0.08693971030600856,
+          "annualized_volatility": 0.18270687914811654,
+          "max_drawdown": -0.5327142771265596,
+          "annualized_half_gross_turnover_ex_initial": 0.15409495938072085,
+          "annualized_fee_fraction_including_initial": 4.962822377872903e-24
+        },
+        "SPY": {
+          "cagr": 0.08025764946553982,
+          "annualized_volatility": 0.19391341141666787,
+          "max_drawdown": -0.5518945927485668,
+          "annualized_half_gross_turnover_ex_initial": 0.0,
+          "annualized_fee_fraction_including_initial": 1.5906481980361868e-26
+        }
+      },
+      "original_annualized_arithmetic_active_vs_ew9": -0.00021568489118957315,
+      "share_random_cagr_above_momentum": 0.452392578125,
+      "share_random_cagr_above_ew9": 0.430908203125,
+      "share_random_cagr_above_spy": 0.619873046875,
+      "momentum_cagr_percentile_midrank": 0.547607421875,
+      "quantiles": {
+        "cagr": [
+          0.06241232778835587,
+          0.08450564876736044,
+          0.1076095856840445
+        ],
+        "annualized_volatility": [
+          0.1855456313917102,
+          0.1950234289045209,
+          0.20612084493968102
+        ],
+        "max_drawdown": [
+          -0.6238286310692647,
+          -0.5430170548331921,
+          -0.459556766153158
+        ],
+        "annualized_half_gross_turnover_ex_initial": [
+          2.699770024984887,
+          2.7096027659431603,
+          2.7193567170981225
+        ],
+        "annualized_fee_fraction_including_initial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_return": [
+          3.8267705096562525,
+          7.242814183024913,
+          13.259855183098235
+        ],
+        "annualized_arithmetic_active_vs_ew9": [
+          -0.021156272821322188,
+          -0.0003136954592331798,
+          0.0208213869601043
+        ],
+        "tracking_error_vs_ew9": [
+          0.05524914614728675,
+          0.06054366236528887,
+          0.06658848665602701
+        ]
+      }
+    },
+    {
+      "method": "overlap_matched",
+      "cost_bps": 0,
+      "paths": 4096,
+      "reference_metrics": {
+        "MOM12_1": {
+          "cagr": 0.08615101165008054,
+          "annualized_volatility": 0.19048971770850054,
+          "max_drawdown": -0.4610077543346177,
+          "annualized_half_gross_turnover_ex_initial": 2.6981027850071575,
+          "annualized_fee_fraction_including_initial": 4.962822377872903e-24
+        },
+        "EW9": {
+          "cagr": 0.08693971030600856,
+          "annualized_volatility": 0.18270687914811654,
+          "max_drawdown": -0.5327142771265596,
+          "annualized_half_gross_turnover_ex_initial": 0.15409495938072085,
+          "annualized_fee_fraction_including_initial": 4.962822377872903e-24
+        },
+        "SPY": {
+          "cagr": 0.08025764946553982,
+          "annualized_volatility": 0.19391341141666787,
+          "max_drawdown": -0.5518945927485668,
+          "annualized_half_gross_turnover_ex_initial": 0.0,
+          "annualized_fee_fraction_including_initial": 1.5906481980361868e-26
+        }
+      },
+      "original_annualized_arithmetic_active_vs_ew9": -0.00021568489118957315,
+      "share_random_cagr_above_momentum": 0.43896484375,
+      "share_random_cagr_above_ew9": 0.4140625,
+      "share_random_cagr_above_spy": 0.633056640625,
+      "momentum_cagr_percentile_midrank": 0.56103515625,
+      "quantiles": {
+        "cagr": [
+          0.06535854453958623,
+          0.08432762004301253,
+          0.10394721130386886
+        ],
+        "annualized_volatility": [
+          0.1854430214497838,
+          0.19520181769380007,
+          0.2060023860070132
+        ],
+        "max_drawdown": [
+          -0.6283995246450986,
+          -0.5404822575656447,
+          -0.46232313629593713
+        ],
+        "annualized_half_gross_turnover_ex_initial": [
+          2.699978005496528,
+          2.709228484620307,
+          2.7204157816430055
+        ],
+        "annualized_fee_fraction_including_initial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_return": [
+          4.1871436503020005,
+          7.207703538355187,
+          12.083224071201764
+        ],
+        "annualized_arithmetic_active_vs_ew9": [
+          -0.017811639079258763,
+          -0.0004734473625738905,
+          0.017095494678205526
+        ],
+        "tracking_error_vs_ew9": [
+          0.055451059130348805,
+          0.06059021924321158,
+          0.06633526926655048
+        ]
+      }
+    },
+    {
+      "method": "identity_remap",
+      "cost_bps": 5,
+      "paths": 4096,
+      "reference_metrics": {
+        "MOM12_1": {
+          "cagr": 0.08320357987610638,
+          "annualized_volatility": 0.19047364942393108,
+          "max_drawdown": -0.4619951434318772,
+          "annualized_half_gross_turnover_ex_initial": 2.6975546350977577,
+          "annualized_fee_fraction_including_initial": 0.002716774781789706
+        },
+        "EW9": {
+          "cagr": 0.08675133971559301,
+          "annualized_volatility": 0.1827066943006561,
+          "max_drawdown": -0.5328742114577136,
+          "annualized_half_gross_turnover_ex_initial": 0.15409246459419648,
+          "annualized_fee_fraction_including_initial": 0.00017331261128614481
+        },
+        "SPY": {
+          "cagr": 0.0802368817648691,
+          "annualized_volatility": 0.19391347414438345,
+          "max_drawdown": -0.5518945927485677,
+          "annualized_half_gross_turnover_ex_initial": 0.0,
+          "annualized_fee_fraction_including_initial": 1.9220146691948328e-05
+        }
+      },
+      "original_annualized_arithmetic_active_vs_ew9": -0.0027771817820017074,
+      "share_random_cagr_above_momentum": 0.451904296875,
+      "share_random_cagr_above_ew9": 0.35498046875,
+      "share_random_cagr_above_spy": 0.5390625,
+      "momentum_cagr_percentile_midrank": 0.548095703125,
+      "quantiles": {
+        "cagr": [
+          0.05950996078614973,
+          0.08154800823541164,
+          0.10459318308426746
+        ],
+        "annualized_volatility": [
+          0.18552818107265198,
+          0.19501025807622813,
+          0.2061131330101098
+        ],
+        "max_drawdown": [
+          -0.6250960822616433,
+          -0.5445098366210521,
+          -0.46160650169475265
+        ],
+        "annualized_half_gross_turnover_ex_initial": [
+          2.699243390672068,
+          2.7090299965551403,
+          2.7187880316746926
+        ],
+        "annualized_fee_fraction_including_initial": [
+          0.002718463537364017,
+          0.0027282501432470863,
+          0.002738008178366638
+        ],
+        "total_return": [
+          3.4953709764931764,
+          6.677811690621574,
+          12.283743065557438
+        ],
+        "annualized_arithmetic_active_vs_ew9": [
+          -0.023725069618622585,
+          -0.0028897465223147603,
+          0.01824344205537365
+        ],
+        "tracking_error_vs_ew9": [
+          0.055232870168300675,
+          0.06053061870564719,
+          0.06657117445435577
+        ]
+      }
+    },
+    {
+      "method": "overlap_matched",
+      "cost_bps": 5,
+      "paths": 4096,
+      "reference_metrics": {
+        "MOM12_1": {
+          "cagr": 0.08320357987610638,
+          "annualized_volatility": 0.19047364942393108,
+          "max_drawdown": -0.4619951434318772,
+          "annualized_half_gross_turnover_ex_initial": 2.6975546350977577,
+          "annualized_fee_fraction_including_initial": 0.002716774781789706
+        },
+        "EW9": {
+          "cagr": 0.08675133971559301,
+          "annualized_volatility": 0.1827066943006561,
+          "max_drawdown": -0.5328742114577136,
+          "annualized_half_gross_turnover_ex_initial": 0.15409246459419648,
+          "annualized_fee_fraction_including_initial": 0.00017331261128614481
+        },
+        "SPY": {
+          "cagr": 0.0802368817648691,
+          "annualized_volatility": 0.19391347414438345,
+          "max_drawdown": -0.5518945927485677,
+          "annualized_half_gross_turnover_ex_initial": 0.0,
+          "annualized_fee_fraction_including_initial": 1.9220146691948328e-05
+        }
+      },
+      "original_annualized_arithmetic_active_vs_ew9": -0.0027771817820017074,
+      "share_random_cagr_above_momentum": 0.438232421875,
+      "share_random_cagr_above_ew9": 0.326416015625,
+      "share_random_cagr_above_spy": 0.54052734375,
+      "momentum_cagr_percentile_midrank": 0.561767578125,
+      "quantiles": {
+        "cagr": [
+          0.06245450781723255,
+          0.08137289442566542,
+          0.10094367896546164
+        ],
+        "annualized_volatility": [
+          0.18542245071738603,
+          0.19518798502888962,
+          0.20598791551792128
+        ],
+        "max_drawdown": [
+          -0.6298710097263642,
+          -0.5419787785742642,
+          -0.4639205174040355
+        ],
+        "annualized_half_gross_turnover_ex_initial": [
+          2.6994467939309543,
+          2.708662032695544,
+          2.7198216684029433
+        ],
+        "annualized_fee_fraction_including_initial": [
+          0.0027186669406228992,
+          0.002727882179387491,
+          0.00273904181509489
+        ],
+        "total_return": [
+          3.831755631694991,
+          6.645554250578881,
+          11.188488203869824
+        ],
+        "annualized_arithmetic_active_vs_ew9": [
+          -0.02038538709370493,
+          -0.003044498655482935,
+          0.014521126492389184
+        ],
+        "tracking_error_vs_ew9": [
+          0.05543125274747264,
+          0.06058509376248562,
+          0.066338857282803
+        ]
+      }
+    },
+    {
+      "method": "identity_remap",
+      "cost_bps": 10,
+      "paths": 4096,
+      "reference_metrics": {
+        "MOM12_1": {
+          "cagr": 0.08026411417356782,
+          "annualized_volatility": 0.1904633489720879,
+          "max_drawdown": -0.4629807384077155,
+          "annualized_half_gross_turnover_ex_initial": 2.6970172529086884,
+          "annualized_fee_fraction_including_initial": 0.005432455598255528
+        },
+        "EW9": {
+          "cagr": 0.08656301485676021,
+          "annualized_volatility": 0.1827065749661953,
+          "max_drawdown": -0.5330340893725061,
+          "annualized_half_gross_turnover_ex_initial": 0.15409001855020865,
+          "annualized_fee_fraction_including_initial": 0.0003466011295385679
+        },
+        "SPY": {
+          "cagr": 0.08021612483922191,
+          "annualized_volatility": 0.1939135863699253,
+          "max_drawdown": -0.5518945927485674,
+          "annualized_half_gross_turnover_ex_initial": 0.0,
+          "annualized_fee_fraction_including_initial": 3.842109243815046e-05
+        }
+      },
+      "original_annualized_arithmetic_active_vs_ew9": -0.005337601784127596,
+      "share_random_cagr_above_momentum": 0.45166015625,
+      "share_random_cagr_above_ew9": 0.2890625,
+      "share_random_cagr_above_spy": 0.453369140625,
+      "momentum_cagr_percentile_midrank": 0.54833984375,
+      "quantiles": {
+        "cagr": [
+          0.056617956338984865,
+          0.0785994249348897,
+          0.10158077060683401
+        ],
+        "annualized_volatility": [
+          0.18551665835465958,
+          0.1949999273881099,
+          0.20611108803506495
+        ],
+        "max_drawdown": [
+          -0.6265693528708708,
+          -0.5459131793535117,
+          -0.4634772034000232
+        ],
+        "annualized_half_gross_turnover_ex_initial": [
+          2.6987090881468063,
+          2.7084780536933892,
+          2.7182240653896903
+        ],
+        "annualized_fee_fraction_including_initial": [
+          0.005435839268731769,
+          0.005455377199824927,
+          0.005474869223217538
+        ],
+        "total_return": [
+          3.1869754938199026,
+          6.151708057636321,
+          11.373213870965373
+        ],
+        "annualized_arithmetic_active_vs_ew9": [
+          -0.0262902654938963,
+          -0.005462889146066021,
+          0.01566662402733189
+        ],
+        "tracking_error_vs_ew9": [
+          0.05522355702344053,
+          0.06052324006673521,
+          0.0665673338043456
+        ]
+      }
+    },
+    {
+      "method": "overlap_matched",
+      "cost_bps": 10,
+      "paths": 4096,
+      "reference_metrics": {
+        "MOM12_1": {
+          "cagr": 0.08026411417356782,
+          "annualized_volatility": 0.1904633489720879,
+          "max_drawdown": -0.4629807384077155,
+          "annualized_half_gross_turnover_ex_initial": 2.6970172529086884,
+          "annualized_fee_fraction_including_initial": 0.005432455598255528
+        },
+        "EW9": {
+          "cagr": 0.08656301485676021,
+          "annualized_volatility": 0.1827065749661953,
+          "max_drawdown": -0.5330340893725061,
+          "annualized_half_gross_turnover_ex_initial": 0.15409001855020865,
+          "annualized_fee_fraction_including_initial": 0.0003466011295385679
+        },
+        "SPY": {
+          "cagr": 0.08021612483922191,
+          "annualized_volatility": 0.1939135863699253,
+          "max_drawdown": -0.5518945927485674,
+          "annualized_half_gross_turnover_ex_initial": 0.0,
+          "annualized_fee_fraction_including_initial": 3.842109243815046e-05
+        }
+      },
+      "original_annualized_arithmetic_active_vs_ew9": -0.005337601784127596,
+      "share_random_cagr_above_momentum": 0.438232421875,
+      "share_random_cagr_above_ew9": 0.250244140625,
+      "share_random_cagr_above_spy": 0.440185546875,
+      "momentum_cagr_percentile_midrank": 0.561767578125,
+      "quantiles": {
+        "cagr": [
+          0.059558328941398064,
+          0.07842624007813448,
+          0.09794832529314701
+        ],
+        "annualized_volatility": [
+          0.18540901298896817,
+          0.19518013997553857,
+          0.20597879263265517
+        ],
+        "max_drawdown": [
+          -0.6311662516872169,
+          -0.5434581819762536,
+          -0.4657621086639071
+        ],
+        "annualized_half_gross_turnover_ex_initial": [
+          2.6989251577855073,
+          2.70812105463827,
+          2.7192267107304704
+        ],
+        "annualized_fee_fraction_including_initial": [
+          0.005436271408009169,
+          0.005454663201714691,
+          0.005476874513899101
+        ],
+        "total_return": [
+          3.500709988916463,
+          6.121910268778111,
+          10.354943425492854
+        ],
+        "annualized_arithmetic_active_vs_ew9": [
+          -0.02295798309130477,
+          -0.005611039649146334,
+          0.011947899485545891
+        ],
+        "tracking_error_vs_ew9": [
+          0.055442600655826645,
+          0.060590379674381786,
+          0.06632618617259686
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Assets are not exchangeable; empirical percentiles are not alpha p-values.",
+    "All history had already been viewed; no prospective validation is claimed.",
+    "Holdings overlap is matched, monetary turnover and risk exposures are not.",
+    "Fees are recomputed per path; random paths are not independent historical market observations."
+  ],
+  "input_matches_original_snapshot": true
+}

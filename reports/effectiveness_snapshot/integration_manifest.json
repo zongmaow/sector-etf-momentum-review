@@ -1,0 +1,299 @@
+{
+  "integration_date": "2026-10-05",
+  "source_bundle_name": "sector-etf-effectiveness-study",
+  "source_research_date": "2026-10-04",
+  "classification": "public integration of an already completed retrospective study; no new inference or parameter search",
+  "preserved_source_bundle_manifest_sha256": "1cbdb09abe85d19ec2ab066ca55000964888723f795eecb1c21fa01d0e487b49",
+  "snapshot_files": [
+    {
+      "source_bundle_path": "etf_condition_tests.csv",
+      "repository_path": "reports/effectiveness_snapshot/etf_condition_tests.csv",
+      "sha256": "dfafb600b42cc1729e4128f466d31298c4aee041e461d8e1d0ddd146b5f7580d",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "etf_condition_time_checks.csv",
+      "repository_path": "reports/effectiveness_snapshot/etf_condition_time_checks.csv",
+      "sha256": "757e771daede17cc1a236b8994840ecc18c653d87a5f25d4dbb4c3be0bb8f85d",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "etf_leave_one_year_out.csv",
+      "repository_path": "reports/effectiveness_snapshot/etf_leave_one_year_out.csv",
+      "sha256": "2237cf278f8511ab2fecc4a5d01969f80db8940d579ed2e65e6c0a9feb4948e4",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "etf_monthly_features.csv",
+      "repository_path": "reports/effectiveness_snapshot/etf_monthly_features.csv",
+      "sha256": "623b1d8f0059efd131994dbe49ca6a9f5f6f1a536d94d5e50fa4177ebbe0945d",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "etf_study_manifest.json",
+      "repository_path": "reports/effectiveness_snapshot/etf_study_manifest.json",
+      "sha256": "0e4291e4654d7e48e68df03bb9dee1dd6d4fabda289b8beca80f6e0f1c0f2014",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/basic_summary.csv",
+      "repository_path": "reports/effectiveness_snapshot/external/basic_summary.csv",
+      "sha256": "344d0bf22096aa9fd77f4e35719daff9a6ca75d6d32fdd56c16c99b0f1e8fbd5",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/basic_summary.json",
+      "repository_path": "reports/effectiveness_snapshot/external/basic_summary.json",
+      "sha256": "da4d0e7d8717ae05fa971e910d3b0e3de1afaafce53328e038707713c4dafaec",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/comparison_returns.csv",
+      "repository_path": "reports/effectiveness_snapshot/external/comparison_returns.csv",
+      "sha256": "df6dd4ccd77c1f5d1ecaa241de2a0ce98a9177e84d9456787f3dffdea542147a",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/conditional_results.csv",
+      "repository_path": "reports/effectiveness_snapshot/external/conditional_results.csv",
+      "sha256": "243a318393e5cfc0fd5a7146dbc4b918aa6e5811fa137ddb9debb0f87fe06b22",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/conditional_results.json",
+      "repository_path": "reports/effectiveness_snapshot/external/conditional_results.json",
+      "sha256": "523f023a77dbb1358e8b423d050e99176b9abdcfc967401ff0d835cc6e86acc2",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/conditions_and_outcomes.csv",
+      "repository_path": "reports/effectiveness_snapshot/external/conditions_and_outcomes.csv",
+      "sha256": "6a728b6a764ab00b56a018e1157d43d41ab2959df4fa73d407eb845d98344916",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/ew10_monthly_ledger.csv",
+      "repository_path": "reports/effectiveness_snapshot/external/ew10_monthly_ledger.csv",
+      "sha256": "54e26c5f36dec8f3a393fbfca9b99eb769eed6f622c5c31a24feb629d02ade9d",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/external_validation_zh.md",
+      "repository_path": "reports/effectiveness_snapshot/external/external_validation_zh.md",
+      "sha256": "33036be36a4e0372d32939844bc74dcf3d96c84b4a11902488ccf14a11e3836f",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/ff10_holding_month_scores.csv",
+      "repository_path": "reports/effectiveness_snapshot/external/ff10_holding_month_scores.csv",
+      "sha256": "0530ee5b216cad3e64313b5c19291537912e8c92bb1c068fb90fb08bb2975c37",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/leave_one_year_out.csv",
+      "repository_path": "reports/effectiveness_snapshot/external/leave_one_year_out.csv",
+      "sha256": "a864ea4a53b5c4af0064f096e3b9b7b7be62eaa41097671008daf7c6235007be",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/mom12_1_monthly_ledger.csv",
+      "repository_path": "reports/effectiveness_snapshot/external/mom12_1_monthly_ledger.csv",
+      "sha256": "a7d166677fd9dd7824e803d226f06617f566367800902ace75c1fc865e60410d",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "external/provenance.json",
+      "repository_path": "reports/effectiveness_snapshot/external/provenance.json",
+      "sha256": "ef4203fb18284a0b3d2c2a9396cfe4b0a7266698ad2a73ef899bf51e4d2a39fc",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "filter_inference.csv",
+      "repository_path": "reports/effectiveness_snapshot/filter_inference.csv",
+      "sha256": "ca40e389502f9c6c35310ff95d1ec1fc09c4b9777c8458a6125682a4e863683a",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "filter_performance.png",
+      "repository_path": "reports/effectiveness_snapshot/filter_performance.png",
+      "sha256": "de6ac30ab74f3f359f32437fdf0fb109e4334100a1bbfd841551877fbe14d0f8",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "filter_summary.csv",
+      "repository_path": "reports/effectiveness_snapshot/filter_summary.csv",
+      "sha256": "06e77cfef41227f11cd5072466503aefe0ab4fe9a9633c1807d65dce235dc157",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "filter_time_checks.csv",
+      "repository_path": "reports/effectiveness_snapshot/filter_time_checks.csv",
+      "sha256": "acce9ad3cfba96e44243122e47e25853b5531f1651bc26ea70ec6750ceff7466",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "filters_daily_nav_5bps.csv",
+      "repository_path": "reports/effectiveness_snapshot/filters_daily_nav_5bps.csv",
+      "sha256": "1bd5c98d228a69e05bb91cbe3ebcf8cd880f9af06def280578bb1d13e8a4af5f",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "filters_monthly_0bps.csv",
+      "repository_path": "reports/effectiveness_snapshot/filters_monthly_0bps.csv",
+      "sha256": "29f20ac8795a2d4b91baae2930a3ff53281849682054e2574918fbfcc91167c2",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "filters_monthly_10bps.csv",
+      "repository_path": "reports/effectiveness_snapshot/filters_monthly_10bps.csv",
+      "sha256": "5533cd03c45c660409b3aa5c5fdf05c5d6f679ffaa1ecea5cfdfbac496e10a97",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "filters_monthly_5bps.csv",
+      "repository_path": "reports/effectiveness_snapshot/filters_monthly_5bps.csv",
+      "sha256": "e381ae40905ff44539ad7856eefa537ec859fb1e200cdcf39c74eab8e6cf42fb",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "independent_calculation_audit.json",
+      "repository_path": "reports/effectiveness_snapshot/independent_calculation_audit.json",
+      "sha256": "4efef4334e56be897f1a7b34c356aa44d24533b7b225d551755cf297dbd66326",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "independent_calculation_audit_zh.md",
+      "repository_path": "reports/effectiveness_snapshot/independent_calculation_audit_zh.md",
+      "sha256": "b609f03df445b7623b056d3dbc3214c44c2fedb9cf21e8099d29928db0961649",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "industry_rotation_effectiveness_zh.md",
+      "repository_path": "reports/effectiveness_snapshot/industry_rotation_effectiveness_zh.md",
+      "sha256": "9f50fcd1e3798a2604210d05e609f04bb56e01835530219b334138f76ed55a11",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "ledger_validation.csv",
+      "repository_path": "reports/effectiveness_snapshot/ledger_validation.csv",
+      "sha256": "63ba555909bb1ed028f6b09d36577a8e8d22f3b40b90cef96088f51f28c03695",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "mechanism/calendar_month_active_attribution.csv",
+      "repository_path": "reports/effectiveness_snapshot/mechanism/calendar_month_active_attribution.csv",
+      "sha256": "edfd686fa2f11cfb7d7a4df45a69b67cdf4ed3754770e2997f519ad7f97d4d25",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "mechanism/calendar_year_active_attribution.csv",
+      "repository_path": "reports/effectiveness_snapshot/mechanism/calendar_year_active_attribution.csv",
+      "sha256": "f0c221ca29e3096b30efb6a70ccdeac928ee8b7adb7b88927166f030d5070a2d",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "mechanism/execution_intervals.csv",
+      "repository_path": "reports/effectiveness_snapshot/mechanism/execution_intervals.csv",
+      "sha256": "d27da590be4046d71f3ef91cee144bce1a077fa63a04bee5353e9f6114fa9467",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "mechanism/interval_sector_gross_active.csv",
+      "repository_path": "reports/effectiveness_snapshot/mechanism/interval_sector_gross_active.csv",
+      "sha256": "fbd7a91008dfad47cc54481cf40b016e5e8d3fb13763fb4817b38d7bead6d396",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "mechanism/mechanism_review_zh.md",
+      "repository_path": "reports/effectiveness_snapshot/mechanism/mechanism_review_zh.md",
+      "sha256": "ebaefd083ee88c01297f14a974a0bbafca548a309079ebe0fa69f95c40aa7aa4",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "mechanism/mechanism_statistics.json",
+      "repository_path": "reports/effectiveness_snapshot/mechanism/mechanism_statistics.json",
+      "sha256": "2d532f42c377cfd9703e32e23cf731df7876bab12818576bb81b8a916fe07f7a",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "mechanism_and_conditions.png",
+      "repository_path": "reports/effectiveness_snapshot/mechanism_and_conditions.png",
+      "sha256": "a9d9d9894159b06ea9629b940f802fc5c5d346edf1a69c2212813e4f851c1363",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "protocol_audit_zh.md",
+      "repository_path": "reports/effectiveness_snapshot/protocol_audit_zh.md",
+      "sha256": "52599157a984e4eea133fe521c8e68d5246c471f302f277ef6abec9626fa0fb6",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "recomputed_baseline_monthly.csv",
+      "repository_path": "reports/effectiveness_snapshot/recomputed_baseline_monthly.csv",
+      "sha256": "391f4365a3ce177b2c81cd6c64b21727262c8a2fbe458fe79f66a552748dd43a",
+      "byte_identical": true
+    },
+    {
+      "source_bundle_path": "research_protocol_zh.md",
+      "repository_path": "reports/effectiveness_snapshot/research_protocol_zh.md",
+      "sha256": "9cdb1e71ccfdfb7b10631cacc8337a4a496b1c6692fe572dd038feccb403c823",
+      "byte_identical": true
+    }
+  ],
+  "ported_scripts": [
+    {
+      "source_bundle_path": "scripts/study.py",
+      "repository_path": "research/effectiveness/study.py",
+      "original_sha256": "9a46159b39cc29aa4688bd2091340d9c45dcdde4edc8655317b18fb8d80afe0d",
+      "integrated_sha256": "956557e0129b132a4215276f75cfca2d6859f81a4972f90cb18f27da06d615b8"
+    },
+    {
+      "source_bundle_path": "mechanism/analyze_mechanism.py",
+      "repository_path": "research/effectiveness/analyze_mechanism.py",
+      "original_sha256": "a48c598f147a25c379be92c70bc26c1d1f8fb3336a97a88531c41b1de909d10e",
+      "integrated_sha256": "30fc92bf91428accda1fad29c3119cfb0b212d84affdff69dc349ef78a94b0d2"
+    },
+    {
+      "source_bundle_path": "scripts/independent_audit.py",
+      "repository_path": "research/effectiveness/independent_audit.py",
+      "original_sha256": "90d4d0decd8f32b69c951f1e4d3f093f8a41fee88f4a5b863d9d8da9668167da",
+      "integrated_sha256": "03f93f1f4e3852debfcadf4db044f9a3784c56ea00edeb310e2b1894f7045902"
+    },
+    {
+      "source_bundle_path": "external/analyze_external.py",
+      "repository_path": "research/effectiveness/external/analyze_external.py",
+      "original_sha256": "48cc2d9779f7f9c649e382d12d87037b8952a2150fd868934f443aff9291f2d5",
+      "integrated_sha256": "80776490198497f1efa6e5bd50d581d536789b21fa61e5b22d693cf60d65563f"
+    },
+    {
+      "source_bundle_path": "external/analyze_conditions.py",
+      "repository_path": "research/effectiveness/external/analyze_conditions.py",
+      "original_sha256": "40acafe2583fad7ab2f767ecfc629714b685671ab4bb9eac1fddb4fe029ce043",
+      "integrated_sha256": "29122a0c187c69ed21bc4354afb8069a720d2740a55fa2c2d3964b6cad39dc84"
+    },
+    {
+      "source_bundle_path": "external/write_summary.py",
+      "repository_path": "research/effectiveness/external/write_summary.py",
+      "original_sha256": "cc0de6eadfb50a951ee9dcff06ed49066c1a5434fa498f90f7c3c63b5b66d3c0",
+      "integrated_sha256": "c9cd5224a95d1e288d665a4aea2eb06860e518a579f261e6c22b564655fc5383"
+    }
+  ],
+  "script_changes": [
+    "Replaced machine-specific paths with CLI arguments or repository-relative defaults.",
+    "Separated explicitly supplied raw French CSV inputs from generated private outputs; no implicit download.",
+    "Deferred mechanism/audit/summary execution until CLI parsing so --help performs no data work.",
+    "Independent audit reads the baseline freshly recomputed by study.py instead of the historical cached original report.",
+    "New recalculations record their own input/script hashes; historical snapshot manifests remain byte-identical."
+  ],
+  "excluded_inputs": [
+    "ETF total-return and risk-free raw inputs",
+    "original French vendor ZIP/CSV/HTML files",
+    "raw-like parsed French return and factor histories"
+  ],
+  "omitted_derivatives": [
+    "filter daily P&L and trading ledgers: regenerated locally by study.py for independent audit",
+    "duplicated mechanism run_output.json",
+    "original one-machine packaging/report builder"
+  ],
+  "validation_scope": "Syntax and six --help commands; all 39 preserved snapshot hashes and six ported-script hashes; main memo/new index local links; 21 unchanged ETF/French numerical-function ASTs; four primary CLIs explicitly reject missing saved inputs. Financial study is the preserved 2026-10-04 run, not rerun during integration."
+}

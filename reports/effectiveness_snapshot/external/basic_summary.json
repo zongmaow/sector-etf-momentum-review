@@ -1,0 +1,729 @@
+{
+  "primary_periods": [
+    {
+      "period": "1960-01 to 1999-12",
+      "n_months": 480,
+      "mom_cagr": 0.14355871403268528,
+      "ew10_cagr": 0.12608803019267634,
+      "mom_total_return": 212.96301272778138,
+      "ew10_total_return": 114.5829263220106,
+      "mom_max_drawdown_monthly": -0.4205744130574637,
+      "ew10_max_drawdown_monthly": -0.45571692110737616,
+      "mom_volatility_ann": 0.15892557262527746,
+      "ew10_volatility_ann": 0.14469033543153031,
+      "mom_mean_fee_ann": 0.002569534697196057,
+      "ew10_mean_fee_ann": 0.00013503079927537168,
+      "monthly_active_win_fraction": 0.56875,
+      "mean_monthly": 0.0014814928783817825,
+      "annualized_arithmetic_active": 0.01777791454058139,
+      "tracking_error_ann": 0.061809052776851794,
+      "information_ratio": 0.28762638710489064,
+      "nobs": 480,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": 0.0014814928783817825,
+          "ci95_monthly": [
+            -0.0001347774988068424,
+            0.003108749033762073
+          ],
+          "annualized_arithmetic_mean": 0.01777791454058139,
+          "ci95_annualized_arithmetic": [
+            -0.0016173299856821087,
+            0.03730498840514487
+          ],
+          "nobs": 480,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": 0.0014814928783817825,
+          "ci95_monthly": [
+            -7.362667069059397e-05,
+            0.0030862850726976828
+          ],
+          "annualized_arithmetic_mean": 0.01777791454058139,
+          "ci95_annualized_arithmetic": [
+            -0.0008835200482871276,
+            0.037035420872372195
+          ],
+          "nobs": 480,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": 0.0014814928783817825,
+          "ci95_monthly": [
+            1.711284382719613e-05,
+            0.0030507076720364887
+          ],
+          "annualized_arithmetic_mean": 0.01777791454058139,
+          "ci95_annualized_arithmetic": [
+            0.00020535412592635359,
+            0.036608492064437864
+          ],
+          "nobs": 480,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.009135959183302015,
+      "mean_hac12_asymptotic_normal_p": 0.05166344475486482,
+      "mean_hac12_holm3_p": 0.10332688950972964
+    },
+    {
+      "period": "2000-01 to 2025-12",
+      "n_months": 312,
+      "mom_cagr": 0.10731595515797698,
+      "ew10_cagr": 0.09108307068961952,
+      "mom_total_return": 13.159910190520787,
+      "ew10_total_return": 8.645022596950106,
+      "mom_max_drawdown_monthly": -0.3944659303622118,
+      "ew10_max_drawdown_monthly": -0.48074823992182225,
+      "mom_volatility_ann": 0.16657532021020238,
+      "ew10_volatility_ann": 0.1501706715786196,
+      "mom_mean_fee_ann": 0.002722897132485802,
+      "ew10_mean_fee_ann": 0.00015712586419788172,
+      "monthly_active_win_fraction": 0.532051282051282,
+      "mean_monthly": 0.0014425061486250533,
+      "annualized_arithmetic_active": 0.01731007378350064,
+      "tracking_error_ann": 0.08531506166098868,
+      "information_ratio": 0.2028958714498108,
+      "nobs": 312,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": 0.0014425061486250533,
+          "ci95_monthly": [
+            -0.001040752713084766,
+            0.004040561778336224
+          ],
+          "annualized_arithmetic_mean": 0.01731007378350064,
+          "ci95_annualized_arithmetic": [
+            -0.012489032557017192,
+            0.048486741340034695
+          ],
+          "nobs": 312,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": 0.0014425061486250533,
+          "ci95_monthly": [
+            -0.0009708013497650538,
+            0.003998607457627643
+          ],
+          "annualized_arithmetic_mean": 0.01731007378350064,
+          "ci95_annualized_arithmetic": [
+            -0.011649616197180645,
+            0.047983289491531717
+          ],
+          "nobs": 312,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": 0.0014425061486250533,
+          "ci95_monthly": [
+            -0.0008965863734932272,
+            0.00398138972575757
+          ],
+          "annualized_arithmetic_mean": 0.01731007378350064,
+          "ci95_annualized_arithmetic": [
+            -0.010759036481918727,
+            0.04777667670909083
+          ],
+          "nobs": 312,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.014736914300759242,
+      "mean_hac12_asymptotic_normal_p": 0.24015222355052196,
+      "mean_hac12_holm3_p": 0.24015222355052196
+    },
+    {
+      "period": "1960-01 to 2025-12",
+      "n_months": 792,
+      "mom_cagr": 0.12914176831390933,
+      "ew10_cagr": 0.11216609320351978,
+      "mom_total_return": 3028.6970443186456,
+      "ew10_total_return": 1113.7999361974134,
+      "mom_max_drawdown_monthly": -0.4205744130574637,
+      "ew10_max_drawdown_monthly": -0.48074823992182214,
+      "mom_volatility_ann": 0.1619387652278928,
+      "ew10_volatility_ann": 0.14684462117105118,
+      "mom_mean_fee_ann": 0.002629950202007168,
+      "ew10_mean_fee_ann": 0.00014373491575999688,
+      "monthly_active_win_fraction": 0.5542929292929293,
+      "mean_monthly": 0.0014661344696897376,
+      "annualized_arithmetic_active": 0.01759361363627685,
+      "tracking_error_ann": 0.07193917392663503,
+      "information_ratio": 0.24456235283184044,
+      "nobs": 792,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": 0.0014661344696897376,
+          "ci95_monthly": [
+            7.985510906201112e-05,
+            0.002903834274478203
+          ],
+          "annualized_arithmetic_mean": 0.01759361363627685,
+          "ci95_annualized_arithmetic": [
+            0.0009582613087441334,
+            0.03484601129373843
+          ],
+          "nobs": 792,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": 0.0014661344696897376,
+          "ci95_monthly": [
+            0.0001043642977361505,
+            0.002860186481164524
+          ],
+          "annualized_arithmetic_mean": 0.01759361363627685,
+          "ci95_annualized_arithmetic": [
+            0.001252371572833806,
+            0.034322237773974286
+          ],
+          "nobs": 792,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": 0.0014661344696897376,
+          "ci95_monthly": [
+            0.0001821391530102349,
+            0.002803624333797153
+          ],
+          "annualized_arithmetic_mean": 0.01759361363627685,
+          "ci95_annualized_arithmetic": [
+            0.002185669836122819,
+            0.033643492005565837
+          ],
+          "nobs": 792,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.007874221665325367,
+      "mean_hac12_asymptotic_normal_p": 0.02546133487742723,
+      "mean_hac12_holm3_p": 0.07638400463228169
+    }
+  ],
+  "decades": [
+    {
+      "period": "1960-01 to 1969-12",
+      "n_months": 120,
+      "mom_cagr": 0.10621616426479652,
+      "ew10_cagr": 0.09549431493399063,
+      "mom_total_return": 1.7441004297833755,
+      "ew10_total_return": 1.4894378095423222,
+      "mom_max_drawdown_monthly": -0.23597229417894194,
+      "ew10_max_drawdown_monthly": -0.23906495812099915,
+      "mom_volatility_ann": 0.13598657466684408,
+      "ew10_volatility_ann": 0.1256813855930986,
+      "mom_mean_fee_ann": 0.00222376955342698,
+      "ew10_mean_fee_ann": 0.0001531738821118189,
+      "monthly_active_win_fraction": 0.5666666666666667,
+      "mean_monthly": 0.0009302203662496862,
+      "annualized_arithmetic_active": 0.011162644394996235,
+      "tracking_error_ann": 0.04776176116387268,
+      "information_ratio": 0.23371509180108993,
+      "nobs": 120,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": 0.0009302203662496862,
+          "ci95_monthly": [
+            -0.0016040699910572836,
+            0.0033856857454338586
+          ],
+          "annualized_arithmetic_mean": 0.011162644394996235,
+          "ci95_annualized_arithmetic": [
+            -0.019248839892687403,
+            0.040628228945206304
+          ],
+          "nobs": 120,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": 0.0009302203662496862,
+          "ci95_monthly": [
+            -0.0015295347118340018,
+            0.0032520148628576015
+          ],
+          "annualized_arithmetic_mean": 0.011162644394996235,
+          "ci95_annualized_arithmetic": [
+            -0.01835441654200802,
+            0.039024178354291214
+          ],
+          "nobs": 120,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": 0.0009302203662496862,
+          "ci95_monthly": [
+            -0.0014127251149838246,
+            0.0031511648196208618
+          ],
+          "annualized_arithmetic_mean": 0.011162644394996235,
+          "ci95_annualized_arithmetic": [
+            -0.016952701379805896,
+            0.03781397783545034
+          ],
+          "nobs": 120,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.013541168646132227,
+      "mean_hac12_asymptotic_normal_p": 0.40974147032784336
+    },
+    {
+      "period": "1970-01 to 1979-12",
+      "n_months": 120,
+      "mom_cagr": 0.06358013484231972,
+      "ew10_cagr": 0.06247620877029214,
+      "mom_total_return": 0.8522609523556928,
+      "ew10_total_return": 0.8331252519661789,
+      "mom_max_drawdown_monthly": -0.4205744130574639,
+      "ew10_max_drawdown_monthly": -0.45571692110737616,
+      "mom_volatility_ann": 0.16132927094931138,
+      "ew10_volatility_ann": 0.1650528679330575,
+      "mom_mean_fee_ann": 0.0024123986120321923,
+      "ew10_mean_fee_ann": 0.00011828033387191339,
+      "monthly_active_win_fraction": 0.5666666666666667,
+      "mean_monthly": 3.941549245007521e-05,
+      "annualized_arithmetic_active": 0.00047298590940090255,
+      "tracking_error_ann": 0.06091408443456553,
+      "information_ratio": 0.00776480371972082,
+      "nobs": 120,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": 3.941549245007521e-05,
+          "ci95_monthly": [
+            -0.0031311407898472893,
+            0.0031806980767700335
+          ],
+          "annualized_arithmetic_mean": 0.00047298590940090255,
+          "ci95_annualized_arithmetic": [
+            -0.03757368947816747,
+            0.0381683769212404
+          ],
+          "nobs": 120,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": 3.941549245007521e-05,
+          "ci95_monthly": [
+            -0.0029097448883977062,
+            0.002944053292972446
+          ],
+          "annualized_arithmetic_mean": 0.00047298590940090255,
+          "ci95_annualized_arithmetic": [
+            -0.03491693866077247,
+            0.03532863951566935
+          ],
+          "nobs": 120,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": 3.941549245007521e-05,
+          "ci95_monthly": [
+            -0.002461323156719949,
+            0.002404999533254356
+          ],
+          "annualized_arithmetic_mean": 0.00047298590940090255,
+          "ci95_annualized_arithmetic": [
+            -0.02953587788063939,
+            0.028859994399052274
+          ],
+          "nobs": 120,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.0158918838652679,
+      "mean_hac12_asymptotic_normal_p": 0.9762562796934492
+    },
+    {
+      "period": "1980-01 to 1989-12",
+      "n_months": 120,
+      "mom_cagr": 0.19681546706603625,
+      "ew10_cagr": 0.18475131848056936,
+      "mom_total_return": 5.029369944078996,
+      "ew10_total_return": 4.448437920039833,
+      "mom_max_drawdown_monthly": -0.3235633185690159,
+      "ew10_max_drawdown_monthly": -0.28860910184203414,
+      "mom_volatility_ann": 0.18438274828401602,
+      "ew10_volatility_ann": 0.15712195621675773,
+      "mom_mean_fee_ann": 0.0030753196123079283,
+      "ew10_mean_fee_ann": 0.0001282704375468684,
+      "monthly_active_win_fraction": 0.575,
+      "mean_monthly": 0.0012662936680589959,
+      "annualized_arithmetic_active": 0.01519552401670795,
+      "tracking_error_ann": 0.06333409420067153,
+      "information_ratio": 0.23992644417652115,
+      "nobs": 120,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": 0.0012662936680589959,
+          "ci95_monthly": [
+            -0.0019023124844427888,
+            0.00440807896899784
+          ],
+          "annualized_arithmetic_mean": 0.01519552401670795,
+          "ci95_annualized_arithmetic": [
+            -0.022827749813313467,
+            0.052896947627974075
+          ],
+          "nobs": 120,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": 0.0012662936680589959,
+          "ci95_monthly": [
+            -0.0018293074788190535,
+            0.004383730421117232
+          ],
+          "annualized_arithmetic_mean": 0.01519552401670795,
+          "ci95_annualized_arithmetic": [
+            -0.021951689745828642,
+            0.052604765053406784
+          ],
+          "nobs": 120,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": 0.0012662936680589959,
+          "ci95_monthly": [
+            -0.0017665548162457934,
+            0.004559573363132504
+          ],
+          "annualized_arithmetic_mean": 0.01519552401670795,
+          "ci95_annualized_arithmetic": [
+            -0.021198657794949522,
+            0.05471488035759005
+          ],
+          "nobs": 120,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.01885868597618331,
+      "mean_hac12_asymptotic_normal_p": 0.4203827994457461
+    },
+    {
+      "period": "1990-01 to 1999-12",
+      "n_months": 120,
+      "mom_cagr": 0.21449703797180764,
+      "ew10_cagr": 0.1660920265166108,
+      "mom_total_return": 5.9817549152874845,
+      "ew10_total_return": 3.6486650755297925,
+      "mom_max_drawdown_monthly": -0.1523696968413799,
+      "ew10_max_drawdown_monthly": -0.1607814190863447,
+      "mom_volatility_ann": 0.14857782536984165,
+      "ew10_volatility_ann": 0.1259995320734882,
+      "mom_mean_fee_ann": 0.0025666510110171257,
+      "ew10_mean_fee_ann": 0.00014039854357088605,
+      "monthly_active_win_fraction": 0.5666666666666667,
+      "mean_monthly": 0.003690041986768373,
+      "annualized_arithmetic_active": 0.044280503841220474,
+      "tracking_error_ann": 0.07270764637404187,
+      "information_ratio": 0.6090212797347478,
+      "nobs": 120,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": 0.003690041986768373,
+          "ci95_monthly": [
+            4.851444667419093e-05,
+            0.0075638223161559204
+          ],
+          "annualized_arithmetic_mean": 0.044280503841220474,
+          "ci95_annualized_arithmetic": [
+            0.0005821733600902912,
+            0.09076586779387105
+          ],
+          "nobs": 120,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": 0.003690041986768373,
+          "ci95_monthly": [
+            0.0002911969512990059,
+            0.007402119798809321
+          ],
+          "annualized_arithmetic_mean": 0.044280503841220474,
+          "ci95_annualized_arithmetic": [
+            0.003494363415588071,
+            0.08882543758571185
+          ],
+          "nobs": 120,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": 0.003690041986768373,
+          "ci95_monthly": [
+            0.0008256433945206771,
+            0.007086623248367338
+          ],
+          "annualized_arithmetic_mean": 0.044280503841220474,
+          "ci95_annualized_arithmetic": [
+            0.009907720734248126,
+            0.08503947898040806
+          ],
+          "nobs": 120,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.02347930583022706,
+      "mean_hac12_asymptotic_normal_p": 0.0593033745249235
+    },
+    {
+      "period": "2000-01 to 2009-12",
+      "n_months": 120,
+      "mom_cagr": 0.026207501796900123,
+      "ew10_cagr": 0.02909718964685859,
+      "mom_total_return": 0.29524478139143984,
+      "ew10_total_return": 0.33218310610697777,
+      "mom_max_drawdown_monthly": -0.3944659303622118,
+      "ew10_max_drawdown_monthly": -0.48074823992182225,
+      "mom_volatility_ann": 0.1523963279988611,
+      "ew10_volatility_ann": 0.15412998213870635,
+      "mom_mean_fee_ann": 0.002903356547127119,
+      "ew10_mean_fee_ann": 0.00016881585645108649,
+      "monthly_active_win_fraction": 0.49166666666666664,
+      "mean_monthly": -0.0002617744651456394,
+      "annualized_arithmetic_active": -0.0031412935817476725,
+      "tracking_error_ann": 0.09492559006383937,
+      "information_ratio": -0.033092168082759235,
+      "nobs": 120,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": -0.0002617744651456394,
+          "ci95_monthly": [
+            -0.0043942565681249985,
+            0.003848769339147357
+          ],
+          "annualized_arithmetic_mean": -0.0031412935817476725,
+          "ci95_annualized_arithmetic": [
+            -0.052731078817499985,
+            0.04618523206976828
+          ],
+          "nobs": 120,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": -0.0002617744651456394,
+          "ci95_monthly": [
+            -0.0038967979701364473,
+            0.0034729582155254603
+          ],
+          "annualized_arithmetic_mean": -0.0031412935817476725,
+          "ci95_annualized_arithmetic": [
+            -0.04676157564163737,
+            0.04167549858630552
+          ],
+          "nobs": 120,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": -0.0002617744651456394,
+          "ci95_monthly": [
+            -0.003796289322735034,
+            0.0033627945099342672
+          ],
+          "annualized_arithmetic_mean": -0.0031412935817476725,
+          "ci95_annualized_arithmetic": [
+            -0.045555471872820406,
+            0.04035353411921121
+          ],
+          "nobs": 120,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.022712197264815725,
+      "mean_hac12_asymptotic_normal_p": 0.8899964811684323
+    },
+    {
+      "period": "2010-01 to 2019-12",
+      "n_months": 120,
+      "mom_cagr": 0.14443770525475808,
+      "ew10_cagr": 0.12767514310365424,
+      "mom_total_return": 2.8540875742987954,
+      "ew10_total_return": 2.3253707742808394,
+      "mom_max_drawdown_monthly": -0.2208587923671299,
+      "ew10_max_drawdown_monthly": -0.16641975604192916,
+      "mom_volatility_ann": 0.13009821335824961,
+      "ew10_volatility_ann": 0.12415908805062767,
+      "mom_mean_fee_ann": 0.0026079363101688072,
+      "ew10_mean_fee_ann": 0.00011736581909154603,
+      "monthly_active_win_fraction": 0.5666666666666667,
+      "mean_monthly": 0.001307368314990598,
+      "annualized_arithmetic_active": 0.015688419779887178,
+      "tracking_error_ann": 0.04908752958279757,
+      "information_ratio": 0.31960092335518736,
+      "nobs": 120,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": 0.001307368314990598,
+          "ci95_monthly": [
+            -0.0011842086504034322,
+            0.003705554252505428
+          ],
+          "annualized_arithmetic_mean": 0.015688419779887178,
+          "ci95_annualized_arithmetic": [
+            -0.014210503804841186,
+            0.044466651030065134
+          ],
+          "nobs": 120,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": 0.001307368314990598,
+          "ci95_monthly": [
+            -0.001050141986647738,
+            0.0035432789831192427
+          ],
+          "annualized_arithmetic_mean": 0.015688419779887178,
+          "ci95_annualized_arithmetic": [
+            -0.012601703839772856,
+            0.04251934779743091
+          ],
+          "nobs": 120,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": 0.001307368314990598,
+          "ci95_monthly": [
+            -0.0011399842947546358,
+            0.003504219501534126
+          ],
+          "annualized_arithmetic_mean": 0.015688419779887178,
+          "ci95_annualized_arithmetic": [
+            -0.01367981153705563,
+            0.04205063401840951
+          ],
+          "nobs": 120,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.014265993666256204,
+      "mean_hac12_asymptotic_normal_p": 0.2714595996626033
+    },
+    {
+      "period": "2020-01 to 2025-12",
+      "n_months": 72,
+      "mom_cagr": 0.18977410245500992,
+      "ew10_cagr": 0.13845676465564183,
+      "mom_total_return": 1.8365279612709462,
+      "ew10_total_return": 1.1772046439143025,
+      "mom_max_drawdown_monthly": -0.21793232459954837,
+      "ew10_max_drawdown_monthly": -0.22928545393753508,
+      "mom_volatility_ann": 0.22949681239958875,
+      "ew10_volatility_ann": 0.179829091068543,
+      "mom_mean_fee_ann": 0.002613732811945265,
+      "ew10_mean_fee_ann": 0.00020390928561976672,
+      "monthly_active_win_fraction": 0.5416666666666666,
+      "mean_monthly": 0.004508203560966966,
+      "annualized_arithmetic_active": 0.054098442731603594,
+      "tracking_error_ann": 0.11210533670218698,
+      "information_ratio": 0.48256795191935076,
+      "nobs": 72,
+      "bootstrap": {
+        "3": {
+          "mean_monthly": 0.004508203560966966,
+          "ci95_monthly": [
+            -0.002650567180565976,
+            0.012226003230901008
+          ],
+          "annualized_arithmetic_mean": 0.054098442731603594,
+          "ci95_annualized_arithmetic": [
+            -0.03180680616679171,
+            0.1467120387708121
+          ],
+          "nobs": 72,
+          "block_size": 3,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "6": {
+          "mean_monthly": 0.004508203560966966,
+          "ci95_monthly": [
+            -0.002554870874744442,
+            0.012049592493861437
+          ],
+          "annualized_arithmetic_mean": 0.054098442731603594,
+          "ci95_annualized_arithmetic": [
+            -0.030658450496933304,
+            0.14459510992633726
+          ],
+          "nobs": 72,
+          "block_size": 6,
+          "draws": 20000,
+          "seed": 20261004
+        },
+        "12": {
+          "mean_monthly": 0.004508203560966966,
+          "ci95_monthly": [
+            -0.0022111318060633444,
+            0.011877393802030881
+          ],
+          "annualized_arithmetic_mean": 0.054098442731603594,
+          "ci95_annualized_arithmetic": [
+            -0.026533581672760133,
+            0.14252872562437058
+          ],
+          "nobs": 72,
+          "block_size": 12,
+          "draws": 20000,
+          "seed": 20261004
+        }
+      },
+      "mean_hac12_se_ann": 0.04346066087615444,
+      "mean_hac12_asymptotic_normal_p": 0.21321701819414565
+    }
+  ]
+}
